@@ -167,8 +167,8 @@ Days of COVID watch: {quarintine.days}
 
 {'-'*40}
 [{yesterday_count} new zettel yesterday.](thearchive://match/›[[{uuid}).
-[{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')})
-[{two_yrs_ago_count} notes created on {two_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{two_yrs_ago.strftime('%Y%m%d')})
+[{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')}).
+[{two_yrs_ago_count} notes created on {two_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{two_yrs_ago.strftime('%Y%m%d')}).
 {tencount} new zettel in {tengap} days.
 {hundredcount} new zettel in {hundredgap} days.
 {tzettel / (today - day0).days:.1f} zettel created on average since day zero.
