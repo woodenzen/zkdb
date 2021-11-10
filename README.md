@@ -5,7 +5,7 @@ Add required modules with `pip install -r requirements.txt`
 
 Here is the output on my Dashboard so you can see what data is presented.
 
-![Image](https://www.dropbox.com/s/yrsxo27oja5k03m/Screen%20Shot%202021-11-09%20at%205.29.41%20PM.png)
+![Image](https://www.dropbox.com/s/yrsxo27oja5k03m/Screen%20Shot%202021-11-09%20at%205.29.41%20PM.png?dl=1)
 
 ---
  
