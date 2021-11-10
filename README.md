@@ -30,12 +30,14 @@ Days of COVID watch: 605
 	8 Poetry of Zettelkasting videos
 
 ----------------------------------------
+
 [1 new zettel yesterday.](thearchive://match/›[[20181108).  
 [2 notes created on 20201109](thearchive://match/›[[20201109).  
 [0 notes created on 20191109](thearchive://match/›[[20191109).  
 7 new zettel in 10 days.  
 179 new zettel in 100 days.  
 2.2 zettel created on average since day zero.  
+
 ----------------------------------------
 
 ## 7 Notes created in the last 10 days
