@@ -10,10 +10,24 @@ from datetime import timedelta
 import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
+import argparse
+
+
+# With argparse running this from command line
+# python zkdashboard.py -z /Users/will/Dropbox/zettelkasten/ -c 2 -s "/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md"
+
+parser = argparse.ArgumentParser(description='Zettelkasten Dashboard')
+parser.add_argument('-z',
+                    metavar='zettelkasten directory', type=pathlib.Path)
+parser.add_argument('-s', metavar='slogans',
+                    help='File location', type=pathlib.Path)
+parser.add_argument('-c', metavar='number',
+                    help='Number of slogans to print', type=int)
+args = parser.parse_args()
 
 # path to zettelkasten
 
-target_dir = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
+target_dir = args.z  # /Users/will/Dropbox/zettelkasten/
 
 # Regex
 
@@ -54,11 +68,11 @@ quarintine = today - covid
 
 # Random Super Slogan
 
-with open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md") as file_in:
+with open(args.s) as file_in:  # /Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md
     lines = []
     for line in file_in:
         lines.append(line[:-1])
-    sample = random.sample(lines, 3)
+    sample = random.sample(lines, args.c)
 ss = ('\n'.join(sample))
 
 
