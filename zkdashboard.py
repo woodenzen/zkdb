@@ -54,9 +54,12 @@ quarintine = today - covid
 
 # Random Super Slogan
 
-ss = random.choice(
-    open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md").readlines())
-ss = ss.replace(u'\xa0', u' ')
+with open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md") as file_in:
+    lines = []
+    for line in file_in:
+        lines.append(line[:-1])
+    sample = random.sample(lines, 3)
+ss = ('\n'.join(sample))
 
 
 # Iteration for counting tags, links (tlinks), wc (twords), total zettel (tzettel)
@@ -146,12 +149,15 @@ for uuid in sorted(files, reverse=True):
 
 output = f""" 
 ## Memento Mori
+
 Days since birth: {since.days}
 Days until I'm 80: {until.days}
 Days of COVID watch: {quarintine.days}
 
 ## Super Slogan
+
 {ss}
+
 {'-'*40}
 
 \t{twords} Total word count
