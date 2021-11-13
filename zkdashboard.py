@@ -4,9 +4,7 @@ import pathlib
 import re
 from collections import defaultdict
 import os
-from datetime import date
-from datetime import datetime
-from datetime import timedelta
+from datetime import date, datetime, timedelta
 import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
