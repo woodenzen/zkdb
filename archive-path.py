@@ -61,6 +61,6 @@ class TheArchive:
             raise Exception(
                 u"Warning: Cannot get The Archive setting: {0}".format(key))
 
-
-path = TheArchive.path()
-sys.stdout.write(path)
+if __name__ == "__main__":
+    path = TheArchive.path()
+    sys.stdout.write(path)
