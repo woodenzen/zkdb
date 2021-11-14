@@ -8,10 +8,11 @@ from datetime import date, datetime, timedelta
 import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
+from archive_path import TheArchive
 
 # path to zettelkasten
 
-target_dir = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
+target_dir = pathlib.Path(TheArchive.path())
 
 # Regex
 
