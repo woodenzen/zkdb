@@ -1,3 +1,4 @@
 # Specify filepatterns you want git to ignore.
 venv/*
 .DS_Store
+__pycache__/*
