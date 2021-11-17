@@ -11,11 +11,7 @@ import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
 import argparse
-# from archive_path import TheArchive
-
-
-# With argparse running this from command line
-# python zkdashboard.py -z /Users/will/Dropbox/zettelkasten/ -c 2 -s "/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md"
+from archive_path import TheArchive
 
 parser = argparse.ArgumentParser(description='Zettelkasten Dashboard')
 parser.add_argument('-s',
@@ -25,10 +21,9 @@ parser.add_argument('-m',
                     action='store_true', help='Markdown style links.')
 args = parser.parse_args()
 
-
 # path to zettelkasten
 
-target_dir = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
+target_dir = pathlib.Path(TheArchive.path())
 
 # Regex
 
