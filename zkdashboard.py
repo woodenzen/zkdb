@@ -39,6 +39,7 @@ tzettel = 0
 yesterday_count = 0
 tencount = 0
 tencountfiles = []
+m_tencountfiles = []
 hundredcount = 0
 one_yr_ago_count = 0
 two_yrs_ago_count = 0
@@ -85,16 +86,15 @@ for child in target_dir.iterdir():
 
 if args.s == 1:
 
-    output = f""" 
+    s_output = f""" 
 {'-'*40}
 
    {twords} Total word count
    {tlinks - tzettel} Total link count
    {tzettel} Total zettel count
 
-{'-'*40}
-    """
-
+{'-'*40}"""
+    print(s_output)
 ###
 #   Archive/wiki links
 
@@ -120,7 +120,7 @@ if args.a == 1:
                 if targetdate == uuid:
                     # tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
                     #     '%m/%d/%Y') + " :: [" + file_name.rsplit((uuid), 1)[0] + "](thearchive://match/" + file_name + ")")
-                    tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
+                    m_tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
                         '%m/%d/%Y') + " :: [[" + file_name + "]]")
                     tencount += 1
 
@@ -149,8 +149,7 @@ if args.a == 1:
             if uuid == three_yrs_ago.strftime('%Y%m%d'):
                 three_yrs_ago_count += 1
 
-    output = f""" 
-{'-'*40}
+    a_output = f"""{'-'*40}
 
    {yesterday_count} new zettel yesterday :: [[{yesterday.strftime('%Y%m%d')}]].
    {one_yr_ago_count} notes created one year ago :: [[{one_yr_ago.strftime('%Y%m%d')}]].
@@ -166,8 +165,9 @@ if args.a == 1:
 
 """
 
-    for newnotes in tencountfiles:
-        output += newnotes + '\n'
+    for newnotes in m_tencountfiles:
+        a_output += newnotes + '\n'
+    print(a_output)
 
 # markdown links
 
@@ -222,7 +222,7 @@ if args.m == 1:
             if uuid == three_yrs_ago.strftime('%Y%m%d'):
                 three_yrs_ago_count += 1
 
-    output = f""" 
+    m_output = f""" 
 {'-'*40}
 
   [{yesterday_count} new zettel yesterday.](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}).
@@ -240,8 +240,8 @@ if args.m == 1:
 """
 
     for newnotes in tencountfiles:
-        output += newnotes + '\n'
+        m_output += newnotes + '\n'
 
-print(output)
+    print(m_output)
 print(args)
 # pyperclip.copy(output)
