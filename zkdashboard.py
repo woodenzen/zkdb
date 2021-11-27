@@ -39,7 +39,6 @@ tzettel = 0
 yesterday_count = 0
 tencount = 0
 tencountfiles = []
-m_tencountfiles = []
 hundredcount = 0
 one_yr_ago_count = 0
 two_yrs_ago_count = 0
