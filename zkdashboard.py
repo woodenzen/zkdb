@@ -10,16 +10,49 @@ from datetime import timedelta
 import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
-import argparse
+# import argparse
 from archive_path import TheArchive
+import textwrap
+from argparse import ArgumentParser, HelpFormatter
 
-parser = argparse.ArgumentParser(description='Zettelkasten Dashboard')
+
+class RawFormatter(HelpFormatter):
+    def _fill_text(self, text, width, indent):
+        return "\n".join([textwrap.fill(line, width) for line in textwrap.indent(textwrap.dedent(text), indent).splitlines()])
+
+
+program_descripton = f'''
+    Zettelkasten Dashboard v1.0
+
+    Created by Will Simpson on November 15, 2021 
+
+    Distributed on an "AS IS" basis without warranties
+    or conditions of any kind, either express or implied.
+
+    Puts stats and/or review links in clipboard for 
+    pasteing in your journaling app of choice.
+
+    USAGE:
+    '''
+
+
+parser = ArgumentParser(description=program_descripton,
+                        formatter_class=RawFormatter)
+
+# parser = argparse.ArgumentParser(description='Zettelkasten Dashboard Dashboard contents are copied to the clipboard\rfor pasting where ever you want.')
 parser.add_argument('-s',
                     action='store_true', help='Just Basic Stats')
 parser.add_argument('-a', action='store_true', help='Archive style links')
 parser.add_argument('-m',
                     action='store_true', help='Markdown style links.')
-args = parser.parse_args()
+
+# Check for the presence of atleast one argument
+
+args = vars(parser.parse_args())
+if not any(args.values()):
+    parser.error('No arguments provided.')
+
+
 
 # path to zettelkasten
 
@@ -162,7 +195,7 @@ if args.a == 1:
 
 {'-'*40}
 
-   ## {tencount} Notes created in the last 10 days
+   # {tencount} Notes created in the last 10 days
 
 """
 
@@ -241,7 +274,7 @@ if args.m == 1:
 
 {'-'*40}
 
-    ## {tencount} Notes created in the last 10 days
+    # {tencount} Notes created in the last 10 days
 
 """
 
