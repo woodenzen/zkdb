@@ -94,7 +94,8 @@ if args.s == 1:
    {tzettel} Total zettel count
 
 {'-'*40}"""
-    print(s_output)
+    # print(s_output)
+    pyperclip.copy(s_output)
 ###
 #   Archive/wiki links
 
@@ -167,7 +168,12 @@ if args.a == 1:
 
     for newnotes in a_tencountfiles:
         a_output += newnotes + '\n'
-    print(a_output)
+    # print(a_output)
+    if args.s == 1 and args.a == 1:
+        c_output = s_output + a_output
+        pyperclip.copy(c_output)
+    else:
+        pyperclip.copy(a_output)
 
 # markdown links
 
@@ -242,6 +248,11 @@ if args.m == 1:
     for newnotes in tencountfiles:
         m_output += newnotes + '\n'
 
-    print(m_output)
-print(args)
-# pyperclip.copy(output)
+    # print(m_output)
+    # print(args)
+
+    if args.s == 1 and args.m == 1:
+        c_output = s_output + m_output
+        pyperclip.copy(c_output)
+    else:
+        pyperclip.copy(m_output)
