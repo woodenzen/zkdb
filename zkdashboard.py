@@ -22,15 +22,11 @@ class RawFormatter(HelpFormatter):
 
 
 program_descripton = f'''
-    Zettelkasten Dashboard v1.0
+     Zettelkasten Dashboard v1.0
+     Created by Will Simpson on November 15, 2021 
 
-    Created by Will Simpson on November 15, 2021 
-
-    Distributed on an "AS IS" basis without warranties
-    or conditions of any kind, either express or implied.
-
-    Puts stats and/or review links in clipboard for 
-    pasteing in your journaling app of choice.
+     Puts stats and/or review links in clipboard for 
+     pasteing in your journaling app of choice.
 
     USAGE:
     '''
