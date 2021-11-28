@@ -7,16 +7,17 @@ Add required modules with `pip install -r requirements.txt`
 
 Here is the output on my Dashboard so you can see what data is presented.
 
-![Image](https://i.ibb.co/M6Gb0RW/Screen-Shot-2021-11-09-at-5-29-41-PM.png)
+![Image](https://user-images.githubusercontent.com/55596338/143788889-1ca5cdd6-cbf4-4f55-b646-4343ef948786.png)
 
 ## Issues
+This is a work in progress.  
 If you encounter any problems, please file an issue along with a detailed description. Thank you 😃
 
 ## About zkdashboard
 Created by Will Simpson - will@kestrelcreek.com
 
 Thanks to all the über cool folks who have contributed:  
-[@ZettelDistraction](https://github.com/flengyel)
-[@pryley](https://github.com/pryley)
-[@ctietze](https://github.com/DivineDominion)
+[@ZettelDistraction](https://github.com/flengyel)  
+[@pryley](https://github.com/pryley)  
+[@ctietze](https://github.com/DivineDominion)  
 
