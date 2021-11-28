@@ -39,6 +39,7 @@ tzettel = 0
 yesterday_count = 0
 tencount = 0
 tencountfiles = []
+a_tencountfiles = []
 hundredcount = 0
 one_yr_ago_count = 0
 two_yrs_ago_count = 0
@@ -119,7 +120,7 @@ if args.a == 1:
                 if targetdate == uuid:
                     # tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
                     #     '%m/%d/%Y') + " :: [" + file_name.rsplit((uuid), 1)[0] + "](thearchive://match/" + file_name + ")")
-                    m_tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
+                    a_tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
                         '%m/%d/%Y') + " :: [[" + file_name + "]]")
                     tencount += 1
 
@@ -164,7 +165,7 @@ if args.a == 1:
 
 """
 
-    for newnotes in m_tencountfiles:
+    for newnotes in a_tencountfiles:
         a_output += newnotes + '\n'
     print(a_output)
 
