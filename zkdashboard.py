@@ -20,6 +20,15 @@ class RawFormatter(HelpFormatter):
     def _fill_text(self, text, width, indent):
         return "\n".join([textwrap.fill(line, width) for line in textwrap.indent(textwrap.dedent(text), indent).splitlines()])
 
+# Function
+
+
+def zettel(x):
+    yr_ago = datetime.now() - relativedelta(years=x)
+    if uuid == yr_ago.strftime('%Y%m%d'):
+        yr_ago_count += 1
+        return yr_ago_count
+
 
 program_descripton = f'''
      Zettelkasten Dashboard v1.0
@@ -41,13 +50,13 @@ parser.add_argument('-s',
 parser.add_argument('-a', action='store_true', help='Archive style links')
 parser.add_argument('-m',
                     action='store_true', help='Markdown style links.')
+args = parser.parse_args()
 
 # Check for the presence of atleast one argument
 
-args = vars(parser.parse_args())
-if not any(args.values()):
-    parser.error('No arguments provided.')
-
+# args = vars(parser.parse_args())
+# if not any(args.values()):
+#     parser.error('No arguments provided.')
 
 
 # path to zettelkasten
