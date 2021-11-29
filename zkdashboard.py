@@ -4,21 +4,22 @@ import pathlib
 import re
 from collections import defaultdict
 import os
-from datetime import date
-from datetime import datetime
-from datetime import timedelta
+from datetime import date, datetime, timedelta
 import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
-# import argparse
 from archive_path import TheArchive
 import textwrap
 from argparse import ArgumentParser, HelpFormatter
 
 
+# Help formatter class
+
 class RawFormatter(HelpFormatter):
     def _fill_text(self, text, width, indent):
         return "\n".join([textwrap.fill(line, width) for line in textwrap.indent(textwrap.dedent(text), indent).splitlines()])
+
+# Help text
 
 
 program_descripton = f'''
@@ -32,22 +33,25 @@ program_descripton = f'''
     '''
 
 
+# Command Line Parser
+
 parser = ArgumentParser(description=program_descripton,
                         formatter_class=RawFormatter)
 
-# parser = argparse.ArgumentParser(description='Zettelkasten Dashboard Dashboard contents are copied to the clipboard\rfor pasting where ever you want.')
-parser.add_argument('-s',
-                    action='store_true', help='Just Basic Stats')
+# parser = argparse.ArgumentParser
+# (description='Zettelkasten Dashboard Dashboard contents are copied to the clipboard for pasting where ever you want.')
+
+parser.add_argument('-s', action='store_true', help='Just Basic Stats')
 parser.add_argument('-a', action='store_true', help='Archive style links')
-parser.add_argument('-m',
-                    action='store_true', help='Markdown style links.')
+parser.add_argument('-m', action='store_true', help='Markdown style links.')
+
+args = parser.parse_args()
 
 # Check for the presence of atleast one argument
 
-args = vars(parser.parse_args())
-if not any(args.values()):
-    parser.error('No arguments provided.')
-
+# args = vars(parser.parse_args())
+# if not any(args.values()):
+#     parser.error('No arguments provided.')
 
 
 # path to zettelkasten
@@ -278,7 +282,7 @@ if args.m == 1:
         m_output += newnotes + '\n'
 
     # print(m_output)
-    # print(args)
+    print(args)
 
     if args.s == 1 and args.m == 1:
         c_output = s_output + m_output
