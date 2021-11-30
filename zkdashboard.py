@@ -4,13 +4,10 @@ import pathlib
 import re
 from collections import defaultdict
 import os
-from datetime import date
-from datetime import datetime
-from datetime import timedelta
+from datetime import date, datetime, timedelta
 import random
 from dateutil.relativedelta import relativedelta
 import pyperclip
-# import argparse
 from archive_path import TheArchive
 import textwrap
 from argparse import ArgumentParser, HelpFormatter
@@ -24,10 +21,11 @@ class RawFormatter(HelpFormatter):
 
 
 def zettel(x):
+    yr_ago_count = 0
     yr_ago = datetime.now() - relativedelta(years=x)
     if uuid == yr_ago.strftime('%Y%m%d'):
         yr_ago_count += 1
-        return yr_ago_count
+        return yr_ago_count, yr_ago.strftime('%Y%m%d')
 
 
 program_descripton = f'''
