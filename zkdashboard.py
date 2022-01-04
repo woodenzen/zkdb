@@ -17,16 +17,6 @@ class RawFormatter(HelpFormatter):
     def _fill_text(self, text, width, indent):
         return "\n".join([textwrap.fill(line, width) for line in textwrap.indent(textwrap.dedent(text), indent).splitlines()])
 
-# Function
-
-
-def zettel(x):
-    yr_ago_count = 0
-    yr_ago = datetime.now() - relativedelta(years=x)
-    if uuid == yr_ago.strftime('%Y%m%d'):
-        yr_ago_count += 1
-        return yr_ago_count, yr_ago.strftime('%Y%m%d')
-
 
 program_descripton = f'''
      Zettelkasten Dashboard v1.0
@@ -82,7 +72,7 @@ two_yrs_ago_count = 0
 three_yrs_ago_count = 0
 tengap = 10
 hundredgap = 100
-day0 = date(2018, 11, 14)
+day0 = date(2011, 11, 14)
 today = date.today()
 
 # Iteration for counting tags, links (tlinks), wc (twords), total zettel (tzettel)

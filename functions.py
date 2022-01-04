@@ -4,7 +4,7 @@
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-notelist = ['20211202', '20201203', '20191203', '20181203']
+notelist = ['20211202', '20201221', '20201221', '20191203', '20181203']
 
 
 def zettel(x):
@@ -46,4 +46,4 @@ def zettel(x):
     return [x, note_count, note_uuid.strftime('%Y%m%d')]
 
 
-print(f'[{zettel(1)[1]}  new zettel yesterday :: [{zettel(1)[2]}](thearchive://match/›[[{zettel(1)[2]}).')
+print(f'[{zettel(1)[1]} new zettel yesterday :: [{zettel(1)[2]}](thearchive://match/›[[{zettel(1)[2]}).')
