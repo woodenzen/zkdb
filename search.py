@@ -16,15 +16,8 @@ def zsearch(s, *args):
 
 with open("Extract Knowledge From Reading 202201042008.md", "r") as fp:
     for line in fp:
-        atom = zsearch(line, "zettel")
-print(atom) 
-print(line)   
+        atom = zsearch(line, "zettel","some")
+        if atom != None:
+            print(atom) 
+  
 
-
-    
-
-# p = re.compile('[a-z]+') 
-# p.match("")
-# print(p.match(""))
-# m = p.match("extract")
-# print(m)
