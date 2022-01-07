@@ -11,7 +11,7 @@ from datetime import date
 from datetime import timedelta
 import random
 from dateutil.relativedelta import relativedelta
-import Foundation, AppKit
+# import Foundation, AppKit
 
 def lines_that_contain(string, fp):
     return [line for line in fp if string in line]
@@ -73,14 +73,14 @@ for uuid in sorted(files, reverse=True):
                 with open(filename, "r") as fp:
                     for line in lines_that_contain("Subatomic: ", fp):
                         atom = line.split(":")[1]
-                        zettel_list.append(file_name.rsplit((uuid), 1)[0] + "\n   -" + atom)                # tencount += 1                # tencount += 1                # tencount += 1                # tencount += 1                # tencount += 1# 100 day gap        # for i in range(hundredgap):        #     targetdate = (date.today() - timedelta(+i)).strftime('%Y%m%d')        #     if targetdate == uuid:        #         hundredcount += 1# 1 year gap       # one_yr_ago = datetime.now() - relativedelta(years=1)       # if uuid == one_yr_ago.strftime('%Y%m%d'):       #     one_yr_ago_count +=  2 year ga       # two_yrs_ago = datetime.now() - relativedelta(years=2)       # if uuid == two_yrs_ago.strftime('%Y%m%d'):       #     two_yrs_ago_count +=  3 year ga       # three_yrs_ago = datetime.now() - relativedelta(years=3)       # if uuid == three_yrs_ago.strftime('%Y%m%d'):       #     three_yrs_ago_count += 1
+                        zettel_list.append(file_name.rsplit((uuid), 1)[0] + "\n   -" + atom + "\n")                # tencount += 1                # tencount += 1                # tencount += 1                # tencount += 1                # tencount += 1# 100 day gap        # for i in range(hundredgap):        #     targetdate = (date.today() - timedelta(+i)).strftime('%Y%m%d')        #     if targetdate == uuid:        #         hundredcount += 1# 1 year gap       # one_yr_ago = datetime.now() - relativedelta(years=1)       # if uuid == one_yr_ago.strftime('%Y%m%d'):       #     one_yr_ago_count +=  2 year ga       # two_yrs_ago = datetime.now() - relativedelta(years=2)       # if uuid == two_yrs_ago.strftime('%Y%m%d'):       #     two_yrs_ago_count +=  3 year ga       # three_yrs_ago = datetime.now() - relativedelta(years=3)       # if uuid == three_yrs_ago.strftime('%Y%m%d'):       #     three_yrs_ago_count += 1
 
 # Print and output
 
 output = f""" 
 
-Below are the titles and a one-sentence summary/meaning/'stinger' of zettel 
-I've birthed into existence and their ideas I'm grappling with.
+Below are ideas I'm grappling and a one-sentence summary/meaning/'stinger' 
+of zettel I've birthed into existence.
  
 I would **love** to talk to you about anything on this list.
 If any of this is of interest to you, please start a thread here, [DM me](https://forum.zettelkasten.de/messages/add), or [get in touch via email](https://forum.zettelkasten.de/profile/Will).
@@ -90,7 +90,9 @@ ran_notes = (random.sample(zettel_list, 7))
 for newnotes in ran_notes:
     output += newnotes
 
-# print(output)
+print(output)
 # print(type(output))
-pbcopy(output)
-
+# pbcopy(output)
+# pyperclip.copy(output)
+# import sys
+# print(sys.path)

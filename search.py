@@ -14,15 +14,14 @@ def zsearch(s, *args):
             return None
     return [s]
 
-#   with open(filename, "r") as fp:
-#         for line in lines_that_contain("Subatomic: ", fp):
-#                 atom = line.split(":")[1]   
-    
-    
-    
-x = zsearch("This is a more complicated sentence.", "this", "complicated", "more")
-print(x)
+with open("Extract Knowledge From Reading 202201042008.md", "r") as fp:
+    for line in fp:
+        atom = zsearch(line, "zettel")
+print(atom) 
+print(line)   
 
+
+    
 
 # p = re.compile('[a-z]+') 
 # p.match("")
