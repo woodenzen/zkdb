@@ -2,22 +2,25 @@
 # encoding: utf-8
 
 import re
+import os
 
-# #True or false search conaines all the words
-
+zettelkasten = '/Users/will/Dropbox/zettelkasten'
 
 def zsearch(s, *args):
     for x in args:
-        r = "(?=.*" + x + ")"
+        r = (r"(?=.* " + x + ")")
         p = re.search(r, s, re.IGNORECASE)
         if p is None:
             return None
-    return [s]
+    return s
 
-with open("Extract Knowledge From Reading 202201042008.md", "r") as fp:
-    for line in fp:
-        atom = zsearch(line, "zettel","some")
-        if atom != None:
-            print(atom) 
-  
+for filename in os.listdir(zettelkasten):
+    if filename.endswith('.md'):
+        with open(os.path.join(zettelkasten, filename),"r") as fp:
+            for line in fp:
+                atom = zsearch(line, "knowledgeable")
+                if atom != None:
+                    print(atom)
+                    print(filename) 
+        
 
