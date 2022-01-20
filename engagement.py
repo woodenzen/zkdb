@@ -79,8 +79,8 @@ for uuid in sorted(files, reverse=True):
 
 output = f""" 
 
-Below are ideas I'm grappling and a one-sentence summary/meaning/'stinger' 
-of zettel I've birthed into existence.
+Below are ideas and a one-sentence summary/meaning/'stinger' 
+of notions I'm grappling.
  
 I would **love** to talk to you about anything on this list.
 If any of this is of interest to you, please start a thread here, [DM me](https://forum.zettelkasten.de/messages/add), or [get in touch via email](https://forum.zettelkasten.de/profile/Will).
