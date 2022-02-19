@@ -11,7 +11,7 @@ from datetime import date
 from datetime import timedelta
 import random
 from dateutil.relativedelta import relativedelta
-# import Foundation, AppKit
+import Foundation, AppKit
 
 def lines_that_contain(string, fp):
     return [line for line in fp if string in line]
@@ -90,8 +90,8 @@ ran_notes = (random.sample(zettel_list, 7))
 for newnotes in ran_notes:
     output += newnotes
 
-print(output)
-# print(type(output))
+# print(output)
+print(type(output))
 # pbcopy(output)
 # pyperclip.copy(output)
 # import sys
