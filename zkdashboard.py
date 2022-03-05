@@ -12,8 +12,6 @@ import random
 from dateutil.relativedelta import relativedelta
 # import pyperclip 
 
-
-
 # path to zettelkasten
 
 target_dir = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
@@ -232,3 +230,4 @@ for newnotes in tencountfiles:
 
 print(output)
 # pyperclip.copy(output)
+
