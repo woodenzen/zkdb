@@ -4,3 +4,4 @@ venv/*
 __pycache__/*
 notes.md
 .vscode/*
+test.py

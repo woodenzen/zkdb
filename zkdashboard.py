@@ -32,15 +32,6 @@ tvideo = 0
 twords = 0
 tlinks = 0
 tzettel = 0
-yesterday_count = 0
-tencount = 0
-tencountfiles = []
-hundredcount = 0
-one_yr_ago_count = 0
-two_yrs_ago_count = 0
-three_yrs_ago_count = 0
-tengap = 10
-hundredgap = 100
 day0 = date(2018, 11, 14)
 atom = ""
 
@@ -121,6 +112,19 @@ for child in target_dir.iterdir():
     files[file_date].append(child)
 
 # Get counts for various date parameters.
+yesterday_count = 0
+yesterday = (date.today() - timedelta(1))
+tencount = 0
+tencountfiles = []
+hundredcount = 0
+one_yr_ago_count = 0
+one_yr_ago = datetime.now() - relativedelta(years=1)
+two_yrs_ago_count = 0
+two_yrs_ago = datetime.now() - relativedelta(years=2)
+three_yrs_ago_count =  0
+three_yrs_ago = datetime.now() - relativedelta(years=3)
+tengap = 10
+hundredgap = 100
 
 for uuid in sorted(files, reverse=True):
 
@@ -129,7 +133,6 @@ for uuid in sorted(files, reverse=True):
 
 # Yesterday
 
-        yesterday = (date.today() - timedelta(1))
         if uuid == yesterday.strftime('%Y%m%d'):
             yesterday_count += 1
 
@@ -169,19 +172,16 @@ for uuid in sorted(files, reverse=True):
 
 # 1 year gap
 
-        one_yr_ago = datetime.now() - relativedelta(years=1)
         if uuid == one_yr_ago.strftime('%Y%m%d'):
             one_yr_ago_count += 1
 
 # 2 year gap
 
-        two_yrs_ago = datetime.now() - relativedelta(years=2)
         if uuid == two_yrs_ago.strftime('%Y%m%d'):
             two_yrs_ago_count += 1
 
 # 3 year gap
 
-        three_yrs_ago = datetime.now() - relativedelta(years=3)
         if uuid == three_yrs_ago.strftime('%Y%m%d'):
             three_yrs_ago_count += 1
 
