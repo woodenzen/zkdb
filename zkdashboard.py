@@ -117,6 +117,12 @@ yesterday = (date.today() - timedelta(1))
 tencount = 0
 tencountfiles = []
 hundredcount = 0
+one_week_ago_count = 0
+one_week_ago = datetime.now() - relativedelta(weeks=1)
+three_weeks_ago_count = 0
+three_weeks_ago = datetime.now() - relativedelta(weeks=3)
+six_months_ago_count = 0
+six_months_ago = datetime.now() - relativedelta(months=6)
 one_yr_ago_count = 0
 one_yr_ago = datetime.now() - relativedelta(years=1)
 two_yrs_ago_count = 0
@@ -170,6 +176,21 @@ for uuid in sorted(files, reverse=True):
             if targetdate == uuid:
                 hundredcount += 1
 
+# 1 week gap
+
+        if uuid == one_week_ago.strftime('%Y%m%d'):
+            one_week_ago_count += 1
+
+# 3 week gap
+
+        if uuid == three_weeks_ago.strftime('%Y%m%d'):
+            three_weeks_ago_count += 1
+
+# 6 month gap
+
+        if uuid == six_months_ago.strftime('%Y%m%d'):
+            six_months_ago_count += 1
+
 # 1 year gap
 
         if uuid == one_yr_ago.strftime('%Y%m%d'):
@@ -189,10 +210,10 @@ for uuid in sorted(files, reverse=True):
 
 output = f""" 
 ## Memento Mori
-Days since birth: {since.days} - {percentSince}%
-Days until I'm 80: {until.days} - {percentLeft}%
+Weeks since birth: {round(since.days/7)} - {percentSince}%
+Weeks until I'm 80: {round(until.days/7)} - {percentLeft}%
 Days of COVID watch: {quarintine.days} - {percentOfTotal}%
-Total Days in an eighty year life. 29220
+Total weeks in an eighty year life. {round(29220/7)}
 
 ## Super Slogan
 {ss}
@@ -205,24 +226,23 @@ Zettelkasten Statistics
        ★★★★★
 
 \t{tproof} [Zettel Proofing](thearchive://match/"#proofing").
-\t{ttwodo} [2do's](thearchive://match/"#2do").
 \t{tbooks} [Books Processed](thearchive://match/"#book").
 \t{tblogs} [Blog Posts](thearchive://match/"#blog-post").
 \t{tarticles} [Articles Processed](thearchive://match/"#article").
 \t{tvideo} [Poetry of Zettelkasting videos](thearchive://match/"#video").
 
 {'-'*40}
-[{yesterday_count} new zettel yesterday.](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}).
-[{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')}).
-[{two_yrs_ago_count} notes created on {two_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{two_yrs_ago.strftime('%Y%m%d')}).
-[{three_yrs_ago_count} notes created on {three_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_yrs_ago.strftime('%Y%m%d')}).
-{tencount} new zettel in {tengap} days.
-{hundredcount} new zettel in {hundredgap} days.
+[{yesterday_count} notes created on {yesterday.strftime('%Y%m%d')}](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}) yesterday.
+[{one_week_ago_count} notes created on {one_week_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_week_ago.strftime('%Y%m%d')}) one week ago.
+[{three_weeks_ago_count} notes created on {three_weeks_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_weeks_ago.strftime('%Y%m%d')}) three weeks ago.
+[{six_months_ago_count} notes created on {six_months_ago.strftime('%Y%m%d')}](thearchive://match/›[[{six_months_ago.strftime('%Y%m%d')}) six months ago.
+[{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')}) one year ago.
+[{two_yrs_ago_count} notes created on {two_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{two_yrs_ago.strftime('%Y%m%d')}) two years ago.
+[{three_yrs_ago_count} notes created on {three_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_yrs_ago.strftime('%Y%m%d')}) three years ago.
+**{tencount} new zettel in the last {tengap} days.**
+{hundredcount} new zettel in the last {hundredgap} days.
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 {'-'*40}
-
-## {tencount} Notes created in the last 10 days
-
 """
 
 for newnotes in tencountfiles:

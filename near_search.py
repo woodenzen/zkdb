@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # encoding: utf-8
-
-# TODO [ZK Proximity Search ](thearchive://match/ZK Proximity Search 202203192030)
+'''
+TODO [ZK Proximity Search ](thearchive://match/ZK Proximity Search 202203192030)
+To use the or compare arg1 or arg
+'''
+# * 
 
 # import time
 # startTime = time.time()

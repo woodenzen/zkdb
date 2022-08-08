@@ -4,11 +4,11 @@ cdate: January 4, 2022 8:07 PM
 tags: #knowledge #proofing
 ---
 # Extract Knowledge form Reading
-Subatomic: The five step knowledge creation process
+Subatomic: The five step knowledge creation process.
 
 Looking at reading in as detailed as this will slow the reading down tremendously. I don't have to be perfect at this. This can be my goal and who knows.
 
-Some zettel can have two parts The 'premise' of the idea expressed and it use case.
+Some zettel can have two parts. The 'premise' of the idea expressed and it use case.
 
 Some zettel can have up to seven parts. Described below.
 

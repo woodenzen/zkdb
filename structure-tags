@@ -1,0 +1,20 @@
+#!/bin/zsh
+# https://forum.zettelkasten.de/discussion/2294/structure-tags-as-an-alternative-to-structure-zettels
+if [[ "$1" && ("$1" != "-h") ]] 
+# if there's an argument that isn't "-h", the help flag
+then
+# clear the screen and print the search term
+clear; echo "#$1"
+# print files containing the structure-tag in order
+# grep: "-d skip" skip directories
+# "-o" prints only the search term not the whole line
+# sort: "-t" defines the field delimiter, here a colon
+# "-k2" sorts by the second field, i.e. everything after the first colon
+grep -d skip -o "#"$1"@[^ ]*" * | sort -t: -k2
+# print a blank line and any remaining unordered files containing the same tag
+echo " "
+grep -l -d skip "#"$1"( |$)" *
+else
+# print the help message
+echo "Usage: "$0" structure-tag-name (without # and @)"
+fi
