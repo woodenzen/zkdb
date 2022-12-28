@@ -169,17 +169,17 @@ for uuid in sorted(files, reverse=True):
                     atom = ""
                     for line in lines_that_contain("Subatomic: ", fp):
                         atom = "-" + line.split(":")[1]
+                        # atom = atom + line.split("\n")[0]
                 #   Archive format
                 # tencountfiles.append(file_name.rsplit((uuid), 1)[0] + "[[" + full_uuid + "]]\n   -" + atom)
                 #   Markdown format
                 tencountfiles.append(
-                    "- "
+                    # "- "                    
+                    "["
                     + file_name.rsplit((uuid), 1)[0]
-                    + "["
-                    + uuid
                     + "](thearchive://match/"
                     + file_name
-                    + ")\n\t\t"
+                    + ")\r\t"
                     + atom
                 )
                 #   Original format
@@ -230,50 +230,10 @@ for uuid in sorted(files, reverse=True):
             four_yrs_ago_count += 1
 
 
-                
-# Print and output
 
-output1 = f""" 
-## Memento Mori
-Days since birth: {since.days} - {percentSince}%
-Days until I'm 80: {until.days} - {percentLeft}%
-Days of COVID watch: {quarintine.days} - {percentOfTotal}%
-Total days in an eighty-year life. 29220
-
-## Super Slogan
-{ss}
+output = f"""# {tencount} New Zettel in the Last {tengap} Days.
 {'-'*40}
-Zettelkasten Statistics
-       ★★★★★
-\t{twords} Total word count
-\t{tlinks - tzettel} Total link count
-\t{tzettel} Total zettel count
-       ★★★★★
 
-\t{tproof} [Zettel Proofing](thearchive://match/"#proofing").
-\t{tbooks} [Books Processed](thearchive://match/"#book").
-\t{tblogs} [Blog Posts](thearchive://match/"#blog-post").
-\t{tpodcast} [Podcasts Processed](thearchive://match/"#podcast").
-\t{tarticles} [Articles Processed](thearchive://match/"#article").
-\t{tvideo} [Poetry of Zettelkasting videos](thearchive://match/"#video").
-
-{'-'*40}
-[{yesterday_count} notes created on {yesterday.strftime('%Y%m%d')}](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}) yesterday.
-[{one_week_ago_count} notes created on {one_week_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_week_ago.strftime('%Y%m%d')}) one week ago.
-[{three_weeks_ago_count} notes created on {three_weeks_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_weeks_ago.strftime('%Y%m%d')}) three weeks ago.
-[{six_months_ago_count} notes created on {six_months_ago.strftime('%Y%m%d')}](thearchive://match/›[[{six_months_ago.strftime('%Y%m%d')}) six months ago.
-[{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')}) one year ago.
-
-Four Random Notes Older Then One Year Old
-"""
-print(f'{output1}')
-zkrand()
-
-output = f""" 
-**{tencount} new zettel in the last {tengap} days.**
-{hundredcount} new zettel in the last {hundredgap} days.
-{tzettel / (today - day0).days:.2f} zettel created on average since day zero.
-{'-'*40}
 """
 
 for newnotes in tencountfiles:
