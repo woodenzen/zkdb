@@ -62,20 +62,17 @@ for uuid in sorted(files, reverse=True):
                     for line in lines_that_contain("Subatomic: ", fp):
                         atom = line.split(":")[1]
                 tencountfiles.append(     
-                    "["
-                    + file_name.rsplit((uuid), 1)[0]
-                    + "](thearchive://match/"
-                    + file_name
-                    + ")\r"
-                    +"\t\t"
+                    file_name.rsplit((uuid), 1)[0]
+                    +"\r"
                     +" -"
                     + atom
+                    +"\r"
                 )
                 tencount += 1
 
 output = f"""# What I'm Working On
 ## {tencount} New Zettel in the Last {tengap} Days.
-Titles and one-sentence summary/meaning of atomic zettel. These are the ideas I'm currently wrestling with. They represent a {tengap}-day window of new notes.
+Titles and one-sentence summary of atomic zettel. These are the ideas I'm currently wrestling with. They represent a {tengap}-day window of new notes.
 
 This is generated with nothing held back. I would **love** to talk to you about anything on this list. If any of this is of interest to you, please start a thread here, [DM me](https://forum.zettelkasten.de/messages/add), or [get in touch via email](https://forum.zettelkasten.de/profile/Will).
 
