@@ -38,6 +38,43 @@ day0 = date(2018, 11, 14)
 atom = ""
 counter = 0
 
+# Death Watch
+
+birth = date(1956, 9, 26)
+today = date.today()
+eighty = date(2036, 9, 26)
+covid = date(2020, 3, 14)
+since = today - birth
+until = eighty - today
+quarintine = today - covid
+percentSince = round(since.days / 29220 * 100, 1)
+percentLeft = round(until.days / 29220 * 100, 1)
+percentOfTotal = round(quarintine.days / 29220 * 100, 2)
+
+# Get counts for various date parameters.
+
+yesterday_count = 0
+yesterday = date.today() - timedelta(1)
+tencount = 0
+tencountfiles = []
+hundredcount = 0
+one_week_ago_count = 0
+one_week_ago = datetime.now() - relativedelta(weeks=1)
+three_weeks_ago_count = 0
+three_weeks_ago = datetime.now() - relativedelta(weeks=3)
+six_months_ago_count = 0
+six_months_ago = datetime.now() - relativedelta(months=6)
+one_yr_ago_count = 0
+one_yr_ago = datetime.now() - relativedelta(years=1)
+two_yrs_ago_count = 0
+two_yrs_ago = datetime.now() - relativedelta(years=2)
+three_yrs_ago_count = 0
+three_yrs_ago = datetime.now() - relativedelta(years=3)
+four_yrs_ago_count = 0
+four_yrs_ago = datetime.now() - relativedelta(years=4)
+tengap = 7
+hundredgap = 100
+
 # Functions
 def lines_that_equal(line_to_match, fp):
     return [line for line in fp if line == line_to_match]
@@ -53,20 +90,6 @@ def lines_that_start_with(string, fp):
 
 def lines_that_end_with(string, fp):
     return [line for line in fp if line.endswith(string)]
-
-
-# Death Watch
-
-birth = date(1956, 9, 26)
-today = date.today()
-eighty = date(2036, 9, 26)
-covid = date(2020, 3, 14)
-since = today - birth
-until = eighty - today
-quarintine = today - covid
-percentSince = round(since.days / 29220 * 100, 1)
-percentLeft = round(until.days / 29220 * 100, 1)
-percentOfTotal = round(quarintine.days / 29220 * 100, 2)
 
 # Random Super Slogan
 
@@ -119,29 +142,6 @@ for child in target_dir.iterdir():
         continue
     file_date = match.group()
     files[file_date].append(child)
-
-# Get counts for various date parameters.
-yesterday_count = 0
-yesterday = date.today() - timedelta(1)
-tencount = 0
-tencountfiles = []
-hundredcount = 0
-one_week_ago_count = 0
-one_week_ago = datetime.now() - relativedelta(weeks=1)
-three_weeks_ago_count = 0
-three_weeks_ago = datetime.now() - relativedelta(weeks=3)
-six_months_ago_count = 0
-six_months_ago = datetime.now() - relativedelta(months=6)
-one_yr_ago_count = 0
-one_yr_ago = datetime.now() - relativedelta(years=1)
-two_yrs_ago_count = 0
-two_yrs_ago = datetime.now() - relativedelta(years=2)
-three_yrs_ago_count = 0
-three_yrs_ago = datetime.now() - relativedelta(years=3)
-four_yrs_ago_count = 0
-four_yrs_ago = datetime.now() - relativedelta(years=4)
-tengap = 10
-hundredgap = 100
 
 for uuid in sorted(files, reverse=True):
 
