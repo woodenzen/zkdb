@@ -28,6 +28,7 @@ tbooks = 0
 tblogs = 0
 tpodcast = 0
 tarticles = 0
+tyoutube = 0
 tproof = 0
 ttwodo = 0
 tvideo = 0
@@ -113,6 +114,10 @@ for filename in os.listdir(target_dir):
         tpodcast += podcast
         article = data.count("#article")
         tarticles += article
+        
+        youtube = data.count("#youtube")
+        tyoutube += youtube
+        
         proof = data.count("#proofing")
         tproof += proof
         video = data.count("#video")
@@ -255,7 +260,8 @@ Zettelkasten Statistics
 \t{tblogs} [Blog Posts](thearchive://match/"#blog-post").
 \t{tpodcast} [Podcasts Processed](thearchive://match/"#podcast").
 \t{tarticles} [Articles Processed](thearchive://match/"#article").
-\t{tvideo} [Poetry of Zettelkasting videos](thearchive://match/"#video").
+\t{tyoutube} [YouTube Videos Processed](thearchive://match/"#youtube").
+\t{tvideo} [Poetry of Zettelkasting Videos Made](thearchive://match/"#video").
 
 {'-'*40}
 [{yesterday_count} notes created on {yesterday.strftime('%Y%m%d')}](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}) yesterday.
@@ -264,7 +270,7 @@ Zettelkasten Statistics
 [{six_months_ago_count} notes created on {six_months_ago.strftime('%Y%m%d')}](thearchive://match/›[[{six_months_ago.strftime('%Y%m%d')}) six months ago.
 [{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')}) one year ago.
 
-Four Random Notes Older Then One Year Old
+Four Random Notes Older than One Year Old
 """
 print(f'{output1}')
 zkrand()

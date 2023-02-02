@@ -73,11 +73,11 @@ for uuid in sorted(files, reverse=True):
                 )
                 tencount += 1
 
-output = f"""# What I'm Working On
+output = f"""## The Ideas I'm Currently Wrestling With
 ## {tencount} New Zettel in the Last {tengap} Days.
-Titles and one-sentence summary/meaning of atomic zettel. These are the ideas I'm currently wrestling with. They represent a {tengap}-day window of new notes.
+Below are the titles and one-sentence summary/meaning of each zettel that I added to my ZK this week. These are the ideas I'm currently wrestling with. They represent a {tengap}-day window of new notes.
 
-This is generated with nothing held back. I would **love** to talk to you about anything on this list. If any of this is of interest to you, please start a thread here, [DM me](https://forum.zettelkasten.de/messages/add), or [get in touch via email](https://forum.zettelkasten.de/profile/Will).
+This is generated with nothing held back. If any of this interests you, please start a thread here or[DM me](https://forum.zettelkasten.de/messages/add). If you have questions about form or content, I'm happy to discuss anything on this list.
 
 {'-'*40}
 
