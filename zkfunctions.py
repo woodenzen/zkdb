@@ -5,6 +5,32 @@ from dateutil.relativedelta import relativedelta
 from plistlib import load
 from urllib.parse import urlparse
 
+'''
+Get folder size
+'''
+def getFolderSize(folder):
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(folder):#not sub folders
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            total_size += os.path.getsize(fp)   
+    return total_size
+    
+'''
+Human readable single folder size
+'''
+
+def sizeof_fmt(num, suffix='bytes'):
+    for unit in ['',' Kilo',' Mega',' Giga',' Tera',' Peta',' Exa',' Zetta']:
+        if abs(num) < 1024.0:
+            return "%3.1f%s%s" % (num, unit, suffix)
+        num /= 1024.0
+    return
+
+if __name__ == '__main__':
+    print(sizeof_fmt(getFolderSize('/Users/will/Dropbox/zettelkasten')))
+    print('-'*40) 
+
 ####
 # Function for finding the path to The Archive
 #####
@@ -22,8 +48,13 @@ def TheArchivePath():
 
 if __name__ == "__main__":
     zettelkasten = pathlib.Path(TheArchivePath())
-    print(zettelkasten)
-    
+    print(f'The Current ZK Directory. {zettelkasten}')
+    print(f'## {len(os.listdir(zettelkasten))} notes in the archive.')   
+    subfolders = [ f.path for f in os.scandir(zettelkasten) if f.is_dir() ]
+    for i in subfolders:
+        print(f'## {len(os.listdir(i))} files in {i}.')
+        print(f'## {sizeof_fmt(getFolderSize(i))} in {i}.')
+        print('-'*40) 
 '''
 Print a random list of notes from the past.
 '''   
@@ -54,29 +85,4 @@ def zkrand(number):
                     
 if __name__ == "__main__":
     zkrand(10)
-    
-'''
-get folder size
-'''
-def getFolderSize(folder):
-    total_size = 0
-    for dirpath, dirnames, filenames in os.walk(folder):#not sub folders
-        for f in filenames:
-            fp = os.path.join(dirpath, f)
-            total_size += os.path.getsize(fp)   
-    return total_size
-    
-'''
-Human readable single folder size
-'''
-
-def sizeof_fmt(num, suffix='bytes'):
-    for unit in ['',' Kilo',' Mega',' Giga',' Tera',' Peta',' Exa',' Zetta']:
-        if abs(num) < 1024.0:
-            return "%3.1f%s%s" % (num, unit, suffix)
-        num /= 1024.0
-    return
-
-if __name__ == '__main__':
-    print(sizeof_fmt(getFolderSize('/Users/will/Dropbox/zettelkasten/media/')))
-
+    print('-'*40)     
