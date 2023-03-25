@@ -1,15 +1,13 @@
-#! /usr/local/bin/python3
-
 import os, re, random
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
     
-def zkrand():
+def zkrand(number):
     target_dir = "/Users/will/Dropbox/zettelkasten"
     counter = 0
     # Set counter to the number of notes wanted to be returned.
-    print('## Ten random notes from the past.')
-    while counter < 10:
+    print(f'## {number} random notes from the past.')
+    while counter < number:
         # Create a variable "random+file" that contains a randomixed list of the files,
         random_file=random.choices(os.listdir(target_dir))
         # d = a year month day
@@ -30,4 +28,4 @@ def zkrand():
                 counter += 1
                     
 if __name__ == "__main__":
-    zkrand()
+    zkrand(10)

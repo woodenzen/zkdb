@@ -4,7 +4,7 @@
 import pathlib
 import os, re, random
 from collections import defaultdict
-from datetime import date
+from datetime import date 
 from datetime import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
@@ -109,7 +109,7 @@ for uuid in sorted(files, reverse=True):
                 hundredcount += 1
 
 # Output
-zkrand()
+zkrand(10)
 
 output = f""" 
 {'-'*40}
