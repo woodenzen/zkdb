@@ -1,3 +1,6 @@
+#!/usr/local/bin/python3.9
+# encoding: utf-8
+
 import pathlib
 import os, re, random
 from collections import defaultdict
@@ -285,10 +288,3 @@ for newnotes in tencountfiles:
     output += newnotes + "\r"
 
 print(f'{output}') 
-
-# pyperclip.copy(output)
-
-
-# [{two_yrs_ago_count} notes created on {two_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{two_yrs_ago.strftime('%Y%m%d')}) two years ago.
-# [{three_yrs_ago_count} notes created on {three_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_yrs_ago.strftime('%Y%m%d')}) tzhree years ago.
-# [{four_yrs_ago_count} notes created on {four_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{four_yrs_ago.strftime('%Y%m%d')}) four years ago.
