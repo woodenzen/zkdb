@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# encoding: utf-8
-
 import pathlib
 import os, re, random
 from collections import defaultdict
@@ -73,7 +70,7 @@ three_yrs_ago_count = 0
 three_yrs_ago = datetime.now() - relativedelta(years=3)
 four_yrs_ago_count = 0
 four_yrs_ago = datetime.now() - relativedelta(years=4)
-tengap = 7
+tengap = 10
 hundredgap = 100
 
 # Functions
@@ -247,7 +244,7 @@ Total days in an eighty-year life. 29220
 
 ## Super Slogan
 {ss}
-{'-'*40}
+{'–'*4}
 Zettelkasten Statistics
        ★★★★★
 \t{twords} Total word count
@@ -263,7 +260,7 @@ Zettelkasten Statistics
 \t{tyoutube} [YouTube Videos Processed](thearchive://match/"#youtube").
 \t{tvideo} [Poetry of Zettelkasting Videos Made](thearchive://match/"#video").
 
-{'-'*40}
+{'–'*4}
 [{yesterday_count} notes created on {yesterday.strftime('%Y%m%d')}](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}) yesterday.
 [{one_week_ago_count} notes created on {one_week_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_week_ago.strftime('%Y%m%d')}) one week ago.
 [{three_weeks_ago_count} notes created on {three_weeks_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_weeks_ago.strftime('%Y%m%d')}) three weeks ago.
@@ -279,7 +276,7 @@ output = f"""
 **{tencount} new zettel in the last {tengap} days.**
 {hundredcount} new zettel in the last {hundredgap} days.
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
-{'-'*40}
+{'–'*4}
 """
 
 for newnotes in tencountfiles:

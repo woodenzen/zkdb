@@ -1,6 +1,3 @@
-#!/usr/local/bin/python3.9
-# encoding: utf-8
-
 import pathlib
 import os, re, random
 from collections import defaultdict
@@ -8,7 +5,7 @@ from datetime import date
 from datetime import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
-from bear_rand import zkrand
+from zkfunctions import zkrand, trend, large_note_rand
 from plistlib import load
 from urllib.parse import urlparse
 
@@ -31,7 +28,7 @@ def TheArchivePath():
 # Variables
 #####
 # path to zettelkasten
-target_dir = pathlib.Path(TheArchivePath())
+zettelkasten = pathlib.Path(TheArchivePath())
 
 # Regex
 date_pattern = re.compile(r"\d{8}")
@@ -43,6 +40,9 @@ day0 = date(2018, 11, 14)
 atom = ""
 counter = 0
 today = date.today()
+twords = 0
+tlinks = 0
+tzettel = 0
 
 #####
 # Functions
@@ -50,16 +50,33 @@ today = date.today()
 def lines_that_contain(string, fp):
     return [line for line in fp if string in line]
 
+# Random Super Slogan
 
-# Iteration for counting total zettel (tzettel)
-for filename in os.listdir(target_dir):
+ss = random.choice(
+    open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md").readlines()
+)
+ss = ss.replace("\xa0", " ")
+
+# Iteration for counting tags, links (tlinks), wc (twords), total zettel (tzettel)
+
+for filename in os.listdir(zettelkasten):
     if filename.endswith(".md"):
+        file = open((os.path.join(zettelkasten, filename)), "r")
+        data = file.read()
+        links = data.count("]]")
+        tlinks += links
+        per_word = data.split()
+        twords += len(per_word)
         tzettel += 1
+
+        continue
+    else:
+        continue
 
 
 # Files is a dictionary mapping of a date to the list of files with that date
 files = defaultdict(list)
-for child in target_dir.iterdir():
+for child in zettelkasten.iterdir():
     # Skip directories
     if child.is_dir():
         continue
@@ -74,7 +91,7 @@ for child in target_dir.iterdir():
     tencount = 0
     tencountfiles = []
     hundredcount = 0
-    tengap = 7
+    tengap = 10
     hundredgap = 100
 
 for uuid in sorted(files, reverse=True):
@@ -101,7 +118,6 @@ for uuid in sorted(files, reverse=True):
                     + atom
                 )
                 tencount += 1
-
         # 100 day gap
         for i in range(hundredgap):
             targetdate = (date.today() - timedelta(+i)).strftime("%Y%m%d")
@@ -109,13 +125,38 @@ for uuid in sorted(files, reverse=True):
                 hundredcount += 1
 
 # Output
+
 zkrand(10)
+
+print(f"""
+{'-'*40}
+""")
+
+large_note_rand(800, 1600, 10)
+
+# Trending
+ten = '⬇︎' if trend(20, 10) >= trend(10, 10) else '⬆︎'
+hundred = '⬇︎' if trend(200, 100) >= trend(100, 100) else '⬆︎'
 
 output = f""" 
 {'-'*40}
-{tencount} new zettel in the last {tengap} days.
-{hundredcount} new zettel in the last {hundredgap} days.
+
+## Super Slogan
+{ss}
+
+---
+
+Zettelkasten Statistics
+       ★★★★★
+{twords} Total word count
+{tlinks - tzettel} Total link count
+{tzettel} Total zettel count
+       ★★★★★
+       
+{tencount} new zettel in the last {tengap} days. {ten}
+{hundredcount} new zettel in the last {hundredgap} days. {hundred}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
+
 {'-'*40}
 
 """

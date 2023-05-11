@@ -5,9 +5,10 @@ from dateutil.relativedelta import relativedelta
 from plistlib import load
 from urllib.parse import urlparse
 
-'''
-Get folder size
-'''
+
+####
+# Get folder size
+####
 def getFolderSize(folder):
     total_size = 0
     for dirpath, dirnames, filenames in os.walk(folder):#not sub folders
@@ -16,9 +17,9 @@ def getFolderSize(folder):
             total_size += os.path.getsize(fp)   
     return total_size
     
-'''
-Human readable single folder size
-'''
+####
+# Human readable single folder size
+####
 
 def sizeof_fmt(num, suffix='bytes'):
     for unit in ['',' Kilo',' Mega',' Giga',' Tera',' Peta',' Exa',' Zetta']:
@@ -34,7 +35,6 @@ if __name__ == '__main__':
 ####
 # Function for finding the path to The Archive
 #####
-# Set the active archive path
 def TheArchivePath():
 #  Variables that ultimately revel The Archive's plist file.
     bundle_id = "de.zettelkasten.TheArchive"
@@ -55,9 +55,12 @@ if __name__ == "__main__":
         print(f'## {len(os.listdir(i))} files in {i}.')
         print(f'## {sizeof_fmt(getFolderSize(i))} in {i}.')
         print('-'*40) 
-'''
-Print a random list of notes from the past.
-'''   
+
+    
+#####
+# Function for getting a list of random files in the ZK 
+#####
+    
 def zkrand(number):
     target_dir = "/Users/will/Dropbox/zettelkasten"
     counter = 0
@@ -84,5 +87,71 @@ def zkrand(number):
                 counter += 1
                     
 if __name__ == "__main__":
-    zkrand(10)
-    print('-'*40)     
+    print(zkrand(10))    
+
+    
+#####
+# Function for determining if the ZK is growing or shrinking
+##### 
+
+import os
+from datetime import datetime, timedelta
+
+zettelkasten = "/Users/will/Dropbox/zettelkasten/"
+
+def trend(days_ago, num_days):
+    count = 0
+    target_date = datetime.now() - timedelta(days=days_ago)
+    target_date_str = target_date.strftime('%Y%m%d')
+    for i in range(num_days):
+        date = target_date - timedelta(days=i)
+        date_str = date.strftime('%Y%m%d')
+        for filename in os.listdir(zettelkasten):
+            if date_str in filename:
+                count += 1
+    return count 
+
+if __name__ == "__main__":
+    result = '⬇︎' if trend(20, 10) <= trend(10, 10) else '⬆︎'
+    print(result)
+ 
+ 
+
+    
+#####
+# Function for getting a list of random files in the ZK that are more than 1000 words
+##### 
+ 
+ 
+import os, re, random
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+
+####
+# Get a random file from the zettelkasten folder with more than 1000 words
+####
+   
+def large_note_rand(minsize, maxsize, target):
+    target_dir = "/Users/will/Dropbox/zettelkasten"
+    files = os.listdir(target_dir)
+    files = [f for f in files if f.endswith('.md')]
+    zettel=0
+    print(f'## {target} random notes for atomizing, between {minsize} and {maxsize} words.')    
+    while zettel < target:
+        # open a random file
+        random.shuffle(files)
+        file_name, file_ext = os.path.splitext(os.path.basename(files[0]))
+        with open(f'{target_dir}/{files[0]}', 'r') as file:
+            data = file.read()
+            words = data.split()
+            if len(words) > minsize and len(words) < maxsize:
+                zettel+=1   
+                # print(f"{file_name} has {len(words)} words.")
+                # add leading spaces
+                # print(f'{len(words)} [{file_name}](thearchive://match/{file_name})')
+                print(f'{str(len(words)).ljust(4)} [{file_name}](thearchive://match/{file_name})')
+        continue            
+    return 
+if __name__ == "__main__":
+    large_note_rand(800, 1600, 10)
