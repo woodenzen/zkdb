@@ -34,3 +34,4 @@ for filename in os.listdir(zettelkasten):
 # print('\n Execution time in seconds: ' + str(executionTime))
          
 
+# Terminal code. egrep -i "\b(?:\S*?"boston"\S*?\W+(?:\w+\W+){0,"10"}?\S*?"love"\S*?|\S*?"love"\S*?\W+(?:\w+\W+){0,"10"}?\S*?"boston"\S*?)\b" *.md

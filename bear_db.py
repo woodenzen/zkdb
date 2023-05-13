@@ -135,8 +135,8 @@ print(f"""
 large_note_rand(800, 1600, 10)
 
 # Trending
-ten = '⬇︎' if trend(20, 10) >= trend(10, 10) else '⬆︎'
-hundred = '⬇︎' if trend(200, 100) >= trend(100, 100) else '⬆︎'
+ten = '⬇︎' if trend(11, 10) >= trend(10, 10) else '⬆︎'
+hundred = '⬇︎' if trend(101, 100) >= trend(100, 100) else '⬆︎'
 
 output = f""" 
 {'-'*40}
