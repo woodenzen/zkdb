@@ -132,16 +132,19 @@ from dateutil.relativedelta import relativedelta
 # Get a random file from the zettelkasten folder with more than 1000 words
 ####
    
-def large_note_rand(minsize, maxsize, target):
+def large_note_rand(minsize, maxsize, notenumber):
     target_dir = "/Users/will/Dropbox/zettelkasten"
     files = os.listdir(target_dir)
     files = [f for f in files if f.endswith('.md')]
     zettel=0
-    print(f'## {target} random notes for atomizing, between {minsize} and {maxsize} words.')    
-    while zettel < target:
+    print(f'## {notenumber} random notes for reveiw & atomizing, between {minsize} and {maxsize} words.')    
+    while zettel < notenumber:
         # open a random file
         random.shuffle(files)
         file_name, file_ext = os.path.splitext(os.path.basename(files[0]))
+        d = re.compile('.* (\d{8})')
+        zkdate = d.match(str(file_name))[1]
+        year=zkdate[:4]
         with open(f'{target_dir}/{files[0]}', 'r') as file:
             data = file.read()
             words = data.split()
@@ -150,8 +153,8 @@ def large_note_rand(minsize, maxsize, target):
                 # print(f"{file_name} has {len(words)} words.")
                 # add leading spaces
                 # print(f'{len(words)} [{file_name}](thearchive://match/{file_name})')
-                print(f'{str(len(words)).ljust(4)} [{file_name}](thearchive://match/{file_name})')
+                print(f'{year} {str(len(words)).ljust(4)} [{file_name}](thearchive://match/{file_name})')
         continue            
     return 
 if __name__ == "__main__":
-    large_note_rand(800, 1600, 10)
+    large_note_rand(500, 1500, 10)

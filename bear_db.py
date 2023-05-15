@@ -126,13 +126,13 @@ for uuid in sorted(files, reverse=True):
 
 # Output
 
-zkrand(10)
+# zkrand(10)
 
 print(f"""
 {'-'*40}
 """)
 
-large_note_rand(800, 1600, 10)
+large_note_rand(400, 2500, 10)
 
 # Trending
 ten = '⬇︎' if trend(11, 10) >= trend(10, 10) else '⬆︎'
