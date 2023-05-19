@@ -96,6 +96,7 @@ if __name__ == "__main__":
 
 import os
 from datetime import datetime, timedelta
+import pathlib
 
 zettelkasten = "/Users/will/Dropbox/zettelkasten/"
 
@@ -103,20 +104,25 @@ def trend(days_ago, num_days):
     count = 0
     target_date = datetime.now() - timedelta(days=days_ago)
     target_date_str = target_date.strftime('%Y%m%d')
+    
     for i in range(num_days):
         date = target_date - timedelta(days=i)
         date_str = date.strftime('%Y%m%d')
-        for filename in os.listdir(zettelkasten):
-            if date_str in filename:
+        for f in os.listdir(zettelkasten):
+            if date_str in f and f.endswith('.md'):
                 count += 1
-    return count 
+    return count, target_date_str, date_str 
 
 if __name__ == "__main__":
-    result = '⬇︎' if trend(20, 10) <= trend(10, 10) else '⬆︎'
-    print(result)
- 
- 
-
+    yesterday = 1
+    two_days_ago = 2
+    # ten = '⬇︎' if trend(yesterday, 11) <= trend(two_days_ago, 10) else '⬆︎'
+    # hundred = '⬇︎' if trend(yesterday, 100) <= trend(two_days_ago, 100) else '⬆︎'
+    ten = '⬇︎' if trend(11, 10) >= trend(10, 10) else '⬆︎'
+    hundred = '⬇︎' if trend(101, 100) >= trend(100, 100) else '⬆︎'
+    print(ten, trend(yesterday, 11), trend(two_days_ago, 10))
+    print(hundred, trend(yesterday, 100), trend(two_days_ago, 100))
+    
     
 #####
 # Function for getting a list of random files in the ZK that are more than 1000 words
@@ -137,7 +143,7 @@ def large_note_rand(minsize, maxsize, notenumber):
     files = os.listdir(target_dir)
     files = [f for f in files if f.endswith('.md')]
     zettel=0
-    print(f'## {notenumber} random notes for reveiw & atomizing, between {minsize} and {maxsize} words.')    
+    print(f'## {notenumber} random notes for review & atomizing, between {minsize} and {maxsize} words.')    
     while zettel < notenumber:
         # open a random file
         random.shuffle(files)

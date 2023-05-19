@@ -132,11 +132,11 @@ print(f"""
 {'-'*40}
 """)
 
-large_note_rand(400, 2500, 10)
+large_note_rand(500, 10000, 10)
 
 # Trending
-ten = '⬇︎' if trend(11, 10) >= trend(10, 10) else '⬆︎'
-hundred = '⬇︎' if trend(101, 100) >= trend(100, 100) else '⬆︎'
+ten = '⬆︎' if trend(11, 10) >= trend(10, 10) else '⬇︎'
+hundred = '⬆︎' if trend(101, 100) >= trend(100, 100) else '⬇︎'
 
 output = f""" 
 {'-'*40}
