@@ -3,11 +3,11 @@
 import os, re, random
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-
+from zkfunctions import TheArchivePath
 
     
 def zkrand():
-    target_dir = "/Users/will/Dropbox/zettelkasten"
+    target_dir = TheArchivePath()
     counter = 0
     # Set counter to the number of notes wanted to be returned. 
     while counter < 4:

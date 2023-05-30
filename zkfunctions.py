@@ -36,7 +36,12 @@ if __name__ == '__main__':
 # Function for finding the path to The Archive
 #####
 def TheArchivePath():
-#  Variables that ultimately revel The Archive's plist file.
+    """
+    Find the path to The Archive's plist file.
+
+    Returns:
+        A string representing the path to The Archive.
+    """
     bundle_id = "de.zettelkasten.TheArchive"
     team_id = "FRMDA3XRGC"
     #`fileName` is the path to the plist file that contains the path to the ZK.
@@ -60,13 +65,29 @@ if __name__ == "__main__":
         print(f'## {sizeof_fmt(getFolderSize(i))} in {i}.')
         print('-'*40) 
 
+
+#####
+# Function for finding a string in a line of a file
+#####
+def lines_that_contain(string, fp):
+    """
+    Find lines in a file that contain a given string.
+
+    Args:
+        string: A string to search for in the file.
+        fp: A file object representing the file to search.
+
+    Returns:
+        A list of strings representing the lines in the file that contain the given string.
+    """
+    return [line for line in fp if string in line]
     
 #####
 # Function for getting a list of random files in the ZK 
 #####
     
 def zkrand(number):
-    target_dir = "/Users/will/Dropbox/zettelkasten"
+    target_dir = TheArchivePath()
     counter = 0
     # Set counter to the number of notes wanted to be returned.
     print(f'## {number} random notes from the past.')
@@ -103,9 +124,7 @@ from datetime import datetime
 from datetime import timedelta
 
 # path to zettelkasten
-zettelkasten = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
-
-
+zettelkasten = pathlib.Path(TheArchivePath())
 
 def trend(current, previous, lenght):
     """
@@ -163,7 +182,7 @@ from dateutil.relativedelta import relativedelta
 ####
    
 def large_note_rand(minsize, maxsize, notenumber):
-    target_dir = "/Users/will/Dropbox/zettelkasten"
+    target_dir = TheArchivePath()
     files = os.listdir(target_dir)
     files = [f for f in files if f.endswith('.md')]
     zettel=0

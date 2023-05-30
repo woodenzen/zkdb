@@ -17,8 +17,6 @@ Variables:
     tencountfiles: A list of strings representing the filenames of notes created in the last 10 days.
     tengap: An integer representing the number of days to look back for notes.
 
-Functions:
-    lines_that_contain: Find lines in a file that contain a given string.
 """
 
 import pathlib
@@ -28,29 +26,7 @@ from datetime import date
 from datetime import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
-from zkfunctions import zkrand, trend, large_note_rand
-from plistlib import load
-from urllib.parse import urlparse
-
-#####
-# Function for finding the path to The Archive
-#####
-# Set the active archive path
-def TheArchivePath():
-    """
-    Find the path to The Archive's plist file.
-
-    Returns:
-        A string representing the path to The Archive.
-    """
-    bundle_id = "de.zettelkasten.TheArchive"
-    team_id = "FRMDA3XRGC"
-    fileName = os.path.expanduser(
-        "~/Library/Group Containers/{0}.{1}.prefs/Library/Preferences/{0}.{1}.prefs.plist".format(team_id, bundle_id))
-    with open(fileName, 'rb') as fp:
-        pl = load(fp) # load is a special function for use with a plist
-        path = urlparse(pl['archiveURL']) # 'archiveURL' is the key that pairs with the zk path
-    return (path.path) # path is the part of the path that is formatted for use as a path.
+from zkfunctions import trend, large_note_rand, TheArchivePath, lines_that_contain
 
 #####
 # Variables
@@ -73,22 +49,6 @@ tlinks = 0
 tzettel = 0
 tencountfiles = []
 tengap = 10
-
-#####
-# Functions
-#####
-def lines_that_contain(string, fp):
-    """
-    Find lines in a file that contain a given string.
-
-    Args:
-        string: A string to search for in the file.
-        fp: A file object representing the file to search.
-
-    Returns:
-        A list of strings representing the lines in the file that contain the given string.
-    """
-    return [line for line in fp if string in line]
 
 # Random Super Slogan
 

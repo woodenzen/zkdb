@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-
 import time
-startTime = time.time()
-
-import re
-import os
 import pathlib
-from collections import defaultdict
-from datetime import date, datetime, timedelta
-import random
-from turtle import rt
 from dateutil.relativedelta import relativedelta
 
-# path to zettelkasten
+startTime = time.time()
 
+# path to zettelkasten
 zettelkasten = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
 
 # Functions
