@@ -1,3 +1,26 @@
+"""
+A program for analyzing notes stored in The Archive.
+
+The program can count the number of links and words in the notes, as well as group the notes by date. The program can also generate a random notes, over a specified size, from The Archive. It includes a random slogan generator, ZK stats, trends, and a list of notes created in the last 10 days.
+
+Variables:
+    zettelkasten: A pathlib.Path object representing the path to The Archive.
+    date_pattern: A regular expression pattern for matching dates in filenames.
+    link_pattern: A regular expression pattern for matching links in note text.
+    tzettel: An integer representing the total number of notes in The Archive.
+    day0: A date object representing the start date for calculating the average number of notes created per day.
+    atom: A string representing the subatomic structure of a note.
+    counter: An integer representing a counter for iterating over notes.
+    today: A date object representing the current date.
+    twords: An integer representing the total number of words in The Archive.
+    tlinks: An integer representing the total number of links in The Archive.
+    tencountfiles: A list of strings representing the filenames of notes created in the last 10 days.
+    tengap: An integer representing the number of days to look back for notes.
+
+Functions:
+    lines_that_contain: Find lines in a file that contain a given string.
+"""
+
 import pathlib
 import os, re, random
 from collections import defaultdict
@@ -14,7 +37,12 @@ from urllib.parse import urlparse
 #####
 # Set the active archive path
 def TheArchivePath():
-#  Variables that ultimately revel The Archive's plist file.
+    """
+    Find the path to The Archive's plist file.
+
+    Returns:
+        A string representing the path to The Archive.
+    """
     bundle_id = "de.zettelkasten.TheArchive"
     team_id = "FRMDA3XRGC"
     fileName = os.path.expanduser(
@@ -43,11 +71,23 @@ today = date.today()
 twords = 0
 tlinks = 0
 tzettel = 0
+tencountfiles = []
+tengap = 10
 
 #####
 # Functions
 #####
 def lines_that_contain(string, fp):
+    """
+    Find lines in a file that contain a given string.
+
+    Args:
+        string: A string to search for in the file.
+        fp: A file object representing the file to search.
+
+    Returns:
+        A list of strings representing the lines in the file that contain the given string.
+    """
     return [line for line in fp if string in line]
 
 # Random Super Slogan
@@ -87,13 +127,6 @@ for child in zettelkasten.iterdir():
     file_date = match.group()
     files[file_date].append(child)
 
-    # Get counts for various date parameters.
-    tencount = 0
-    tencountfiles = []
-    hundredcount = 0
-    tengap = 10
-    hundredgap = 100
-
 for uuid in sorted(files, reverse=True):
     for filename in files[uuid]:
         file_name = os.path.basename(filename).rsplit(".", 1)[0]
@@ -117,26 +150,20 @@ for uuid in sorted(files, reverse=True):
                     + ")\n\t\t"
                     + atom
                 )
-                tencount += 1
-        # 100 day gap
-        for i in range(hundredgap):
-            targetdate = (date.today() - timedelta(+i)).strftime("%Y%m%d")
-            if targetdate == uuid:
-                hundredcount += 1
+
+# Random Zettel Function    
+large_note_rand(500, 10000, 10)
+
+# Trending Function
+tenday_trend_result = trend(0, 11, 10)
+hundredday_trend_result = trend(0, 101, 100)
 
 # Output
-
-# zkrand(10)
 
 print(f"""
 {'-'*40}
 """)
 
-large_note_rand(500, 10000, 10)
-
-# Trending
-ten = '⬆︎' if trend(11, 10) >= trend(10, 10) else '⬇︎'
-hundred = '⬆︎' if trend(101, 100) >= trend(100, 100) else '⬇︎'
 
 output = f""" 
 {'-'*40}
@@ -153,8 +180,8 @@ Zettelkasten Statistics
 {tzettel} Total zettel count
        ★★★★★
        
-{tencount} new zettel in the last {tengap} days. {ten}
-{hundredcount} new zettel in the last {hundredgap} days. {hundred}
+{tenday_trend_result[3]}-day trend: {tenday_trend_result[0]}/{tenday_trend_result[1]} {tenday_trend_result[2]}
+{hundredday_trend_result[3]}-day trend: {hundredday_trend_result[0]}/{hundredday_trend_result[1]} {hundredday_trend_result[2]}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'-'*40}

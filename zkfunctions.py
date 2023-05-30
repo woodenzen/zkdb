@@ -39,12 +39,16 @@ def TheArchivePath():
 #  Variables that ultimately revel The Archive's plist file.
     bundle_id = "de.zettelkasten.TheArchive"
     team_id = "FRMDA3XRGC"
+    #`fileName` is the path to the plist file that contains the path to the ZK.
     fileName = os.path.expanduser(
         "~/Library/Group Containers/{0}.{1}.prefs/Library/Preferences/{0}.{1}.prefs.plist".format(team_id, bundle_id))
     with open(fileName, 'rb') as fp:
-        pl = load(fp) # load is a special function for use with a plist
-        path = urlparse(pl['archiveURL']) # 'archiveURL' is the key that pairs with the zk path
-    return (path.path) # path is the part of the path that is formatted for use as a path.
+        # load is a special function for use with a plist
+        pl = load(fp) 
+        # 'archiveURL' is the key that pairs with the zk path
+        path = urlparse(pl['archiveURL']) 
+    # path is the part of the path that is formatted for use as a path.
+    return (path.path) 
 
 if __name__ == "__main__":
     zettelkasten = pathlib.Path(TheArchivePath())
@@ -94,45 +98,65 @@ if __name__ == "__main__":
 # Function for determining if the ZK is growing or shrinking
 ##### 
 
-import os
-from datetime import datetime, timedelta
-import pathlib
+import os, pathlib, re
+from datetime import datetime
+from datetime import timedelta
 
-zettelkasten = "/Users/will/Dropbox/zettelkasten/"
+# path to zettelkasten
+zettelkasten = pathlib.Path("/Users/will/Dropbox/zettelkasten/")
 
-def trend(days_ago, num_days):
-    count = 0
-    target_date = datetime.now() - timedelta(days=days_ago)
-    target_date_str = target_date.strftime('%Y%m%d')
-    
-    for i in range(num_days):
-        date = target_date - timedelta(days=i)
-        date_str = date.strftime('%Y%m%d')
-        for f in os.listdir(zettelkasten):
-            if date_str in f and f.endswith('.md'):
-                count += 1
-    return count, target_date_str, date_str 
+
+
+def trend(current, previous, lenght):
+    """
+    Count and compare the number of files modified during the current and previous time periods.
+
+    Args:
+        current (int): The number of days ago to start the current time period.
+        previous (int): The number of days ago to start the previous time period.
+        length (int): The length of the time period to count files for.
+
+    Returns:
+        A tuple containing the number of files modified during the current and previous time periods,
+        and a trend indicator ('⎯' for no change, '⬆︎' for an increase, '⬇︎' for a decrease).
+    """
+    previous_timestamp = datetime.now() - timedelta(days=(previous))
+    current_timestamp = datetime.now() - timedelta(days=(current))
+    current_count = 0
+    previous_count = 0
+    for f in os.listdir(zettelkasten):
+        if f.endswith('.md'):
+            file_date_str = re.findall(r'\d{8}', f)[0]
+            file_date = datetime.strptime(file_date_str, '%Y%m%d')
+            if (current_timestamp - file_date).days <= (lenght):
+                current_count += 1
+            elif 0 < (previous_timestamp - file_date).days <= (lenght):
+                previous_count += 1
+    trend = '⎯'
+    if current_count > previous_count:
+        trend = '⬆︎'
+    elif current_count < previous_count :
+        trend = '⬇︎'
+    return current_count, previous_count, trend, lenght
 
 if __name__ == "__main__":
-    yesterday = 1
-    two_days_ago = 2
-    # ten = '⬇︎' if trend(yesterday, 11) <= trend(two_days_ago, 10) else '⬆︎'
-    # hundred = '⬇︎' if trend(yesterday, 100) <= trend(two_days_ago, 100) else '⬆︎'
-    ten = '⬇︎' if trend(11, 10) >= trend(10, 10) else '⬆︎'
-    hundred = '⬇︎' if trend(101, 100) >= trend(100, 100) else '⬆︎'
-    print(ten, trend(yesterday, 11), trend(two_days_ago, 10))
-    print(hundred, trend(yesterday, 100), trend(two_days_ago, 100))
+    # print(trend(0, 11, 10))
+    # print(trend(0, 101, 100))
+    tenday_trend_result = trend(0, 11, 10)
+    # tenday_previous_count = tenday_trend_result[1]
+    hundredday_trend_result = trend(0, 101, 100)  
+    # hundredday_count = hundredday_trend_result[0]  
+    print(f'{tenday_trend_result[3]}-day trend: {tenday_trend_result[0]} {tenday_trend_result[1]} {tenday_trend_result[2]}')
+    print(f'{hundredday_trend_result[3]}-day trend: {hundredday_trend_result[0]} {hundredday_trend_result[1]} {hundredday_trend_result[2]}')
     
     
 #####
 # Function for getting a list of random files in the ZK that are more than 1000 words
 ##### 
  
- 
 import os, re, random
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-
 
 ####
 # Get a random file from the zettelkasten folder with more than 1000 words
@@ -162,5 +186,46 @@ def large_note_rand(minsize, maxsize, notenumber):
                 print(f'{year} {str(len(words)).ljust(4)} [{file_name}](thearchive://match/{file_name})')
         continue            
     return 
+
 if __name__ == "__main__":
     large_note_rand(500, 1500, 10)
+    
+####
+# Function that returns the time it takes to run a function
+# Is used as a decorator
+#####     
+    
+import os
+import sys
+from datetime import timedelta
+from timeit import time
+
+def stopwatch(method):
+    def timed(*args, **kw):
+        ts = time.perf_counter()
+        result = method(*args, **kw)
+        te = time.perf_counter()
+        duration = timedelta(seconds=te - ts)
+        print(f"{method.__name__}: {duration}")
+        return result
+    return timed
+
+if __name__ == "__main__":
+    @stopwatch
+    def test():
+        return sum(range(1000000))
+    test()
+    
+####
+# Regex search of file names in the ZK
+####    
+
+import os
+import re
+import glob
+    
+def filepaths_search(root_path: str, file_regex: str):
+    return glob.glob(os.path.join(root_path, file_regex))
+
+if __name__ == "__main__":
+    print(filepaths_search(zettelkasten, "*20221218*.md"))
