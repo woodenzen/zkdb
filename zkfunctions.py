@@ -126,7 +126,7 @@ from datetime import timedelta
 # path to zettelkasten
 zettelkasten = pathlib.Path(TheArchivePath())
 
-def trend(current, previous, lenght):
+def trend(current, previous, length):
     """
     Count and compare the number of files modified during the current and previous time periods.
 
@@ -139,24 +139,24 @@ def trend(current, previous, lenght):
         A tuple containing the number of files modified during the current and previous time periods,
         and a trend indicator ('⎯' for no change, '⬆︎' for an increase, '⬇︎' for a decrease).
     """
-    previous_timestamp = datetime.now() - timedelta(days=(previous))
-    current_timestamp = datetime.now() - timedelta(days=(current))
+    current_timestamp = datetime.now() - timedelta(days=current)
+    previous_timestamp = datetime.now() - timedelta(days=(current + length))
     current_count = 0
     previous_count = 0
     for f in os.listdir(zettelkasten):
         if f.endswith('.md'):
             file_date_str = re.findall(r'\d{8}', f)[0]
             file_date = datetime.strptime(file_date_str, '%Y%m%d')
-            if (current_timestamp - file_date).days <= (lenght):
+            if (current_timestamp - file_date).days <= (length):
                 current_count += 1
-            elif 0 < (previous_timestamp - file_date).days <= (lenght):
+            elif (previous_timestamp - file_date).days <= length and (current_timestamp - file_date).days > length:
                 previous_count += 1
     trend = '⎯'
     if current_count > previous_count:
         trend = '⬆︎'
     elif current_count < previous_count :
         trend = '⬇︎'
-    return current_count, previous_count, trend, lenght
+    return current_count, previous_count, trend, length
 
 if __name__ == "__main__":
     # print(trend(0, 11, 10))
