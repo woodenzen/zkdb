@@ -120,11 +120,6 @@ hundredday_trend_result = trend(0, 101, 100)
 
 # Output
 
-print(f"""
-{'-'*40}
-""")
-
-
 output = f""" 
 {'-'*40}
 
