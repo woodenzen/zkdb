@@ -112,7 +112,7 @@ for uuid in sorted(files, reverse=True):
                 )
 
 # Random Zettel Function    
-large_note_rand(500, 10000, 10)
+large_note_rand(500, 20000, 10)
 
 # Trending Function
 tenday_trend_result = trend(0, 11, 10)
@@ -125,7 +125,6 @@ output = f"""
 
 ## Super Slogan
 {ss}
-
 ---
 
 Zettelkasten Statistics

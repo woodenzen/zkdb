@@ -11,8 +11,9 @@ To use the or compare arg1 or arg
 
 import re
 import os
+from zkfunctions import TheArchivePath
 
-zettelkasten = '/Users/will/Dropbox/zettelkasten'
+directory = TheArchivePath()
 
 def zsearch(s, *args):
     for x in args: 
@@ -21,9 +22,9 @@ def zsearch(s, *args):
             return None
     return s
 
-for filename in os.listdir(zettelkasten):
+for filename in os.listdir(directory):
     if filename.endswith('.md'):
-        with open(os.path.join(zettelkasten, filename),"r") as fp:
+        with open(os.path.join(directory, filename),"r") as fp:
             for line in fp:
                 result_line = zsearch(line, os.environ["KMVAR_firstTerm"], os.environ["KMVAR_secondTerm"], os.environ["KMVAR_thirdTerm"])
                 if result_line != None:
