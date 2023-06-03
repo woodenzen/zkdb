@@ -120,7 +120,7 @@ if __name__ == "__main__":
 ##### 
 
 import os, pathlib, re
-from datetime import datetime
+from datetime import datetime as dt
 from datetime import timedelta
 
 # path to zettelkasten
@@ -139,14 +139,14 @@ def trend(current, previous, length):
         A tuple containing the number of files modified during the current and previous time periods,
         and a trend indicator ('⎯' for no change, '⬆︎' for an increase, '⬇︎' for a decrease).
     """
-    current_timestamp = datetime.now() - timedelta(days=current)
-    previous_timestamp = datetime.now() - timedelta(days=(current + length))
+    current_timestamp = dt.now() - timedelta(days=current)
+    previous_timestamp = dt.now() - timedelta(days=(current + length))
     current_count = 0
     previous_count = 0
     for f in os.listdir(zettelkasten):
         if f.endswith('.md'):
             file_date_str = re.findall(r'\d{8}', f)[0]
-            file_date = datetime.strptime(file_date_str, '%Y%m%d')
+            file_date = dt.strptime(file_date_str, '%Y%m%d')
             if (current_timestamp - file_date).days <= (length):
                 current_count += 1
             elif (previous_timestamp - file_date).days <= length and (current_timestamp - file_date).days > length:
@@ -248,3 +248,53 @@ def filepaths_search(root_path: str, file_regex: str):
 
 if __name__ == "__main__":
     print(filepaths_search(zettelkasten, "*20221218*.md"))
+
+####
+# Function for bookography progress
+####    
+
+import re
+import datetime
+
+def bookography(goal):
+    """
+    Calculates the progress towards a reading goal based on the number of books read compared to the years week number.
+
+    Args:
+        goal (int): The number of books to read in a year.
+    
+    Returns:
+        tuple:
+        - int: The highest book number read.
+        - int: The current week of the year.
+        - int: The goal for the year.
+    
+    Returns a tuple containing the highest book number read, the current week of the year, and the goal for the year.
+    """
+    # Variables
+    # User needs to change this to the path of their Bookography file
+    bookography = "/Users/will/Dropbox/zettelkasten/Bookography 2023 202301021454.md"
+    current_date = datetime.date.today()
+    current_week = current_date.isocalendar()[1]
+    
+    # Read the entire file
+    with open(bookography, 'r') as file:
+        content = file.read()
+    # Search for ordered list items and extract numbers
+    # regex pattern looks for lines that start with a number followed by a period
+    pattern = r"^\s*\d+\."
+    matches = re.findall(pattern, content, re.MULTILINE)
+    # Convert matches to integers and remove the period
+    numbers = [int(match.strip(".")) for match in matches]
+
+    # Find the highest number
+    if numbers:
+        highest_number = max(numbers)
+    else:
+        highest_number = 0
+
+    return highest_number, current_week, goal
+
+if __name__ == "__main__":
+    highest_number, current_week, goal = bookography(52)
+    print(f"**I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.**\n**My goal is to read {goal} books this year.**\n\n")

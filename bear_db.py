@@ -26,7 +26,7 @@ from datetime import date
 from datetime import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
-from zkfunctions import trend, large_note_rand, TheArchivePath, lines_that_contain
+from zkfunctions import trend, large_note_rand, TheArchivePath, lines_that_contain, bookography
 
 #####
 # Variables
@@ -118,14 +118,21 @@ large_note_rand(500, 20000, 10)
 tenday_trend_result = trend(0, 11, 10)
 hundredday_trend_result = trend(0, 101, 100)
 
+# Bookography Function
+highest_number, current_week, goal = bookography(52)
+
 # Output
 
 output = f""" 
 {'-'*40}
+## Book Goal Progress 
+**I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.**\n**My goal is to read {goal} books this year.**
+
+{'-'*40}
 
 ## Super Slogan
 {ss}
----
+{'-'*40}
 
 Zettelkasten Statistics
        ★★★★★
