@@ -96,7 +96,7 @@ for uuid in sorted(files, reverse=True):
                 with open(filename, "r") as fp:
                     atom = ""
                     for line in lines_that_contain("Subatomic: ", fp):
-                        atom = "-" + line.split(":")[1]
+                        atom = "*" + line.split(":")[1]
                 #   Archive formatted links if the placement of the output is destined for The Archive
                         # tencountfiles.append(file_name.rsplit((uuid), 1)[0] + "[[" + full_uuid + "]]\n   -" + atom)
                 #   Markdown format
