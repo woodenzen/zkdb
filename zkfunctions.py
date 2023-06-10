@@ -119,55 +119,54 @@ if __name__ == "__main__":
 # Function for determining if the ZK is growing or shrinking
 ##### 
 
-import os, pathlib, re
+import os
+import fnmatch
 from datetime import datetime as dt
 from datetime import timedelta
+zettelkasten = "/Users/will/Dropbox/zettelkasten/"
 
-# path to zettelkasten
-zettelkasten = pathlib.Path(TheArchivePath())
-
-def trend(current, previous, length):
+def trend(length):
     """
-    Count and compare the number of files modified during the current and previous time periods.
+    Returns the number of files in the zettelkasten directory that match a date pattern
+    for the last n days, where n is the length parameter. This is uesd to calculate the trend.
+        
+    The date pattern is YYYYMMDD, and the files are markdown files.
 
-    Args:
-        current (int): The number of days ago to start the current time period.
-        previous (int): The number of days ago to start the previous time period.
-        length (int): The length of the time period to count files for.
-
-    Returns:
-        A tuple containing the number of files modified during the current and previous time periods,
-        and a trend indicator ('⎯' for no change, '⬆︎' for an increase, '⬇︎' for a decrease).
+    The function returns a tuple of the number of files that match the pattern and the length parameter.    
     """
-    current_timestamp = dt.now() - timedelta(days=current)
-    previous_timestamp = dt.now() - timedelta(days=(current + length))
-    current_count = 0
-    previous_count = 0
-    for f in os.listdir(zettelkasten):
-        if f.endswith('.md'):
-            file_date_str = re.findall(r'\d{8}', f)[0]
-            file_date = dt.strptime(file_date_str, '%Y%m%d')
-            if (current_timestamp - file_date).days <= (length):
-                current_count += 1
-            elif (previous_timestamp - file_date).days <= length and (current_timestamp - file_date).days > length:
-                previous_count += 1
-    trend = '⎯'
-    if current_count > previous_count:
-        trend = '⬆︎'
-    elif current_count < previous_count :
-        trend = '⬇︎'
-    return current_count, previous_count, trend, length
+    # calculate date range for the last ten days
+    today = dt.today()
+    ten_days_ago = today - timedelta(days=length)
+    date_range = [ten_days_ago + timedelta(days=x) for x in range(length)]
+
+    # use fnmatch to filter the file names based on a pattern that matches the date string
+    count = 0
+    for root, dirs, files in os.walk(zettelkasten):
+        for date in date_range:
+            date_str = date.strftime("%Y%m%d")
+            for file in fnmatch.filter(files, f"*{date_str}*.md"):
+                count += 1
+    return count, length
 
 if __name__ == "__main__":
-    # print(trend(0, 11, 10))
-    # print(trend(0, 101, 100))
-    tenday_trend_result = trend(0, 11, 10)
-    # tenday_previous_count = tenday_trend_result[1]
-    hundredday_trend_result = trend(0, 101, 100)  
-    # hundredday_count = hundredday_trend_result[0]  
-    print(f'{tenday_trend_result[3]}-day trend: {tenday_trend_result[0]} {tenday_trend_result[1]} {tenday_trend_result[2]}')
-    print(f'{hundredday_trend_result[3]}-day trend: {hundredday_trend_result[0]} {hundredday_trend_result[1]} {hundredday_trend_result[2]}')
-    
+
+    # if the trend is zero, the number of files is the same
+    # if the trend is positive, the number of files is increasing
+    # if the trend is negative, the number of files is decreasing
+    # the direction variable is used to indicate the direction of the trend
+
+    direction = '⎯'
+    if trend(9) > trend(10):
+        direction = '⬆︎'
+    elif trend(99) < trend(100) :
+        direction = '⬇︎'
+
+    # print the trend for the last 10 days and the last 100 days    
+
+    print(f'{trend(10)[1]} day tend: {trend(10)[0]}/{trend(10+1)[0]} {direction}')
+    print(f'{trend(100)[1]} day trend: {trend(100)[0]}/{trend(100+1)[0]} {direction}')
+
+ 
     
 #####
 # Function for getting a list of random files in the ZK that are more than 1000 words

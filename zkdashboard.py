@@ -22,11 +22,10 @@ Variables:
 import pathlib
 import os, re, random
 from collections import defaultdict
-from datetime import date 
-from datetime import datetime
+from datetime import date
 from datetime import timedelta
-from dateutil.relativedelta import relativedelta
 from zkfunctions import trend, large_note_rand, TheArchivePath, lines_that_contain, bookography
+
 
 #####
 # Variables
@@ -112,11 +111,14 @@ for uuid in sorted(files, reverse=True):
                 )
 
 # Random Zettel Function    
-large_note_rand(500, 20000, 10)
+large_note_rand(500, 5000, 10)
 
 # Trending Function
-tenday_trend_result = trend(0, 11, 10)
-hundredday_trend_result = trend(0, 101, 100)
+direction = '⎯'
+if trend(10) > trend(10+1):
+    direction = '⬆︎'
+elif trend(100) < trend(100+1) :
+    direction = '⬇︎'
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)
@@ -140,9 +142,9 @@ Zettelkasten Statistics
 {tlinks - tzettel} Total link count
 {tzettel} Total zettel count
        ★★★★★
-       
-{tenday_trend_result[3]}-day trend: {tenday_trend_result[0]}/{tenday_trend_result[1]} {tenday_trend_result[2]}
-{hundredday_trend_result[3]}-day trend: {hundredday_trend_result[0]}/{hundredday_trend_result[1]} {hundredday_trend_result[2]}
+
+{trend(10)[1]} day tend: {trend(10)[0]}/{trend(10+1)[0]} {direction}
+{trend(100)[1]} day trend: {trend(100)[0]}/{trend(100+1)[0]} {direction}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'-'*40}
