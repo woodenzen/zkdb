@@ -114,11 +114,10 @@ for uuid in sorted(files, reverse=True):
 large_note_rand(500, 5000, 10)
 
 # Trending Function
-direction = '⎯'
-if trend(10) > trend(10+1):
-    direction = '⬆︎'
-elif trend(100) < trend(100+1) :
-    direction = '⬇︎'
+short = 10
+long = 100
+current = trend(short, short+1, short+2)
+past = trend(long, long+1, long+2)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)
@@ -143,8 +142,8 @@ Zettelkasten Statistics
 {tzettel} Total zettel count
        ★★★★★
 
-{trend(10)[1]} day tend: {trend(10)[0]}/{trend(10+1)[0]} {direction}
-{trend(100)[1]} day trend: {trend(100)[0]}/{trend(100+1)[0]} {direction}
+{current[2]}-day tend: {current[0]}/{current[1]} {current[3]}
+{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'-'*40}
