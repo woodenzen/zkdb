@@ -1,19 +1,13 @@
 import os
 import prettytable as pt
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
-'''
-I've discovered that the date string could be in the last 6 digits of the UID, or in the first 6 digits of the UID.
-I have to correct that in the script.
-Consider switching to pandas instead of prettytable
-'''
-
-def count_files_zettelkasten(year_month_str):
+def count_files_zettelkasten(UID):
     directory = "/Users/will/Dropbox/zettelkasten"
     count = 0
     for filename in os.listdir(directory):
-        if year_month_str in filename:
+        if UID in filename:
             file_path = os.path.join(directory, filename)
             if os.path.isfile(file_path):
                 count += 1
@@ -21,15 +15,15 @@ def count_files_zettelkasten(year_month_str):
 
 # Generate year and month strings for the past 5 years
 today = datetime.today()
-year_month_strs = []
-for y in range(today.year-5, today.year+1):
+UIDs = []
+for y in range(today.year-5, today.year+1): # 5 years ago to this year
     for m in range(1, 13):
-        year_month_strs.append(f"{y}{m:02d}")
+        UIDs.append(f" {y}{m:02d}")
 
 # Create a list of lists to store the counts for each year
 counts_by_year = []
 for i in range(6):
-    year_counts = [count_files_zettelkasten(year_month_strs[j]) for j in range(i*12, (i+1)*12)]
+    year_counts = [count_files_zettelkasten(UIDs[j]) for j in range(i*12, (i+1)*12)]
     counts_by_year.append(year_counts)
 
 # Convert month numbers to month names
@@ -48,15 +42,15 @@ print(table)
 #     # print(count)
 
 #     # today = datetime.today()
-#     # year_month_str = today.strftime("%Y%m")
-#     # count = count_files_zettelkasten(year_month_str)
-#     # print(f"Number of files in {year_month_str}: {count}")
+#     # UID = today.strftime("%Y%m")
+#     # count = count_files_zettelkasten(UID)
+#     # print(f"Number of files in {UID}: {count}")
 
 #     today = datetime.today()-timedelta(days=365)
 #     for month in range(1, 13):
-#         year_month_str = today.strftime(f"%Y{month:02d}")
-#         count = count_files_zettelkasten(year_month_str)
-#         print(f"Number of files in {year_month_str}: {count}")
+#         UID = today.strftime(f"%Y{month:02d}")
+#         count = count_files_zettelkasten(UID)
+#         print(f"Number of files in {UID}: {count}")
 
 # table = pt.PrettyTable()
 # table.field_names = ["Monthly Stats 2023", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

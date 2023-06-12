@@ -163,8 +163,8 @@ if __name__ == "__main__":
 
     # print the trend for the last 10 days and the last 100 days    
 
-    print(f'{trend(10)[1]} day tend: {trend(10)[0]}/{trend(10+1)[0]} {direction}')
-    print(f'{trend(100)[1]} day trend: {trend(100)[0]}/{trend(100+1)[0]} {direction}')
+    print(f'{trend(10)[1]}-day tend: {trend(10)[0]}/{trend(10+1)[0]} {direction}')
+    print(f'{trend(100)[1]}-day trend: {trend(100)[0]}/{trend(100+1)[0]} {direction}')
 
  
     
