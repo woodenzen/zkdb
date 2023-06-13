@@ -142,7 +142,7 @@ Zettelkasten Statistics
 {tzettel} Total zettel count
        ★★★★★
 
-{current[2]}-day tend: {current[0]}/{current[1]} {current[3]}
+{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}
 {past[2]}-day trend: {past[0]}/{past[1]} {past[3]}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 

@@ -90,5 +90,5 @@ if __name__ == "__main__":
     past = trend(long, long+1, long+2)
 
     # Print the results
-    print(f'{current[2]}-day tend: {current[0]}/{current[1]} {current[3]}')
+    print(f'{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}')
     print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')
