@@ -116,8 +116,8 @@ for uuid in sorted(files, reverse=True):
 large_note_rand(500, 5000, 10)
 
 # Trending Function
-current = trend(short_trend, short_trend+1, short_trend+2)
-past = trend(long_trend, long_trend+1, long_trend+2)
+current = trend(short_trend, short_trend, short_trend+1)
+past = trend(long_trend, long_trend, long_trend+1)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)

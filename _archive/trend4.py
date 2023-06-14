@@ -72,6 +72,7 @@ def trend(length, start, compare_start):
                 # Increment the counter for the number of files found for comparison
                 compare_count += 1
 
+
     # Determine the direction of the trend based on the number of files found
     direction = '⎯'  # Default direction if the number of files is the same
     if count > compare_count:
@@ -86,8 +87,8 @@ if __name__ == "__main__":
     # Set the length and start of the current and comparison date ranges
     short = 7
     long = 30
-    current = trend(short, short+1, short+2)
-    past = trend(long, long+1, long+2)
+    current = trend(short, short, short+1)
+    past = trend(long, long, long+1)
 
     # Print the results
     print(f'{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}')
