@@ -47,7 +47,9 @@ twords = 0
 tlinks = 0
 tzettel = 0
 tencountfiles = []
-tengap = 10
+tengap = 7
+short_trend = 7
+long_trend = 30
 
 # Random Super Slogan
 
@@ -114,10 +116,8 @@ for uuid in sorted(files, reverse=True):
 large_note_rand(500, 5000, 10)
 
 # Trending Function
-short = 10
-long = 100
-current = trend(short, short+1, short+2)
-past = trend(long, long+1, long+2)
+current = trend(short_trend, short_trend+1, short_trend+2)
+past = trend(long_trend, long_trend+1, long_trend+2)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)

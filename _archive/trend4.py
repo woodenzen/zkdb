@@ -3,10 +3,10 @@ import os
 import fnmatch
 from datetime import datetime as dt
 from datetime import timedelta
-from zkfunctions import TheArchivePath
+
 
 # Set the path to the directory to search for files using the TheArchivePath() function
-zettelkasten = TheArchivePath()
+zettelkasten = "/Users/will/Dropbox/zettelkasten/"
 
 def trend(length, start, compare_start):
     """
@@ -84,8 +84,8 @@ def trend(length, start, compare_start):
 
 if __name__ == "__main__":
     # Set the length and start of the current and comparison date ranges
-    short = 10
-    long = 100
+    short = 7
+    long = 30
     current = trend(short, short+1, short+2)
     past = trend(long, long+1, long+2)
 
