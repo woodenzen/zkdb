@@ -3,7 +3,7 @@ import os, re, random, pathlib
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from plistlib import load
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 
 ####
@@ -53,7 +53,10 @@ def TheArchivePath():
         # 'archiveURL' is the key that pairs with the zk path
         path = urlparse(pl['archiveURL']) 
     # path is the part of the path that is formatted for use as a path.
-    return (path.path) 
+        path = urlparse(pl['archiveURL']).path
+        decoded_path = unquote(path) 
+    return unquote(path) 
+ 
 
 if __name__ == "__main__":
     zettelkasten = pathlib.Path(TheArchivePath())

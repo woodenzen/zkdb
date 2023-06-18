@@ -5,6 +5,11 @@ import time
 import pathlib
 from dateutil.relativedelta import relativedelta
 
+def luhn_checksum(card_number):
+    
+
+    
+    
 startTime = time.time()
 
 # path to zettelkasten
