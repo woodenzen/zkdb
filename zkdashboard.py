@@ -22,11 +22,10 @@ Variables:
 import pathlib
 import os, re, random
 from collections import defaultdict
-from datetime import date 
-from datetime import datetime
+from datetime import date
 from datetime import timedelta
-from dateutil.relativedelta import relativedelta
 from zkfunctions import trend, large_note_rand, TheArchivePath, lines_that_contain, bookography
+
 
 #####
 # Variables
@@ -48,7 +47,9 @@ twords = 0
 tlinks = 0
 tzettel = 0
 tencountfiles = []
-tengap = 10
+tengap = 7
+short_trend = 7
+long_trend = 30
 
 # Random Super Slogan
 
@@ -112,11 +113,11 @@ for uuid in sorted(files, reverse=True):
                 )
 
 # Random Zettel Function    
-large_note_rand(500, 20000, 10)
+large_note_rand(500, 5000, 10)
 
 # Trending Function
-tenday_trend_result = trend(0, 11, 10)
-hundredday_trend_result = trend(0, 101, 100)
+current = trend(short_trend, short_trend, short_trend+1)
+past = trend(long_trend, long_trend, long_trend+1)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)
@@ -140,9 +141,9 @@ Zettelkasten Statistics
 {tlinks - tzettel} Total link count
 {tzettel} Total zettel count
        ★★★★★
-       
-{tenday_trend_result[3]}-day trend: {tenday_trend_result[0]}/{tenday_trend_result[1]} {tenday_trend_result[2]}
-{hundredday_trend_result[3]}-day trend: {hundredday_trend_result[0]}/{hundredday_trend_result[1]} {hundredday_trend_result[2]}
+
+{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}
+{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'-'*40}
