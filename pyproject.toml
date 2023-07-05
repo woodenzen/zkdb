@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "zkdb"
+version = "0.1.0"
+description = "Main Area of development"
+authors = ["Will Simpson <will@kestrelcreek.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+DateTime = "^5.1"
+dateutils = "^0.6.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
