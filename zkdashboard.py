@@ -47,9 +47,9 @@ twords = 0
 tlinks = 0
 tzettel = 0
 tencountfiles = []
-tengap = 7
-short_trend = 7
-long_trend = 30
+tengap = 10
+short_trend = 10
+long_trend = 100
 
 # Random Super Slogan
 
