@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 
-def momenta_mori():
+def momento_mori():
     birth = date(1956, 9, 26)
 
     # Calculate the number of weeks between the birth date and today
@@ -21,4 +21,4 @@ def momenta_mori():
     print(f'I will be 80 on {eighty_years_later.strftime("%m/%d/%Y")}.')
 
 if __name__ == "__main__":
-    momenta_mori()    
+    momento_mori()    

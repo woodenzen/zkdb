@@ -24,7 +24,7 @@ import os, re, random
 from collections import defaultdict
 from datetime import date
 from datetime import timedelta
-from zkfunctions import trend, large_note_rand, TheArchivePath, lines_that_contain, bookography
+from zkfunctions import trend, momento_mori, TheArchivePath, lines_that_contain, bookography
 
 
 #####
@@ -121,6 +121,9 @@ past = trend(long_trend, long_trend, long_trend+1)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)
+
+# Momento Mori Function
+momento_mori()
 
 # Output
 

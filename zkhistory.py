@@ -32,12 +32,12 @@ def get_files_by_pattern():
     # create a regular expression object
     directory = Path(TheArchivePath())
     pattern = re.compile(r"20\d{6}")
-    # iterate over the files in the directory
+    # iterate over the files in the ZK
     for file in Path(directory).iterdir():
         # if the file is a directory, skip it
         if file.is_dir():
             continue
-        # if the file is not a directory, get the match object
+        # if the file is not a directory, match the pattern.search
         match = pattern.search(file.name)
         # if there is a match, increment the count for that match
         if match:

@@ -353,7 +353,7 @@ if __name__ == "__main__":
 
 from datetime import date, timedelta
 
-def momenta_mori():
+def momento_mori():
     birth = date(1956, 9, 26)
 
     # Calculate the number of weeks between the birth date and today
@@ -368,10 +368,11 @@ def momenta_mori():
     eighty_year_life = (eighty_years_later - birth).days / 7
 
     # Print the result
+    print(f'## Momento Mori')
     print(f"Weeks since birth: {round(weeks_since_birth)} or {round(weeks_since_birth / eighty_year_life * 100, 1)}% of 80 years.")
     print(f'Weeks until 80: {round(eighty_year_life - weeks_since_birth)} or {round((eighty_year_life - weeks_since_birth) / round(eighty_year_life) *100, 2)}% of 80 years.')
-    print(f'An 80 year life is {round(eighty_year_life)} weeks long.')
-    print(f'I will be 80 on {eighty_years_later.strftime("%m/%d/%Y")}.')
+    print(f'An 80-year life is {round(eighty_year_life)} weeks long.')
+    print(f'I will be 80 on {eighty_years_later.strftime("%B/%d/%Y")}.')
 
 if __name__ == "__main__":
-    momenta_mori()    
+    momento_mori()    
