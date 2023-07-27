@@ -1,36 +1,11 @@
 import os
 import re
+from zkfunctions import TheArchivePath
 from plistlib import load
 from urllib.parse import urlparse, unquote
 import glob
 import time
 startTime = time.time()
-
-####
-# Function for finding the path to The Archive
-#####
-def TheArchivePath():
-    """
-    Find the path to The Archive's plist file.
-
-    Returns:
-        A string representing the path to The Archive.
-    """
-    bundle_id = "de.zettelkasten.TheArchive"
-    team_id = "FRMDA3XRGC"
-    #`fileName` is the path to the plist file that contains the path to the ZK.
-    fileName = os.path.expanduser(
-        "~/Library/Group Containers/{0}.{1}.prefs/Library/Preferences/{0}.{1}.prefs.plist".format(team_id, bundle_id))
-    with open(fileName, 'rb') as fp:
-        # load is a special function for use with a plist
-        pl = load(fp) 
-        # 'archiveURL' is the key that pairs with the zk path
-        path = urlparse(pl['archiveURL']) 
-    # path is the part of the path that is formatted for use as a path.
-        path = urlparse(pl['archiveURL']).path
-        decoded_path = unquote(path) 
-    return unquote(path) 
-
 
 def get_uuid(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
@@ -64,7 +39,8 @@ def get_list_of_links(file_path):
         return links    
 
 def get_note_title(file_path):
-    title = os.path.basename(file_path)
+    file_name = os.path.basename(file_path)
+    title = re.match(r'.*(?= +\d{12})', file_name).group(0)
     return title
 
 
