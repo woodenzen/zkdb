@@ -27,7 +27,7 @@ for filename in os.listdir(directory):
         with open(os.path.join(directory, filename),"r") as fp:
             for line in fp:
                 result_line = zsearch(line, os.environ["KMVAR_firstTerm"], os.environ["KMVAR_secondTerm"], os.environ["KMVAR_thirdTerm"])
-                if result_line != None:
+                if result_line is not None:
                     UUID = filename[-15:-3]
                     print(f'›[[{UUID}]] OR ', end="")
 

@@ -92,7 +92,7 @@ for uuid in sorted(files, reverse=True):
     for filename in files[uuid]:
         file_name = os.path.basename(filename).rsplit(".", 1)[0]
         for i in range(tengap):
-            targetdate = (date.today() - timedelta(+i)).strftime("%Y%m%d")
+            targetdate = (date.today() - timedelta(i)).strftime("%Y%m%d")
             if targetdate == uuid:
                 with open(filename, "r") as fp:
                     atom = ""
@@ -101,13 +101,14 @@ for uuid in sorted(files, reverse=True):
                 #   Archive formatted links if the placement of the output is destined for The Archive
                         # tencountfiles.append(file_name.rsplit((uuid), 1)[0] + "[[" + full_uuid + "]]\n   -" + atom)
                 #   Markdown format
+                    converted_file_name = file_name.replace(" ", "%20")
                 tencountfiles.append(
                     "- "
                     + file_name.rsplit((uuid), 1)[0]
                     + "["
                     + uuid
                     + "](thearchive://match/"
-                    + file_name
+                    + converted_file_name
                     + ")\n\t\t"
                     + atom
                 )
@@ -116,8 +117,8 @@ for uuid in sorted(files, reverse=True):
 # large_note_rand(500, 5000, 10)
 
 # Trending Function
-current = trend(short_trend, short_trend, short_trend+1)
-past = trend(long_trend, long_trend, long_trend+1)
+current = trend(short_trend, short_trend+1)
+past = trend(long_trend, long_trend+1)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)
@@ -133,12 +134,10 @@ output = f"""
 **I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.**\n**My goal is to read {goal} books this year.**
 
 {'-'*40}
-
 ## Super Slogan
 {ss}
 {'-'*40}
-
-Zettelkasten Statistics
+## Zettelkasten Statistics
        ★★★★★
 {twords} Total word count
 {tlinks - tzettel} Total link count
@@ -150,6 +149,7 @@ Zettelkasten Statistics
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'-'*40}
+## {current[2]}-day Trending Notes
 
 """
 

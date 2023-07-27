@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
+import os
 import pathlib
-import os, re
+import re
 from collections import defaultdict
-from datetime import date
-from datetime import timedelta
+from datetime import date, timedelta
 
 # path to zettelkasten
 target_dir = pathlib.Path("/Users/will/Dropbox/zettelkasten/")

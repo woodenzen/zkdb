@@ -131,7 +131,7 @@ from datetime import timedelta
 # Set the path to the directory to search for files
 zettelkasten = "/Users/will/Dropbox/zettelkasten/"
 
-def trend(length, start, compare_start):
+def trend(length, compare_length):
     """
     Counts the number of files in a given date range and compares it to the number of files in another date range.
 
@@ -155,45 +155,40 @@ def trend(length, start, compare_start):
     today = dt.today()
 
     # Calculate the length of the trend and the date range
-    trend_length = today - timedelta(days=start)
-    date_range = [trend_length + timedelta(days=x) for x in range(length)]
+    trend_length = today - timedelta(days=length-1)
+    date_range = [trend_length + timedelta(days=x-1) for x in range(length)]
 
     # Calculate the length of the comparison trend and the comparison date range
-    compare_trend_length = today - timedelta(days=compare_start)
-    compare_date_range = [compare_trend_length + timedelta(days=x) for x in range(length)]
+    compare_trend_length = today - timedelta(days=compare_length-1)
+    compare_date_range = [compare_trend_length + timedelta(days=x-1) for x in range(compare_length)]
 
     # Initialize counters for the number of files found
     count = 0
     compare_count = 0
 
-    # Loop through all files in the directory and subdirectories
-    for root, dirs, files in os.walk(zettelkasten):
-        # Loop through the date range
-        for date in date_range:
-            # Skip dates that are before the trend length
-            if date < trend_length:
-                continue
-            # Convert the date to a string in the format "YYYYMMDD"
-            date_str = date.strftime("%Y%m%d")
-            # Loop through all files that match the date string
-            for file in fnmatch.filter(files, f"*{date_str}*.md"):
-                # Extract the UUID from the file name
-                UUID = file.split(' ')[-1].split('.')[0]
-                # Increment the counter for the number of files found
-                count += 1
-        # Loop through the comparison date range
-        for date in compare_date_range:
-            # Skip dates that are before the comparison trend length
-            if date < compare_trend_length:
-                continue
-            # Convert the date to a string in the format "YYYYMMDD"
-            date_str = date.strftime("%Y%m%d")
-            # Loop through all files that match the date string
-            for file in fnmatch.filter(files, f"*{date_str}*.md"):
-                # Extract the UUID from the file name
-                UUID = file.split(' ')[-1].split('.')[0]
-                # Increment the counter for the number of files found for comparison
-                compare_count += 1
+    # Loop through all files in the directory
+    for entry in os.scandir(zettelkasten):
+        # Check if the entry is a file
+        if entry.is_file():
+            # Check if the file name ends with ".md"
+            if entry.name.endswith('.md'):
+                # Loop through the date range
+                for date in date_range:
+                    # Convert the date to a string in the format "YYYYMMDD"
+                    date_str = date.strftime("%Y%m%d")
+                    # Check if the file name contains the date string
+                    if date_str in entry.name:
+                        # Increment the counter for the number of files found
+                        count += 1
+                        # Append the file name to the list of files found
+                # Loop through the comparison date range
+                for date in compare_date_range:
+                    # Convert the date to a string in the format "YYYYMMDD"
+                    date_str = date.strftime("%Y%m%d")
+                    # Check if the file name contains the date string
+                    if date_str in entry.name:
+                        # Increment the counter for the number of files found for comparison
+                        compare_count += 1
 
     # Determine the direction of the trend based on the number of files found
     direction = '⎯'  # Default direction if the number of files is the same
@@ -209,12 +204,12 @@ if __name__ == "__main__":
     # Set the length and start of the current and comparison date ranges
     short = 10
     long = 100
-    current = trend(short, short+1, short+2)
-    past = trend(long, long+1, long+2)
-
+    current = trend(short, short+2)
+    past = trend(long, long+2)
     # Print the results
     print(f'{current[2]}-day tend: {current[0]}/{current[1]} {current[3]}')
     print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')
+    print(f'## {current[0]} notes in the last {current[2]} days.')
  
     
 #####

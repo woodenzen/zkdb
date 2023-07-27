@@ -5,3 +5,5 @@ __pycache__/*
 notes.md
 .vscode/*
 test.py
+_testing/*
+```
