@@ -297,7 +297,7 @@ if __name__ == "__main__":
 ####    
 
 import re
-import datetime
+from datetime import datetime, date
 
 def bookography(goal):
     """
@@ -317,7 +317,7 @@ def bookography(goal):
     # Variables
     # User needs to change this to the path of their Bookography file
     bookography = "/Users/will/Dropbox/zettelkasten/Bookography 2023 202301021454.md"
-    current_date = datetime.date.today()
+    current_date = date.today()
     current_week = current_date.isocalendar()[1]
     
     # Read the entire file
@@ -371,3 +371,19 @@ def momento_mori():
 
 if __name__ == "__main__":
     momento_mori()    
+
+####
+# Days Since event
+####     
+
+from datetime import datetime, date
+
+def days_since(start_date, event):
+    today = date.today()
+    start_date = datetime.strptime(start_date, '%Y%m%d').date()
+    days_since = (today - start_date).days
+    # print(f"It has been {days_since} days since {event} on {start_date.strftime('%m/%d/%Y')}")
+    return days_since, event, start_date.strftime('%m/%d/%Y')
+if __name__ == "__main__":
+    days = days_since("08072023", "Right Eye Surgery")
+    print(f"It has been {days[0]} days since {days[1]} on {days[2]}")

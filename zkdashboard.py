@@ -24,7 +24,7 @@ import os, re, random
 from collections import defaultdict
 from datetime import date
 from datetime import timedelta
-from zkfunctions import trend, momento_mori, TheArchivePath, lines_that_contain, bookography
+from zkfunctions import trend, momento_mori, TheArchivePath, lines_that_contain, bookography, days_since
 
 
 #####
@@ -126,17 +126,30 @@ highest_number, current_week, goal = bookography(52)
 # Momento Mori Function
 momento_mori()
 
+# Days Since Event Function
+right_eye_surgery = days_since("20230807", " my Right Eye Surgery")
+fasting = days_since("20230812", "I started practicing Time-Restricted Eating")
+drinking = days_since("20230907", "I started practicing Time-Restricted Drinking")
+shingles = days_since("20230615", "I got Shingles")
+
 # Output
 
 output = f""" 
-{'-'*40}
+{'–'*5}
+## Days Since Event
+It has been {right_eye_surgery[0]} days since {right_eye_surgery[1]} on {right_eye_surgery[2]}
+It has been {fasting[0]} days since {fasting[1]} on {fasting[2]}
+It has been {drinking[0]} days since {drinking[1]} on {drinking[2]}
+It has been {shingles[0]} days since {shingles[1]} on {shingles[2]}
+
+{'–'*5}
 ## Book Goal Progress 
 **I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.**\n**My goal is to read {goal} books this year.**
 
-{'-'*40}
+{'–'*5}
 ## Super Slogan
 {ss}
-{'-'*40}
+{'–'*5}
 ## Zettelkasten Statistics
        ★★★★★
 {twords} Total word count
@@ -148,7 +161,7 @@ output = f"""
 {past[2]}-day trend: {past[0]}/{past[1]} {past[3]}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
-{'-'*40}
+{'–'*5}
 ## {current[2]}-day Trending Notes
 
 """
