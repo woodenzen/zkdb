@@ -137,10 +137,10 @@ shingles = days_since("20230615", "I got Shingles")
 output = f""" 
 {'–'*5}
 ## Days Since Event
-{right_eye_surgery[0]} days since {right_eye_surgery[1]} - {right_eye_surgery[2]}
-{fasting[0]} days since {fasting[1]} - {fasting[2]}
-{drinking[0]} days since {drinking[1]} - {drinking[2]}
-{shingles[0]} days since {shingles[1]} - {shingles[2]}
+{right_eye_surgery[0]} days ({round(right_eye_surgery[0]/7, 1)} weeks) since {right_eye_surgery[1]} - {right_eye_surgery[2]}
+{fasting[0]} days ({round(fasting[0]/7, 1)} weeks) since {fasting[1]} - {fasting[2]}
+{drinking[0]} days ({round(drinking[0]/7, 1)} weeks) since {drinking[1]} - {drinking[2]}
+{shingles[0]} days ({round(shingles[0]/7, 1)} weeks) since {shingles[1]} - {shingles[2]}
 
 {'–'*5}
 ## Book Goal Progress 
