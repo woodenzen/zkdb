@@ -160,7 +160,7 @@ def trend(length, compare_length):
 
     # Calculate the length of the comparison trend and the comparison date range
     compare_trend_length = today - timedelta(days=compare_length-1)
-    compare_date_range = [compare_trend_length + timedelta(days=x-1) for x in range(compare_length)]
+    compare_date_range = [compare_trend_length + timedelta(days=x-11) for x in range(compare_length)]
 
     # Initialize counters for the number of files found
     count = 0
