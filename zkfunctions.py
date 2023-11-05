@@ -204,8 +204,8 @@ if __name__ == "__main__":
     # Set the length and start of the current and comparison date ranges
     short = 10
     long = 100
-    current = trend(short, short+2)
-    past = trend(long, long+2)
+    current = trend(short, short)
+    past = trend(long, long)
     # Print the results
     print(f'{current[2]}-day tend: {current[0]}/{current[1]} {current[3]}')
     print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')

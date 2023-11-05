@@ -117,8 +117,8 @@ for uuid in sorted(files, reverse=True):
 # large_note_rand(500, 5000, 10)
 
 # Trending Function
-current = trend(short_trend, short_trend+1)
-past = trend(long_trend, long_trend+1)
+current = trend(short_trend, short_trend)
+past = trend(long_trend, long_trend)
 
 # Bookography Function
 highest_number, current_week, goal = bookography(52)
@@ -128,7 +128,7 @@ momento_mori()
 
 # Days Since Event Function
 right_eye_surgery = days_since("20230807", " my Right Eye Surgery")
-fasting = days_since("20230812", "I started practicing Time-Restricted Eating")
+fasting = days_since("20230812", "I started Time-Restricted Eating")
 shingles = days_since("20230615", "I got Shingles")
 
 # Output
@@ -155,12 +155,12 @@ output = f"""
 {tzettel} Total zettel count
        ★★★★★
 
-{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}
+{current[2]}-day tend: {current[0]}/{current[1]} {current[3]}
 {past[2]}-day trend: {past[0]}/{past[1]} {past[3]}
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'–'*5}
-## {current[2]}-day Trending Notes
+## {current[2]}-day Trending Notes ({current[0]})
 
 """
 
