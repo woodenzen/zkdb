@@ -25,6 +25,7 @@ from collections import defaultdict
 from datetime import date
 from datetime import timedelta
 from zkfunctions import trend, momento_mori, TheArchivePath, lines_that_contain, bookography, days_since
+from zk_functions.occurances_in_zk import count_proofing_files
 
 
 #####
@@ -126,6 +127,9 @@ highest_number, current_week, goal = bookography(52)
 # Momento Mori Function
 momento_mori()
 
+# #Proofing Count Function
+proofing_count = count_proofing_files(zettelkasten)
+
 # Days Since Event Function
 right_eye_surgery = days_since("20230807", " my Right Eye Surgery")
 fasting = days_since("20230812", "I started Time-Restricted Eating")
@@ -157,6 +161,7 @@ output = f"""
 
 {current[2]}-day tend: {current[0]}/{current[1]} {current[3]}
 {past[2]}-day trend: {past[0]}/{past[1]} {past[3]}
+There are {proofing_count} notes wanting attention in my ZK.
 {tzettel / (today - day0).days:.2f} zettel created on average since day zero.
 
 {'–'*5}

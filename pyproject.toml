@@ -7,9 +7,11 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.9,<3.13"
 DateTime = "^5.1"
 dateutils = "^0.6.12"
+matplotlib = "^3.8.1"
+scipy = "^1.11.3"
 
 
 [build-system]
