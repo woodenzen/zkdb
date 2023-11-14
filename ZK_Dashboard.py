@@ -1,16 +1,14 @@
 # Import the required modules
 import os
 import random
-# import fnmatch
-# from datetime import datetime as dt
-# from datetime import timedelta
 from avg_per_day import calculate_avg_notes_per_day
 from occurances_in_zk import count_target_occurrences
 from TheArchivePath import TheArchivePath
-import daily_results 
+import daily_results
 from zk_stats import zk_stats
 from get_word_count import get_word_count
 from bookography import bookography
+from momento_mori import momento_mori
 
 
 # Set the path to the directory to search for files
@@ -22,22 +20,23 @@ zettelkasten = TheArchivePath()
 twords = get_word_count()
 tlinks = count_target_occurrences(']]')
 tzettel = 0
-ss = random.choice(
-    open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md").readlines()
-)
+ss = random.choice(open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md").readlines())
 ss = ss.replace("\xa0", " ")
 
 # Set the length and start of the current and comparison date ranges for trending
 short = 10
 long = 100
-current = daily_results.trend(short, short)
-past = daily_results.trend(long, long)
 
 # Functions
-## Basic stats
+## Trending Function Call
+current = daily_results.trend(short, short)
+past = daily_results.trend(long, long)
+## Basic stats Function Call
 zk_stats()
-# Bookography Function
+# Bookography Function Call
 highest_number, current_week, goal = bookography(52)
+# Momento Mori Function Call
+momento_mori()
 
 ## Print the dashboard
 output = f"""
