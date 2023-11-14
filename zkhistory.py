@@ -2,7 +2,10 @@ import re
 from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
-from zkfunctions import TheArchivePath
+from TheArchivePath import TheArchivePath
+from zk_random import print_random_files
+
+zettelkasten = TheArchivePath()
 
 def get_date_string(days_ago):
     """Return a string of the date for today - x number of days in the format %Y%m%d.
@@ -59,7 +62,7 @@ if __name__ == "__main__":
 }
 
 # iterate over the days for the review
-for days in [1, 10, 100, 365, 365*2, 365*3, 365*4, 365*5]: 
+for days in [1, 10]: 
     # get the date string
     date_string = get_date_string(days)
     # get the number of files for the date string
@@ -74,7 +77,8 @@ for days in [1, 10, 100, 365, 365*2, 365*3, 365*4, 365*5]:
     output_str = output_strings.get(key, output_strings[(False, False, False)]) # type: ignore
     # print the output string
     print(f"{output_str.format(files_count=files_count, date_string=date_string, days=days_str, years=years)}")  
-
+print(f"## Random Note Review Schedule")
+print_random_files(zettelkasten, 6)
 
 
 

@@ -20,10 +20,10 @@ def momento_mori():
 
     # Print the result
     print(f'## Momento Mori')
-    print(f"Weeks since birth: {round(weeks_since_birth)} or {round(weeks_since_birth / eighty_year_life * 100, 1)}% of 80 years.")
-    print(f'Weeks until 80: {round(eighty_year_life - weeks_since_birth)} or {round((eighty_year_life - weeks_since_birth) / round(eighty_year_life) *100, 1)}% of 80 years.')
-    print(f'An 80-year life is {round(eighty_year_life)} weeks long.')
-    print(f'I will be 80 on {eighty_years_later.strftime("%B/%d/%Y")}.')
+    print(f"- Weeks since birth: {round(weeks_since_birth)} or {round(weeks_since_birth / eighty_year_life * 100, 1)}% of 80 years.")
+    print(f'- Weeks until 80: {round(eighty_year_life - weeks_since_birth)} or {round((eighty_year_life - weeks_since_birth) / round(eighty_year_life) *100, 1)}% of 80 years.')
+    print(f'- An 80-year life is {round(eighty_year_life)} weeks long.')
+    print(f'- I will be 80 on {eighty_years_later.strftime("%B/%d/%Y")}.')
 
 if __name__ == "__main__":
     momento_mori()    

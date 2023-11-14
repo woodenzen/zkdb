@@ -43,7 +43,8 @@ momento_mori()
 output = f"""
 {'–'*5}
 ## Read **{goal}** Books in {datetime.date.today().year} 
-**I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.
+- **I've read {highest_number} books so far this year.**
+- **It is week {current_week} of my one-book-per-week challenge.
 
 {'–'*5}
 ## Super Slogan

@@ -17,13 +17,12 @@ def print_random_files(directory, n):
 
         # Pick a random file from the files that haven't been shown yet
         file_to_show = random.choice([file for file in files if file not in shown_files])
-
+        file_to_show = file_to_show.replace('.md', '')
+        file_UUID = file_to_show[-12:]
         # Add the shown file to shown_files
         shown_files.append(file_to_show)
 
         # Print the name of the file
-        print(file_to_show)
-        print(shown_files)
-
-# Call the function
-print_random_files(zettelkasten, 3)
+        print(f'[{file_to_show}](thearchive://match/›[[{file_UUID})')
+if __name__ == "__main__":
+    print_random_files(zettelkasten, 7)

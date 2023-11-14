@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
-from TheArchivePath import TheArchivePath
+from zkfunctions import TheArchivePath
 
 def get_date_string(days_ago):
     """Return a string of the date for today - x number of days in the format %Y%m%d.
@@ -59,7 +59,7 @@ if __name__ == "__main__":
 }
 
 # iterate over the days for the review
-for days in [1, 10]: 
+for days in [1, 10, 100, 365, 365*2, 365*3, 365*4, 365*5]: 
     # get the date string
     date_string = get_date_string(days)
     # get the number of files for the date string
