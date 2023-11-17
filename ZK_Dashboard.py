@@ -44,7 +44,7 @@ output = f"""
 {'–'*5}
 ## Read **{goal}** Books in {datetime.date.today().year} 
 - **I've read {highest_number} books so far this year.**
-- **It is week {current_week} of my one-book-per-week challenge.
+- **It is week {current_week} of my one-book-per-week challenge.**
 
 {'–'*5}
 ## Super Slogan
@@ -68,8 +68,8 @@ print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20
 print(f"We have {count_target_occurrences('#proofing')} notes wanting attention.")
 
 ## Print the list of files produced in the last 10 days and their subatomic lines.
-print(f'\n ––––– \n')
-print(f'## {current[0]} new notes created in the last ten days. \n')
+print(f'\n–––––')
+print(f'## {current[0]} new notes have been created in the last ten days. \n')
 for entry in current[4]:
     subatomic_line = daily_results.get_subatomic_line(zettelkasten+"/"+entry)
     print(f'- [{entry[:-7]}](thearchive://match/›[[{entry[-15:-3]})\n\t- {subatomic_line[11:]}')
