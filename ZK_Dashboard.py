@@ -65,7 +65,7 @@ print(f'{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}')
 print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')
 print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20181114).")
 # proofing_count = count_proofing_files(zettelkasten)
-print(f"We have {count_target_occurrences('#proofing')} notes wanting attention.")
+print(f"We have {count_target_occurrences('#proofing')} notes in the proofing oven.")
 
 ## Print the list of files produced in the last 10 days and their subatomic lines.
 print(f'\n–––––')
