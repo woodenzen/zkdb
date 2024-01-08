@@ -12,6 +12,7 @@ DateTime = "^5.1"
 dateutils = "^0.6.12"
 matplotlib = "^3.8.1"
 scipy = "^1.11.3"
+watchdog = "^3.0.0"
 
 
 [build-system]

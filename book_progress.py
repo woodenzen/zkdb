@@ -18,7 +18,7 @@ def bookography(goal):
     """
     # Variables
     # User needs to change this to the path of their Bookography file
-    bookography = "/Users/will/Dropbox/zettelkasten/Bookography 2023 202301021454.md"
+    bookography = "/Users/will/Dropbox/zettelkasten/Bookography 2024 202312172031.md"
     current_date = datetime.date.today()
     current_week = current_date.isocalendar()[1]
     

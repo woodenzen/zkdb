@@ -8,7 +8,7 @@ from TheArchivePath import TheArchivePath
 import daily_results
 from zk_stats import zk_stats
 from get_word_count import get_word_count
-from bookography import bookography
+from book_progress import bookography
 from momento_mori import momento_mori
 
 
@@ -21,7 +21,7 @@ zettelkasten = TheArchivePath()
 twords = get_word_count()
 tlinks = count_target_occurrences(']]')
 tzettel = 0
-ss = random.choice(open("/Users/will/Dropbox/zettelkasten/Super Slogans 202012281549.md").readlines())
+ss = random.choice(open("/Users/will/Dropbox/zettelkasten/L-Super Slogans 202012281549.md").readlines())
 ss = ss.replace("\xa0", " ")
 
 # Set the length and start of the current and comparison date ranges for trending
@@ -65,7 +65,7 @@ print(f'{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}')
 print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')
 print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20181114).")
 # proofing_count = count_proofing_files(zettelkasten)
-print(f"We have {count_target_occurrences('#proofing')} notes in the proofing oven.")
+print(f"We have {count_target_occurrences('#proofing')} particles in the proofing oven.")
 
 ## Print the list of files produced in the last 10 days and their subatomic lines.
 print(f'\n–––––')
