@@ -10,6 +10,7 @@ from zk_stats import zk_stats
 from get_word_count import get_word_count
 from book_progress import bookography
 from momento_mori import momento_mori
+from number_to_words import number_to_words
 
 
 # Set the path to the directory to search for files
@@ -35,7 +36,7 @@ past = daily_results.trend(long, long)
 ## Basic stats Function Call
 zk_stats()
 # Bookography Function Call
-highest_number, current_week, goal = bookography(52)
+highest_number, current_week, goal, abandoned = bookography(52)
 # Momento Mori Function Call
 momento_mori()
 
@@ -43,8 +44,8 @@ momento_mori()
 output = f"""
 {'–'*5}
 ## Read **{goal}** Books in {datetime.date.today().year} 
-- **I've read {highest_number} books so far this year.**
-- **It is week {current_week} of my one-book-per-week challenge.**
+- **I have read {number_to_words(highest_number)} books and abandoned {number_to_words(abandoned)} books.**
+- **It is week {number_to_words(current_week)} of my one-book-per-week challenge.**
 
 {'–'*5}
 ## Super Slogan

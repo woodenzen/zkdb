@@ -31,24 +31,15 @@ def bookography(goal):
     matches = re.findall(pattern, content, re.MULTILINE)
     # Convert matches to integers and remove the period
     numbers = [int(match.strip(".")) for match in matches]
-    
-    # Count lines starting with "*"
-    abandoned = sum(1 for line in content.split("\n") if line.strip().startswith("*"))
-    
+
     # Find the highest number
     if numbers:
         highest_number = max(numbers)
     else:
         highest_number = 0
 
-    return highest_number, current_week, goal, abandoned
+    return highest_number, current_week, goal
 
 if __name__ == "__main__":
-    highest_number, current_week, goal, abandoned = bookography(52)
-    # print(f"**I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.**\n**My goal is to read {goal} books this year.**\n\n")
-    # print(f"I have abandoned {abandoned} books.")
-    print(f"**I have read {highest_number} books and abandoned {abandoned} books.**")
-    print(f"**It is week {current_week} of my one-book-per-week challenge.**")
-    # numbers = [int(match.strip(".")) for match in matches]
-    
-
+    highest_number, current_week, goal = bookography(52)
+    print(f"**I've read {highest_number} books so far this year.** \n**It is week {current_week} of my one-book-per-week challenge.**\n**My goal is to read {goal} books this year.**\n\n")
