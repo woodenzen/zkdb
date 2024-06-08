@@ -8,10 +8,6 @@ from TheArchivePath import TheArchivePath
 import daily_results
 from zk_stats import zk_stats
 from get_word_count import get_word_count
-from book_progress import bookography
-from momento_mori import momento_mori
-from number_to_words import number_to_words
-
 
 # Set the path to the directory to search for files
 zettelkasten = TheArchivePath()
@@ -22,8 +18,6 @@ zettelkasten = TheArchivePath()
 twords = get_word_count()
 tlinks = count_target_occurrences(']]')
 tzettel = 0
-ss = random.choice(open("/Users/will/Dropbox/zettelkasten/L-Super Slogans 202012281549.md").readlines())
-ss = ss.replace("\xa0", " ")
 
 # Set the length and start of the current and comparison date ranges for trending
 short = 10
@@ -35,27 +29,10 @@ current = daily_results.trend(short, short)
 past = daily_results.trend(long, long)
 ## Basic stats Function Call
 zk_stats()
-# Bookography Function Call
-highest_number, current_week, goal, abandoned = bookography(52)
-# Momento Mori Function Call
-momento_mori()
 
 ## Print the dashboard
 
-# Calculate pace before converting to words
-pace = highest_number * 52 / current_week
-pace = round(pace)
-
 output = f"""
-{'–'*5}
-## Read **{goal}** Books in {datetime.date.today().year} 
-- **I have read {number_to_words(highest_number)} books and abandoned {number_to_words(abandoned)} books.**
-- **It is week {number_to_words(current_week)} of my one-book-per-week challenge.**
-- **I'm on a pace to read {number_to_words(pace)} books this year.**
-
-{'–'*5}
-## Super Slogan
-{ss}
 {'–'*5}
 ## Zettelkasten Statistics
        ★★★★★ 
@@ -75,7 +52,7 @@ print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20
 print(f"I have {count_target_occurrences('#proofing')} [zettels](thearchive://match/%23proofing) in my proofing oven.")
 
 ## Print the list of files produced in the last 10 days and their subatomic lines.
-print(f'\n–––––')
+print('\n–––––')
 print(f'## {current[0]} new notes have been created in the last ten days. \n')
 for entry in current[4]:
     subatomic_line = daily_results.get_subatomic_line(zettelkasten+"/"+entry)
