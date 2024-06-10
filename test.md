@@ -1,1165 +1,132 @@
----
-UUID:  ›[[202206100711]]
-cdate:  06-10-2022 07:11 AM
-tags:   #how-to-live
----
-# Wonderment-Eudaemonia
-Subatomic: These are the only good outcomes of life.
+4 ways to a better life ›[[201812161720]]  
+12-16-2018 - 5:20 PM
+#writing  
 
-   - Steering and Focusing Attention for Fulfillment [[202205130603]]
-   - B-How To Live [[202106131829]]
-   - Epistemology Of Knowledge [[202201050845]]
+“Don’t let yourself be. Find something new to try, something to change. Count how often it succeeds and how often it doesn’t. Write about it. Ask a patient or a colleague what they think about it. See if you can keep the conversation going.” 
+― Atul Gawande
 
-What factors lead to wonderment/eudaemonia?
-- These are contradictory - solitude and community
-- nature
-- focusing on the present moment experience of awareness and contrarily reminiscing 
-- reading and writing
-- walking
-- conversation
 
-- B-Four Thousand Weeks §[[202206261635]] 
-   * Don't forget the ultimate point of life's frenetic _doing_ is to experience the wonder of life. Why not go directly for the wonder!
-- Serendipitous Ideation [[202106132004]]
+Book - Better [[201812141430]]
+Conversation ...................................................[[201901181058]]
+How to do great things .........................................[[201901221132]]
+- Slowly Spreading Ideas [[202212111126]]
+     - Some ideas aren't made to spread quickly.
 
+★★★★★
+
+Book - Better ›[[201812141430]]  
+12-14-2018
+tags - #book, #writing 
+
+Better: A Surgeon's Notes on Performance
+by Atul Gawande
+
+Positive Deviant.............[[201812141437]]
+4 ways to a better life......[[201812161720]]
 
 
 ★★★★★
----
-UUID:      ›[[202205130603]] 
-cdate:     05-13-2022 06:03 AM
-tags:      #aspects-of-attention 
----
-# Steering and Focusing Attention for Fulfillment
 
-Subatomic: Reflections on attention. 
+Conversation ›[[201901181058]]  
+01-18-2019 - 10:58 AM
 
-## Steering
-- Implies a self that does the steering. Fate might be a propensity rather than a done deal. I can't explain why I chose what I chose but when confronted with a choice I seem to lean the way I've traveled in the past. To change this takes time a repetitions. Sort of like muscle building. The more some path is followed the more it get followed. 
-- Awareness can expand and collapse §[[202205141425]]
-- Priority of attention §[[202205141427]] 
-- Attention strength training §[[202205141428]] 
+ > Only by conversations in which experienced thinkers exchange information about their actual ways of working can a useful sense of method and theory be imparted to the beginning student.
 
-## Focusing
-- Noticing. This is much slower than steering which can be unconscious or so close to being unconscious that it appears automatic. Notice is both slower and instantaneous. As so a something is noticed, brought into focus, it is full noticed. Focus in this sense is not gradual. Something out of focus, blurry, confusing, until the moment it isn't.
-- Focusing attention has an outsized impact [[202205092052]]
-   * Where I place may attention drives who I'll become.
-- Interplay Between Focus And Knowledge [[202105221453]]
-- More noticing [[202012231619]]
+Stressing again the importance of developing and learning conversation skills.
+
+On Intellectual Craftsmanship
+evernote:///view/597091/s5/99d76aa8-2694-43bc-aaf3-89767b2a1d91/99d76aa8-2694-43bc-aaf3-89767b2a1d91/
+
+On Intellectual Craftsmanship ..................................[[201901151724]]
+4 ways to a better life ........................................[[201812161720]]
+Positive Deviant ...............................................[[201812141437]]
+That sounds hard ...............................................[[201902200819]]
 
 
-## Attention
-- How much do I have? 
-- Are there different qualities of attention?
-- Is attention sharable? (via writing)
-- Is attention under valued or over valued?
-- How do the things that capture my attention affect my life?
-- I am who I am because of what I focused my attention on in the past.
-- I would be a different person if I had focused my attention on different things in the past. 
-- Dogen might say that I can be different now, focusing differently in the future.
-- » Has Time Been Well Spent? §[[202205141439]] 
-- T-March 13, 2021 §[[202205141442]] 
-
-## Fulfillment
-- What does fulfillment mean?
-- What brings on the feeling of fulfillment?
-  - A strong workout
-  - Writing a good sentence
-  - Helping others
-- Why don't I focus my attention on the things that bring me fulfillment?
-- Daniel Dennett said, "[f]ind something more important than you are and dedicate your life to it." 
-    - https://forum.zettelkasten.de/discussion/comment/15750/#Comment_15750
-- [[eudaemonia]] 
-
+#thinking-skills
 
 ★★★★★
----
-UUID:      ›[[202106131829]] 
-cdate:     06-13-2021 06:29 PM
-tags:      #book #stoicism #history 
----
-# How To Live?
 
-   - A life of Montaigne in one question and twenty attempts at an answer.
-   - The Art Of Living A Good Life [[202105102006]]
-   - Well-trained mind brings happiness [[202005240910]]
- 
-> Michel Eyquem de Montaigne, also known as Lord of Montaigne, was one of the most significant philosophers of the French Renaissance, known for popularizing the essay as a literary genre. - Wikipedia 
+How to do great things ›[[201901221132]]  
+01-22-2019 - 11:32 AM
 
-Audio book processing. Bakewell writes this book as 20 essays addressing the question, How to Live, though Montaigne's essays. Essays about essays. Sort of.
+Richard Hamming - The Art of Doing Science and Engineering: Learning to Learn.
 
-## Introduction
+> Brains are nice to have but they are even better if you know how to use them.
 
-- We can not escape our perspective. We can only walk with our own two legs, we can only sit with our own bum.
+Minds don't come with owner's manuals. We have to develop our own using a haphazard array of gadgets and hacks. This takes a real long time unless we stand on the shoulders of the giants who came before us. 
 
-## Death
+The Art Of Doing Research [[202103141429]]
+Simple Rules For Lifelong Learning [[202106301918]]
 
-   - You have no choice but to make yourself available for death. Nature will take care of everything.
-   - Death is but a few bad moments at the end of life.
+> If what you are working on is not important and aligned with your goals—and a lot of what you do and say isn’t—then why are you doing it? The question you need to ask yourself if “why are you not working on and thinking about the important problems in your area?” How can we expect to achieve great things if we are not working on the right problems?
 
-## Friends
-   - Seneca recommended developing the skill to replace a valued friend as a way to develop strong character traits and to get over the loss of a friend. §[[202107130847]]
+- The four quadrants of time usage [[202108081059]]
 
-   - The Evolutionary Benefit of Friendship [[202009220727]]
+Ask "Why are you not working on and thinking about the important problems you can affect?"
 
-## Aloneness
-   - recoil at the thought of having a discovery of the moment and having no one to share it with.
-   - all thought of communication causes pain when there is no one to share it with.
+> This isn’t about who works the hardest but rather who focuses their limited energy on the right things. Learning things that (1) change slowly and (2) apply to a wide variety of situations could be a better use of time than learning something incredibly time-consuming, rapidly changing, and of limited application. Hamming dedicated his Friday afternoons to “great thoughts.” Setting aside time to think is a common of people that do great things. Not only does this help you live consciously it helps get your head out of the weeds. The rest of us are too busy with the details to ask if we’re going in the right direction.
 
-## Reaching Eudaemonia Through Ataraxia
-
-   - Hellenistic Philosophy
-        - Stoicism
-        - Epicurism
-        - Skepticism 
-   - they have a common goal of reaching eudaemonia through ataraxia "a lucid state of robust equanimity characterized by ongoing freedom from distress and worry." - Wikipedia
-
-   #beautiful-language 
-   - Looking for equanimity so you aren't battered and dragged around by your emotions like a bone being fought over by a pack of dogs. 
-
-## The definition of sexual intercourse
-   - "...nothing but a little friction of a couple of membranes followed by the spirting of some mucous." 
-
-## The Rump Argument
-   - No matter who you think you are, you are sitting on your own rump just like everyone else. 
-
-- in the 1600's, potatoes were considered an aphrodisiac.
-
-#beautiful-language 
-- "It gathers force as it proceeds."
-- My mind will not budge unless my legs move it.
-- My thoughts fall asleep unless I prod them.
-
-- The Eight Freedoms  [[202111290921]]
+- Concentrating on what matters [[202309250738]]
+     * Productivity's real "work" is less about improving efficiency and more about concentrating on what matters.
+- The Physics Of Productivity [[202106301921]]
+- Mitigating The Pace Of Life [[202107230746]]
+    - Fasting on Fridays
 
 
+How to do great things
+evernote:///view/597091/s5/49f4863b-c885-48a7-aff2-57e94e744dd1/49f4863b-c885-48a7-aff2-57e94e744dd1/
 
-### Links
-- Unattainable Earth [[202106281802]]
+#mental-models #article  
 
----
-### Works cited
-- Bakewell, Sarah. How to Live, or, A Life of Montaigne in One Question and Twenty Attempts at an Answer. 2011.
+- 4 ways to a better life [[201812161720]]
+- Legacy [[201811151610]]
+- Environmental Art Projects [[202001131323]] 
+- Don't Yet Know My Full History [[202008281749]] 
 
 ★★★★★
----
-UUID:      ›[[202201050845]] 
-cdate:     01-05-2022 08:45 AM
-tags:      #pedagogy #zettelkasting #knowledge 
----
-# Epistemology Of Knowledge
-Subatomic: These are the signifiers of knowledge. 
-
-Use case
-- Make these the section headers of a zettel when factoring an article or book section.
-
-1. Truth. 
-	- Arguments 
-  	- Rational
-  	- Evidence
-2. Relevancy. Relevancy as a reason for attention distribution.
-3. Usefulness. Usefulness means that the knowledge structure is a tool to do a job. 
-    - Usefulness is the central metric of tools [[202201052120]]
-          - Usefulness is what is the quality of excellence in a tool. Usefulness is a contribution to eudaemonia.
-4. Beauty.
-5. Simpleness. 
-★★★★★
----
-UUID:      ›[[202106132004]] 
-cdate:     06-13-2021 08:04 PM
-tags:      #blog-post 
----
-# Serendipitous Ideation
-
-When I pay attention and notice ideas as they appear, the noticing and the attention heightens and enriches the experience. This can take a mighty effort, but the energy spent is priceless. 
-
-Effort doesn’t have to be 100% all of the time or even 80% or 60%. Even if the effort is lackluster, any awkward intermingling with ideas intensifies apparency. §[[202106140552]]‹ Grab even the pico-sized moments and let the compounding feedback cycle explode. ›[[202106140557]] Each time ideas are danced with, we get in a little more sync.
-- Maintaining an Idea's Flywheel [[202311011103]]
-     * A positive feedback cycle is created when attention is applied to an idea.
-Psychophysics Of Brightness [[201912270723]]
-Compounding Knowledge [[201903112026]]
-Your smile spreads happiness [[202012151745]]
-
-
-Ideation is serendipitous. Being tackled by ideas and wrestling with them is a privilege. I am the lucky one. “Luck is what happens when preparation meets opportunity.” ― **Roman philosopher Seneca**
-
-The volume of ideas, good and bad, valuable and worthless, appreciate and inappropriate, is increasing. The measure of a good idea is the answer to the question, “Is this consistent with the person I want to be?.” And “Is this idea intricately connected to my objectives?” And “Will it lead to an opportunity to express gratitude?” And “Will this idea encourage me to wake up to the wonderment of this bright moment?”
-
-- B-Techniques For Producing Ideas [[202206251631]] 
-- Wonderment-Eudaemonia [[202206100711]]
-   * The only good outcomes of life.
-- The Image Of A Cities Relationship To ZM [[202106121928]]
-- H-The Art Of Living A Good Life [[202105102006]]
-- How to Keep Getting Better at Stuff [[202405270952]]
-     * Continuous improvement hinges on embracing a growth mindset, seeking regular feedback, and practicing deliberate effort.
-                                                                                                                            ---
-UUID:  ›[[202206100711]]
-cdate:  06-10-2022 07:11 AM
-tags:   #how-to-live
----
-# Wonderment-Eudaemonia
-Subatomic: These are the only good outcomes of life.
-
-   - Steering and Focusing Attention for Fulfillment [[202205130603]]
-   - B-How To Live [[202106131829]]
-   - Epistemology Of Knowledge [[202201050845]]
-
-What factors lead to wonderment/eudaemonia?
-- These are contradictory - solitude and community
-- nature
-- focusing on the present moment experience of awareness and contrarily reminiscing 
-- reading and writing
-- walking
-- conversation
-
-- B-Four Thousand Weeks §[[202206261635]] 
-   * Don't forget the ultimate point of life's frenetic _doing_ is to experience the wonder of life. Why not go directly for the wonder!
-- Serendipitous Ideation [[202106132004]]
-
-
-
-★★★★★
----
-UUID:      ›[[202205130603]] 
-cdate:     05-13-2022 06:03 AM
-tags:      #aspects-of-attention 
----
-# Steering and Focusing Attention for Fulfillment
-
-Subatomic: Reflections on attention. 
-
-## Steering
-- Implies a self that does the steering. Fate might be a propensity rather than a done deal. I can't explain why I chose what I chose but when confronted with a choice I seem to lean the way I've traveled in the past. To change this takes time a repetitions. Sort of like muscle building. The more some path is followed the more it get followed. 
-- Awareness can expand and collapse §[[202205141425]]
-- Priority of attention §[[202205141427]] 
-- Attention strength training §[[202205141428]] 
-
-## Focusing
-- Noticing. This is much slower than steering which can be unconscious or so close to being unconscious that it appears automatic. Notice is both slower and instantaneous. As so a something is noticed, brought into focus, it is full noticed. Focus in this sense is not gradual. Something out of focus, blurry, confusing, until the moment it isn't.
-- Focusing attention has an outsized impact [[202205092052]]
-   * Where I place may attention drives who I'll become.
-- Interplay Between Focus And Knowledge [[202105221453]]
-- More noticing [[202012231619]]
-
-
-## Attention
-- How much do I have? 
-- Are there different qualities of attention?
-- Is attention sharable? (via writing)
-- Is attention under valued or over valued?
-- How do the things that capture my attention affect my life?
-- I am who I am because of what I focused my attention on in the past.
-- I would be a different person if I had focused my attention on different things in the past. 
-- Dogen might say that I can be different now, focusing differently in the future.
-- » Has Time Been Well Spent? §[[202205141439]] 
-- T-March 13, 2021 §[[202205141442]] 
-
-## Fulfillment
-- What does fulfillment mean?
-- What brings on the feeling of fulfillment?
-  - A strong workout
-  - Writing a good sentence
-  - Helping others
-- Why don't I focus my attention on the things that bring me fulfillment?
-- Daniel Dennett said, "[f]ind something more important than you are and dedicate your life to it." 
-    - https://forum.zettelkasten.de/discussion/comment/15750/#Comment_15750
-- [[eudaemonia]] 
-
-
-★★★★★
----
-UUID:      ›[[202106131829]] 
-cdate:     06-13-2021 06:29 PM
-tags:      #book #stoicism #history 
----
-# How To Live?
-
-   - A life of Montaigne in one question and twenty attempts at an answer.
-   - The Art Of Living A Good Life [[202105102006]]
-   - Well-trained mind brings happiness [[202005240910]]
- 
-> Michel Eyquem de Montaigne, also known as Lord of Montaigne, was one of the most significant philosophers of the French Renaissance, known for popularizing the essay as a literary genre. - Wikipedia 
-
-Audio book processing. Bakewell writes this book as 20 essays addressing the question, How to Live, though Montaigne's essays. Essays about essays. Sort of.
-
-## Introduction
-
-- We can not escape our perspective. We can only walk with our own two legs, we can only sit with our own bum.
-
-## Death
-
-   - You have no choice but to make yourself available for death. Nature will take care of everything.
-   - Death is but a few bad moments at the end of life.
-
-## Friends
-   - Seneca recommended developing the skill to replace a valued friend as a way to develop strong character traits and to get over the loss of a friend. §[[202107130847]]
-
-   - The Evolutionary Benefit of Friendship [[202009220727]]
-
-## Aloneness
-   - recoil at the thought of having a discovery of the moment and having no one to share it with.
-   - all thought of communication causes pain when there is no one to share it with.
-
-## Reaching Eudaemonia Through Ataraxia
-
-   - Hellenistic Philosophy
-        - Stoicism
-        - Epicurism
-        - Skepticism 
-   - they have a common goal of reaching eudaemonia through ataraxia "a lucid state of robust equanimity characterized by ongoing freedom from distress and worry." - Wikipedia
-
-   #beautiful-language 
-   - Looking for equanimity so you aren't battered and dragged around by your emotions like a bone being fought over by a pack of dogs. 
-
-## The definition of sexual intercourse
-   - "...nothing but a little friction of a couple of membranes followed by the spirting of some mucous." 
-
-## The Rump Argument
-   - No matter who you think you are, you are sitting on your own rump just like everyone else. 
-
-- in the 1600's, potatoes were considered an aphrodisiac.
-
-#beautiful-language 
-- "It gathers force as it proceeds."
-- My mind will not budge unless my legs move it.
-- My thoughts fall asleep unless I prod them.
-
-- The Eight Freedoms  [[202111290921]]
-
-
-
-### Links
-- Unattainable Earth [[202106281802]]
 
 ---
-### Works cited
-- Bakewell, Sarah. How to Live, or, A Life of Montaigne in One Question and Twenty Attempts at an Answer. 2011.
-
-★★★★★
+UUID:      ›[[202212111126]] 
+cdate:     12-11-2022 11:26 AM
+tags:       [[Atul Gawande]] #medical #meme #article 
 ---
-UUID:      ›[[202201050845]] 
-cdate:     01-05-2022 08:45 AM
-tags:      #pedagogy #zettelkasting #knowledge 
----
-# Epistemology Of Knowledge
-Subatomic: These are the signifiers of knowledge. 
+# Slowly Spreading Ideas
+Subatomic: Some ideas aren't made to spread quickly.
 
-Use case
-- Make these the section headers of a zettel when factoring an article or book section.
+by Atul Gawande
 
-1. Truth. 
-	- Arguments 
-  	- Rational
-  	- Evidence
-2. Relevancy. Relevancy as a reason for attention distribution.
-3. Usefulness. Usefulness means that the knowledge structure is a tool to do a job. 
-    - Usefulness is the central metric of tools [[202201052120]]
-          - Usefulness is what is the quality of excellence in a tool. Usefulness is a contribution to eudaemonia.
-4. Beauty.
-5. Simpleness. 
-★★★★★
----
-UUID:      ›[[202106132004]] 
-cdate:     06-13-2021 08:04 PM
-tags:      #blog-post 
----
-# Serendipitous Ideation
+- Positive Deviant [[201812141437]]
+- 4 ways to a better life [[201812161720]]
 
-When I pay attention and notice ideas as they appear, the noticing and the attention heightens and enriches the experience. This can take a mighty effort, but the energy spent is priceless. 
+Anesthesia as an idea only became a thing in the mid-1800s. It was quickly adopted and became its own medical specialty. In the 1860s, the Edinburgh surgeon Joseph Lister saw the link between hand washing and sterilization and infection, but it took years for surgeons to adopt the practices that saved lives. Why did these two ideas take such a different trajectory?
 
-Effort doesn’t have to be 100% all of the time or even 80% or 60%. Even if the effort is lackluster, any awkward intermingling with ideas intensifies apparency. §[[202106140552]]‹ Grab even the pico-sized moments and let the compounding feedback cycle explode. ›[[202106140557]] Each time ideas are danced with, we get in a little more sync.
-- Maintaining an Idea's Flywheel [[202311011103]]
-     * A positive feedback cycle is created when attention is applied to an idea.
-Psychophysics Of Brightness [[201912270723]]
-Compounding Knowledge [[201903112026]]
-Your smile spreads happiness [[202012151745]]
+- A-Ignaz Semmelweis Pioneered Hand Washing [[202011181945]]
 
+The primary reason for quicker adoption was because what is easy has less resistance to getting adopted.
+- Anesthetic put the patient out, and the surgeon can take his time with the procedure. Previously he had to hurry because of a screaming, writhing patient. From the surgeon's POV, this is easy, from the patient's POV, there is nothing to remember. 
 
-Ideation is serendipitous. Being tackled by ideas and wrestling with them is a privilege. I am the lucky one. “Luck is what happens when preparation meets opportunity.” ― **Roman philosopher Seneca**
+- Hand cleaning required diligent work and remembering to do the steps. The result was not so immediate. 
+> The technical complexity might have been part of the difficulty. Giving Lister’s methods “a try” required painstaking attention to detail. Surgeons had to be scrupulous about soaking their hands, instruments, and even their catgut sutures in antiseptic solution.
 
-The volume of ideas, good and bad, valuable and worthless, appreciate and inappropriate, is increasing. The measure of a good idea is the answer to the question, “Is this consistent with the person I want to be?.” And “Is this idea intricately connected to my objectives?” And “Will it lead to an opportunity to express gratitude?” And “Will this idea encourage me to wake up to the wonderment of this bright moment?”
+With anesthesia, it became easy for the surgeons when the specialty was moved to someone else.
+> Faced with the complexities, they didn’t give up; instead, they formed an entirely new medical specialty—anesthesiology.
 
-- B-Techniques For Producing Ideas [[202206251631]] 
-- Wonderment-Eudaemonia [[202206100711]]
-   * The only good outcomes of life.
-- The Image Of A Cities Relationship To ZM [[202106121928]]
-- H-The Art Of Living A Good Life [[202105102006]]
-- How to Keep Getting Better at Stuff [[202405270952]]
-     * Continuous improvement hinges on embracing a growth mindset, seeking regular feedback, and practicing deliberate effort.
-                                                                                                                            ---
-UUID:  ›[[202206100711]]
-cdate:  06-10-2022 07:11 AM
-tags:   #how-to-live
----
-# Wonderment-Eudaemonia
-Subatomic: These are the only good outcomes of life.
+- Paradigm flipping [[202311140626]]
+     * A paradigm is our mental model of the world. Be bold and imagine a different future.
+- Setting priorities for idea review [[202208031502]]
 
-   - Steering and Focusing Attention for Fulfillment [[202205130603]]
-   - B-How To Live [[202106131829]]
-   - Epistemology Of Knowledge [[202201050845]]
+> So, what were the key differences? First, one combatted a visible and immediate problem (pain); the other combatted an invisible problem (germs) whose effects wouldn’t be manifest until well after the operation. Second, although both made life better for patients, only one made life better for doctors. Anesthesia changed surgery from a brutal, time-pressured assault on a shrieking patient to a quiet, considered procedure.
 
-What factors lead to wonderment/eudaemonia?
-- These are contradictory - solitude and community
-- nature
-- focusing on the present moment experience of awareness and contrarily reminiscing 
-- reading and writing
-- walking
-- conversation
+- Other ideas that stall. A solution may be available, but adoption lags. Typically invisible problems get neglected. 
+  1. Global Warming
+  2. Health crisis from industrial foods
+  3. Student loan debt [[202201202035]]
+  4. Plastic pollution
+  5. Environmental degradation
 
-- B-Four Thousand Weeks §[[202206261635]] 
-   * Don't forget the ultimate point of life's frenetic _doing_ is to experience the wonder of life. Why not go directly for the wonder!
-- Serendipitous Ideation [[202106132004]]
+–––––
+## References and Resources
 
-
-
-★★★★★
----
-UUID:      ›[[202205130603]] 
-cdate:     05-13-2022 06:03 AM
-tags:      #aspects-of-attention 
----
-# Steering and Focusing Attention for Fulfillment
-
-Subatomic: Reflections on attention. 
-
-## Steering
-- Implies a self that does the steering. Fate might be a propensity rather than a done deal. I can't explain why I chose what I chose but when confronted with a choice I seem to lean the way I've traveled in the past. To change this takes time a repetitions. Sort of like muscle building. The more some path is followed the more it get followed. 
-- Awareness can expand and collapse §[[202205141425]]
-- Priority of attention §[[202205141427]] 
-- Attention strength training §[[202205141428]] 
-
-## Focusing
-- Noticing. This is much slower than steering which can be unconscious or so close to being unconscious that it appears automatic. Notice is both slower and instantaneous. As so a something is noticed, brought into focus, it is full noticed. Focus in this sense is not gradual. Something out of focus, blurry, confusing, until the moment it isn't.
-- Focusing attention has an outsized impact [[202205092052]]
-   * Where I place may attention drives who I'll become.
-- Interplay Between Focus And Knowledge [[202105221453]]
-- More noticing [[202012231619]]
-
-
-## Attention
-- How much do I have? 
-- Are there different qualities of attention?
-- Is attention sharable? (via writing)
-- Is attention under valued or over valued?
-- How do the things that capture my attention affect my life?
-- I am who I am because of what I focused my attention on in the past.
-- I would be a different person if I had focused my attention on different things in the past. 
-- Dogen might say that I can be different now, focusing differently in the future.
-- » Has Time Been Well Spent? §[[202205141439]] 
-- T-March 13, 2021 §[[202205141442]] 
-
-## Fulfillment
-- What does fulfillment mean?
-- What brings on the feeling of fulfillment?
-  - A strong workout
-  - Writing a good sentence
-  - Helping others
-- Why don't I focus my attention on the things that bring me fulfillment?
-- Daniel Dennett said, "[f]ind something more important than you are and dedicate your life to it." 
-    - https://forum.zettelkasten.de/discussion/comment/15750/#Comment_15750
-- [[eudaemonia]] 
-
-
-★★★★★
----
-UUID:      ›[[202106131829]] 
-cdate:     06-13-2021 06:29 PM
-tags:      #book #stoicism #history 
----
-# How To Live?
-
-   - A life of Montaigne in one question and twenty attempts at an answer.
-   - The Art Of Living A Good Life [[202105102006]]
-   - Well-trained mind brings happiness [[202005240910]]
- 
-> Michel Eyquem de Montaigne, also known as Lord of Montaigne, was one of the most significant philosophers of the French Renaissance, known for popularizing the essay as a literary genre. - Wikipedia 
-
-Audio book processing. Bakewell writes this book as 20 essays addressing the question, How to Live, though Montaigne's essays. Essays about essays. Sort of.
-
-## Introduction
-
-- We can not escape our perspective. We can only walk with our own two legs, we can only sit with our own bum.
-
-## Death
-
-   - You have no choice but to make yourself available for death. Nature will take care of everything.
-   - Death is but a few bad moments at the end of life.
-
-## Friends
-   - Seneca recommended developing the skill to replace a valued friend as a way to develop strong character traits and to get over the loss of a friend. §[[202107130847]]
-
-   - The Evolutionary Benefit of Friendship [[202009220727]]
-
-## Aloneness
-   - recoil at the thought of having a discovery of the moment and having no one to share it with.
-   - all thought of communication causes pain when there is no one to share it with.
-
-## Reaching Eudaemonia Through Ataraxia
-
-   - Hellenistic Philosophy
-        - Stoicism
-        - Epicurism
-        - Skepticism 
-   - they have a common goal of reaching eudaemonia through ataraxia "a lucid state of robust equanimity characterized by ongoing freedom from distress and worry." - Wikipedia
-
-   #beautiful-language 
-   - Looking for equanimity so you aren't battered and dragged around by your emotions like a bone being fought over by a pack of dogs. 
-
-## The definition of sexual intercourse
-   - "...nothing but a little friction of a couple of membranes followed by the spirting of some mucous." 
-
-## The Rump Argument
-   - No matter who you think you are, you are sitting on your own rump just like everyone else. 
-
-- in the 1600's, potatoes were considered an aphrodisiac.
-
-#beautiful-language 
-- "It gathers force as it proceeds."
-- My mind will not budge unless my legs move it.
-- My thoughts fall asleep unless I prod them.
-
-- The Eight Freedoms  [[202111290921]]
-
-
-
-### Links
-- Unattainable Earth [[202106281802]]
-
----
-### Works cited
-- Bakewell, Sarah. How to Live, or, A Life of Montaigne in One Question and Twenty Attempts at an Answer. 2011.
-
-★★★★★
----
-UUID:      ›[[202201050845]] 
-cdate:     01-05-2022 08:45 AM
-tags:      #pedagogy #zettelkasting #knowledge 
----
-# Epistemology Of Knowledge
-Subatomic: These are the signifiers of knowledge. 
-
-Use case
-- Make these the section headers of a zettel when factoring an article or book section.
-
-1. Truth. 
-	- Arguments 
-  	- Rational
-  	- Evidence
-2. Relevancy. Relevancy as a reason for attention distribution.
-3. Usefulness. Usefulness means that the knowledge structure is a tool to do a job. 
-    - Usefulness is the central metric of tools [[202201052120]]
-          - Usefulness is what is the quality of excellence in a tool. Usefulness is a contribution to eudaemonia.
-4. Beauty.
-5. Simpleness. 
-★★★★★
----
-UUID:      ›[[202106132004]] 
-cdate:     06-13-2021 08:04 PM
-tags:      #blog-post 
----
-# Serendipitous Ideation
-
-When I pay attention and notice ideas as they appear, the noticing and the attention heightens and enriches the experience. This can take a mighty effort, but the energy spent is priceless. 
-
-Effort doesn’t have to be 100% all of the time or even 80% or 60%. Even if the effort is lackluster, any awkward intermingling with ideas intensifies apparency. §[[202106140552]]‹ Grab even the pico-sized moments and let the compounding feedback cycle explode. ›[[202106140557]] Each time ideas are danced with, we get in a little more sync.
-- Maintaining an Idea's Flywheel [[202311011103]]
-     * A positive feedback cycle is created when attention is applied to an idea.
-Psychophysics Of Brightness [[201912270723]]
-Compounding Knowledge [[201903112026]]
-Your smile spreads happiness [[202012151745]]
-
-
-Ideation is serendipitous. Being tackled by ideas and wrestling with them is a privilege. I am the lucky one. “Luck is what happens when preparation meets opportunity.” ― **Roman philosopher Seneca**
-
-The volume of ideas, good and bad, valuable and worthless, appreciate and inappropriate, is increasing. The measure of a good idea is the answer to the question, “Is this consistent with the person I want to be?.” And “Is this idea intricately connected to my objectives?” And “Will it lead to an opportunity to express gratitude?” And “Will this idea encourage me to wake up to the wonderment of this bright moment?”
-
-- B-Techniques For Producing Ideas [[202206251631]] 
-- Wonderment-Eudaemonia [[202206100711]]
-   * The only good outcomes of life.
-- The Image Of A Cities Relationship To ZM [[202106121928]]
-- H-The Art Of Living A Good Life [[202105102006]]
-- How to Keep Getting Better at Stuff [[202405270952]]
-     * Continuous improvement hinges on embracing a growth mindset, seeking regular feedback, and practicing deliberate effort.
-                                                                                                                            ---
-UUID:  ›[[202206100711]]
-cdate:  06-10-2022 07:11 AM
-tags:   #how-to-live
----
-# Wonderment-Eudaemonia
-Subatomic: These are the only good outcomes of life.
-
-   - Steering and Focusing Attention for Fulfillment [[202205130603]]
-   - B-How To Live [[202106131829]]
-   - Epistemology Of Knowledge [[202201050845]]
-
-What factors lead to wonderment/eudaemonia?
-- These are contradictory - solitude and community
-- nature
-- focusing on the present moment experience of awareness and contrarily reminiscing 
-- reading and writing
-- walking
-- conversation
-
-- B-Four Thousand Weeks §[[202206261635]] 
-   * Don't forget the ultimate point of life's frenetic _doing_ is to experience the wonder of life. Why not go directly for the wonder!
-- Serendipitous Ideation [[202106132004]]
-
-
-
-★★★★★
----
-UUID:      ›[[202205130603]] 
-cdate:     05-13-2022 06:03 AM
-tags:      #aspects-of-attention 
----
-# Steering and Focusing Attention for Fulfillment
-
-Subatomic: Reflections on attention. 
-
-## Steering
-- Implies a self that does the steering. Fate might be a propensity rather than a done deal. I can't explain why I chose what I chose but when confronted with a choice I seem to lean the way I've traveled in the past. To change this takes time a repetitions. Sort of like muscle building. The more some path is followed the more it get followed. 
-- Awareness can expand and collapse §[[202205141425]]
-- Priority of attention §[[202205141427]] 
-- Attention strength training §[[202205141428]] 
-
-## Focusing
-- Noticing. This is much slower than steering which can be unconscious or so close to being unconscious that it appears automatic. Notice is both slower and instantaneous. As so a something is noticed, brought into focus, it is full noticed. Focus in this sense is not gradual. Something out of focus, blurry, confusing, until the moment it isn't.
-- Focusing attention has an outsized impact [[202205092052]]
-   * Where I place may attention drives who I'll become.
-- Interplay Between Focus And Knowledge [[202105221453]]
-- More noticing [[202012231619]]
-
-
-## Attention
-- How much do I have? 
-- Are there different qualities of attention?
-- Is attention sharable? (via writing)
-- Is attention under valued or over valued?
-- How do the things that capture my attention affect my life?
-- I am who I am because of what I focused my attention on in the past.
-- I would be a different person if I had focused my attention on different things in the past. 
-- Dogen might say that I can be different now, focusing differently in the future.
-- » Has Time Been Well Spent? §[[202205141439]] 
-- T-March 13, 2021 §[[202205141442]] 
-
-## Fulfillment
-- What does fulfillment mean?
-- What brings on the feeling of fulfillment?
-  - A strong workout
-  - Writing a good sentence
-  - Helping others
-- Why don't I focus my attention on the things that bring me fulfillment?
-- Daniel Dennett said, "[f]ind something more important than you are and dedicate your life to it." 
-    - https://forum.zettelkasten.de/discussion/comment/15750/#Comment_15750
-- [[eudaemonia]] 
-
-
-★★★★★
----
-UUID:      ›[[202106131829]] 
-cdate:     06-13-2021 06:29 PM
-tags:      #book #stoicism #history 
----
-# How To Live?
-
-   - A life of Montaigne in one question and twenty attempts at an answer.
-   - The Art Of Living A Good Life [[202105102006]]
-   - Well-trained mind brings happiness [[202005240910]]
- 
-> Michel Eyquem de Montaigne, also known as Lord of Montaigne, was one of the most significant philosophers of the French Renaissance, known for popularizing the essay as a literary genre. - Wikipedia 
-
-Audio book processing. Bakewell writes this book as 20 essays addressing the question, How to Live, though Montaigne's essays. Essays about essays. Sort of.
-
-## Introduction
-
-- We can not escape our perspective. We can only walk with our own two legs, we can only sit with our own bum.
-
-## Death
-
-   - You have no choice but to make yourself available for death. Nature will take care of everything.
-   - Death is but a few bad moments at the end of life.
-
-## Friends
-   - Seneca recommended developing the skill to replace a valued friend as a way to develop strong character traits and to get over the loss of a friend. §[[202107130847]]
-
-   - The Evolutionary Benefit of Friendship [[202009220727]]
-
-## Aloneness
-   - recoil at the thought of having a discovery of the moment and having no one to share it with.
-   - all thought of communication causes pain when there is no one to share it with.
-
-## Reaching Eudaemonia Through Ataraxia
-
-   - Hellenistic Philosophy
-        - Stoicism
-        - Epicurism
-        - Skepticism 
-   - they have a common goal of reaching eudaemonia through ataraxia "a lucid state of robust equanimity characterized by ongoing freedom from distress and worry." - Wikipedia
-
-   #beautiful-language 
-   - Looking for equanimity so you aren't battered and dragged around by your emotions like a bone being fought over by a pack of dogs. 
-
-## The definition of sexual intercourse
-   - "...nothing but a little friction of a couple of membranes followed by the spirting of some mucous." 
-
-## The Rump Argument
-   - No matter who you think you are, you are sitting on your own rump just like everyone else. 
-
-- in the 1600's, potatoes were considered an aphrodisiac.
-
-#beautiful-language 
-- "It gathers force as it proceeds."
-- My mind will not budge unless my legs move it.
-- My thoughts fall asleep unless I prod them.
-
-- The Eight Freedoms  [[202111290921]]
-
-
-
-### Links
-- Unattainable Earth [[202106281802]]
-
----
-### Works cited
-- Bakewell, Sarah. How to Live, or, A Life of Montaigne in One Question and Twenty Attempts at an Answer. 2011.
-
-★★★★★
----
-UUID:      ›[[202201050845]] 
-cdate:     01-05-2022 08:45 AM
-tags:      #pedagogy #zettelkasting #knowledge 
----
-# Epistemology Of Knowledge
-Subatomic: These are the signifiers of knowledge. 
-
-Use case
-- Make these the section headers of a zettel when factoring an article or book section.
-
-1. Truth. 
-	- Arguments 
-  	- Rational
-  	- Evidence
-2. Relevancy. Relevancy as a reason for attention distribution.
-3. Usefulness. Usefulness means that the knowledge structure is a tool to do a job. 
-    - Usefulness is the central metric of tools [[202201052120]]
-          - Usefulness is what is the quality of excellence in a tool. Usefulness is a contribution to eudaemonia.
-4. Beauty.
-5. Simpleness. 
-★★★★★
----
-UUID:      ›[[202106132004]] 
-cdate:     06-13-2021 08:04 PM
-tags:      #blog-post 
----
-# Serendipitous Ideation
-
-When I pay attention and notice ideas as they appear, the noticing and the attention heightens and enriches the experience. This can take a mighty effort, but the energy spent is priceless. 
-
-Effort doesn’t have to be 100% all of the time or even 80% or 60%. Even if the effort is lackluster, any awkward intermingling with ideas intensifies apparency. §[[202106140552]]‹ Grab even the pico-sized moments and let the compounding feedback cycle explode. ›[[202106140557]] Each time ideas are danced with, we get in a little more sync.
-- Maintaining an Idea's Flywheel [[202311011103]]
-     * A positive feedback cycle is created when attention is applied to an idea.
-Psychophysics Of Brightness [[201912270723]]
-Compounding Knowledge [[201903112026]]
-Your smile spreads happiness [[202012151745]]
-
-
-Ideation is serendipitous. Being tackled by ideas and wrestling with them is a privilege. I am the lucky one. “Luck is what happens when preparation meets opportunity.” ― **Roman philosopher Seneca**
-
-The volume of ideas, good and bad, valuable and worthless, appreciate and inappropriate, is increasing. The measure of a good idea is the answer to the question, “Is this consistent with the person I want to be?.” And “Is this idea intricately connected to my objectives?” And “Will it lead to an opportunity to express gratitude?” And “Will this idea encourage me to wake up to the wonderment of this bright moment?”
-
-- B-Techniques For Producing Ideas [[202206251631]] 
-- Wonderment-Eudaemonia [[202206100711]]
-   * The only good outcomes of life.
-- The Image Of A Cities Relationship To ZM [[202106121928]]
-- H-The Art Of Living A Good Life [[202105102006]]
-- How to Keep Getting Better at Stuff [[202405270952]]
-     * Continuous improvement hinges on embracing a growth mindset, seeking regular feedback, and practicing deliberate effort.
-                                                                                                                            ---
-UUID:  ›[[202206100711]]
-cdate:  06-10-2022 07:11 AM
-tags:   #how-to-live
----
-# Wonderment-Eudaemonia
-Subatomic: These are the only good outcomes of life.
-
-   - Steering and Focusing Attention for Fulfillment [[202205130603]]
-   - B-How To Live [[202106131829]]
-   - Epistemology Of Knowledge [[202201050845]]
-
-What factors lead to wonderment/eudaemonia?
-- These are contradictory - solitude and community
-- nature
-- focusing on the present moment experience of awareness and contrarily reminiscing 
-- reading and writing
-- walking
-- conversation
-
-- B-Four Thousand Weeks §[[202206261635]] 
-   * Don't forget the ultimate point of life's frenetic _doing_ is to experience the wonder of life. Why not go directly for the wonder!
-- Serendipitous Ideation [[202106132004]]
-
-
-
-★★★★★
----
-UUID:      ›[[202205130603]] 
-cdate:     05-13-2022 06:03 AM
-tags:      #aspects-of-attention 
----
-# Steering and Focusing Attention for Fulfillment
-
-Subatomic: Reflections on attention. 
-
-## Steering
-- Implies a self that does the steering. Fate might be a propensity rather than a done deal. I can't explain why I chose what I chose but when confronted with a choice I seem to lean the way I've traveled in the past. To change this takes time a repetitions. Sort of like muscle building. The more some path is followed the more it get followed. 
-- Awareness can expand and collapse §[[202205141425]]
-- Priority of attention §[[202205141427]] 
-- Attention strength training §[[202205141428]] 
-
-## Focusing
-- Noticing. This is much slower than steering which can be unconscious or so close to being unconscious that it appears automatic. Notice is both slower and instantaneous. As so a something is noticed, brought into focus, it is full noticed. Focus in this sense is not gradual. Something out of focus, blurry, confusing, until the moment it isn't.
-- Focusing attention has an outsized impact [[202205092052]]
-   * Where I place may attention drives who I'll become.
-- Interplay Between Focus And Knowledge [[202105221453]]
-- More noticing [[202012231619]]
-
-
-## Attention
-- How much do I have? 
-- Are there different qualities of attention?
-- Is attention sharable? (via writing)
-- Is attention under valued or over valued?
-- How do the things that capture my attention affect my life?
-- I am who I am because of what I focused my attention on in the past.
-- I would be a different person if I had focused my attention on different things in the past. 
-- Dogen might say that I can be different now, focusing differently in the future.
-- » Has Time Been Well Spent? §[[202205141439]] 
-- T-March 13, 2021 §[[202205141442]] 
-
-## Fulfillment
-- What does fulfillment mean?
-- What brings on the feeling of fulfillment?
-  - A strong workout
-  - Writing a good sentence
-  - Helping others
-- Why don't I focus my attention on the things that bring me fulfillment?
-- Daniel Dennett said, "[f]ind something more important than you are and dedicate your life to it." 
-    - https://forum.zettelkasten.de/discussion/comment/15750/#Comment_15750
-- [[eudaemonia]] 
-
-
-★★★★★
----
-UUID:      ›[[202106131829]] 
-cdate:     06-13-2021 06:29 PM
-tags:      #book #stoicism #history 
----
-# How To Live?
-
-   - A life of Montaigne in one question and twenty attempts at an answer.
-   - The Art Of Living A Good Life [[202105102006]]
-   - Well-trained mind brings happiness [[202005240910]]
- 
-> Michel Eyquem de Montaigne, also known as Lord of Montaigne, was one of the most significant philosophers of the French Renaissance, known for popularizing the essay as a literary genre. - Wikipedia 
-
-Audio book processing. Bakewell writes this book as 20 essays addressing the question, How to Live, though Montaigne's essays. Essays about essays. Sort of.
-
-## Introduction
-
-- We can not escape our perspective. We can only walk with our own two legs, we can only sit with our own bum.
-
-## Death
-
-   - You have no choice but to make yourself available for death. Nature will take care of everything.
-   - Death is but a few bad moments at the end of life.
-
-## Friends
-   - Seneca recommended developing the skill to replace a valued friend as a way to develop strong character traits and to get over the loss of a friend. §[[202107130847]]
-
-   - The Evolutionary Benefit of Friendship [[202009220727]]
-
-## Aloneness
-   - recoil at the thought of having a discovery of the moment and having no one to share it with.
-   - all thought of communication causes pain when there is no one to share it with.
-
-## Reaching Eudaemonia Through Ataraxia
-
-   - Hellenistic Philosophy
-        - Stoicism
-        - Epicurism
-        - Skepticism 
-   - they have a common goal of reaching eudaemonia through ataraxia "a lucid state of robust equanimity characterized by ongoing freedom from distress and worry." - Wikipedia
-
-   #beautiful-language 
-   - Looking for equanimity so you aren't battered and dragged around by your emotions like a bone being fought over by a pack of dogs. 
-
-## The definition of sexual intercourse
-   - "...nothing but a little friction of a couple of membranes followed by the spirting of some mucous." 
-
-## The Rump Argument
-   - No matter who you think you are, you are sitting on your own rump just like everyone else. 
-
-- in the 1600's, potatoes were considered an aphrodisiac.
-
-#beautiful-language 
-- "It gathers force as it proceeds."
-- My mind will not budge unless my legs move it.
-- My thoughts fall asleep unless I prod them.
-
-- The Eight Freedoms  [[202111290921]]
-
-
-
-### Links
-- Unattainable Earth [[202106281802]]
-
----
-### Works cited
-- Bakewell, Sarah. How to Live, or, A Life of Montaigne in One Question and Twenty Attempts at an Answer. 2011.
-
-★★★★★
----
-UUID:      ›[[202201050845]] 
-cdate:     01-05-2022 08:45 AM
-tags:      #pedagogy #zettelkasting #knowledge 
----
-# Epistemology Of Knowledge
-Subatomic: These are the signifiers of knowledge. 
-
-Use case
-- Make these the section headers of a zettel when factoring an article or book section.
-
-1. Truth. 
-	- Arguments 
-  	- Rational
-  	- Evidence
-2. Relevancy. Relevancy as a reason for attention distribution.
-3. Usefulness. Usefulness means that the knowledge structure is a tool to do a job. 
-    - Usefulness is the central metric of tools [[202201052120]]
-          - Usefulness is what is the quality of excellence in a tool. Usefulness is a contribution to eudaemonia.
-4. Beauty.
-5. Simpleness. 
-★★★★★
----
-UUID:      ›[[202106132004]] 
-cdate:     06-13-2021 08:04 PM
-tags:      #blog-post 
----
-# Serendipitous Ideation
-
-When I pay attention and notice ideas as they appear, the noticing and the attention heightens and enriches the experience. This can take a mighty effort, but the energy spent is priceless. 
-
-Effort doesn’t have to be 100% all of the time or even 80% or 60%. Even if the effort is lackluster, any awkward intermingling with ideas intensifies apparency. §[[202106140552]]‹ Grab even the pico-sized moments and let the compounding feedback cycle explode. ›[[202106140557]] Each time ideas are danced with, we get in a little more sync.
-- Maintaining an Idea's Flywheel [[202311011103]]
-     * A positive feedback cycle is created when attention is applied to an idea.
-Psychophysics Of Brightness [[201912270723]]
-Compounding Knowledge [[201903112026]]
-Your smile spreads happiness [[202012151745]]
-
-
-Ideation is serendipitous. Being tackled by ideas and wrestling with them is a privilege. I am the lucky one. “Luck is what happens when preparation meets opportunity.” ― **Roman philosopher Seneca**
-
-The volume of ideas, good and bad, valuable and worthless, appreciate and inappropriate, is increasing. The measure of a good idea is the answer to the question, “Is this consistent with the person I want to be?.” And “Is this idea intricately connected to my objectives?” And “Will it lead to an opportunity to express gratitude?” And “Will this idea encourage me to wake up to the wonderment of this bright moment?”
-
-- B-Techniques For Producing Ideas [[202206251631]] 
-- Wonderment-Eudaemonia [[202206100711]]
-   * The only good outcomes of life.
-- The Image Of A Cities Relationship To ZM [[202106121928]]
-- H-The Art Of Living A Good Life [[202105102006]]
-- How to Keep Getting Better at Stuff [[202405270952]]
-     * Continuous improvement hinges on embracing a growth mindset, seeking regular feedback, and practicing deliberate effort.
-                                                                                                                            ---
-UUID:  ›[[202206100711]]
-cdate:  06-10-2022 07:11 AM
-tags:   #how-to-live
----
-# Wonderment-Eudaemonia
-Subatomic: These are the only good outcomes of life.
-
-   - Steering and Focusing Attention for Fulfillment [[202205130603]]
-   - B-How To Live [[202106131829]]
-   - Epistemology Of Knowledge [[202201050845]]
-
-What factors lead to wonderment/eudaemonia?
-- These are contradictory - solitude and community
-- nature
-- focusing on the present moment experience of awareness and contrarily reminiscing 
-- reading and writing
-- walking
-- conversation
-
-- B-Four Thousand Weeks §[[202206261635]] 
-   * Don't forget the ultimate point of life's frenetic _doing_ is to experience the wonder of life. Why not go directly for the wonder!
-- Serendipitous Ideation [[202106132004]]
-
-
-
-★★★★★
----
-UUID:      ›[[202205130603]] 
-cdate:     05-13-2022 06:03 AM
-tags:      #aspects-of-attention 
----
-# Steering and Focusing Attention for Fulfillment
-
-Subatomic: Reflections on attention. 
-
-## Steering
-- Implies a self that does the steering. Fate might be a propensity rather than a done deal. I can't explain why I chose what I chose but when confronted with a choice I seem to lean the way I've traveled in the past. To change this takes time a repetitions. Sort of like muscle building. The more some path is followed the more it get followed. 
-- Awareness can expand and collapse §[[202205141425]]
-- Priority of attention §[[202205141427]] 
-- Attention strength training §[[202205141428]] 
-
-## Focusing
-- Noticing. This is much slower than steering which can be unconscious or so close to being unconscious that it appears automatic. Notice is both slower and instantaneous. As so a something is noticed, brought into focus, it is full noticed. Focus in this sense is not gradual. Something out of focus, blurry, confusing, until the moment it isn't.
-- Focusing attention has an outsized impact [[202205092052]]
-   * Where I place may attention drives who I'll become.
-- Interplay Between Focus And Knowledge [[202105221453]]
-- More noticing [[202012231619]]
-
-
-## Attention
-- How much do I have? 
-- Are there different qualities of attention?
-- Is attention sharable? (via writing)
-- Is attention under valued or over valued?
-- How do the things that capture my attention affect my life?
-- I am who I am because of what I focused my attention on in the past.
-- I would be a different person if I had focused my attention on different things in the past. 
-- Dogen might say that I can be different now, focusing differently in the future.
-- » Has Time Been Well Spent? §[[202205141439]] 
-- T-March 13, 2021 §[[202205141442]] 
-
-## Fulfillment
-- What does fulfillment mean?
-- What brings on the feeling of fulfillment?
-  - A strong workout
-  - Writing a good sentence
-  - Helping others
-- Why don't I focus my attention on the things that bring me fulfillment?
-- Daniel Dennett said, "[f]ind something more important than you are and dedicate your life to it." 
-    - https://forum.zettelkasten.de/discussion/comment/15750/#Comment_15750
-- [[eudaemonia]] 
-
-
-★★★★★
----
-UUID:      ›[[202106131829]] 
-cdate:     06-13-2021 06:29 PM
-tags:      #book #stoicism #history 
----
-# How To Live?
-
-   - A life of Montaigne in one question and twenty attempts at an answer.
-   - The Art Of Living A Good Life [[202105102006]]
-   - Well-trained mind brings happiness [[202005240910]]
- 
-> Michel Eyquem de Montaigne, also known as Lord of Montaigne, was one of the most significant philosophers of the French Renaissance, known for popularizing the essay as a literary genre. - Wikipedia 
-
-Audio book processing. Bakewell writes this book as 20 essays addressing the question, How to Live, though Montaigne's essays. Essays about essays. Sort of.
-
-## Introduction
-
-- We can not escape our perspective. We can only walk with our own two legs, we can only sit with our own bum.
-
-## Death
-
-   - You have no choice but to make yourself available for death. Nature will take care of everything.
-   - Death is but a few bad moments at the end of life.
-
-## Friends
-   - Seneca recommended developing the skill to replace a valued friend as a way to develop strong character traits and to get over the loss of a friend. §[[202107130847]]
-
-   - The Evolutionary Benefit of Friendship [[202009220727]]
-
-## Aloneness
-   - recoil at the thought of having a discovery of the moment and having no one to share it with.
-   - all thought of communication causes pain when there is no one to share it with.
-
-## Reaching Eudaemonia Through Ataraxia
-
-   - Hellenistic Philosophy
-        - Stoicism
-        - Epicurism
-        - Skepticism 
-   - they have a common goal of reaching eudaemonia through ataraxia "a lucid state of robust equanimity characterized by ongoing freedom from distress and worry." - Wikipedia
-
-   #beautiful-language 
-   - Looking for equanimity so you aren't battered and dragged around by your emotions like a bone being fought over by a pack of dogs. 
-
-## The definition of sexual intercourse
-   - "...nothing but a little friction of a couple of membranes followed by the spirting of some mucous." 
-
-## The Rump Argument
-   - No matter who you think you are, you are sitting on your own rump just like everyone else. 
-
-- in the 1600's, potatoes were considered an aphrodisiac.
-
-#beautiful-language 
-- "It gathers force as it proceeds."
-- My mind will not budge unless my legs move it.
-- My thoughts fall asleep unless I prod them.
-
-- The Eight Freedoms  [[202111290921]]
-
-
-
-### Links
-- Unattainable Earth [[202106281802]]
-
----
-### Works cited
-- Bakewell, Sarah. How to Live, or, A Life of Montaigne in One Question and Twenty Attempts at an Answer. 2011.
-
-★★★★★
----
-UUID:      ›[[202201050845]] 
-cdate:     01-05-2022 08:45 AM
-tags:      #pedagogy #zettelkasting #knowledge 
----
-# Epistemology Of Knowledge
-Subatomic: These are the signifiers of knowledge. 
-
-Use case
-- Make these the section headers of a zettel when factoring an article or book section.
-
-1. Truth. 
-	- Arguments 
-  	- Rational
-  	- Evidence
-2. Relevancy. Relevancy as a reason for attention distribution.
-3. Usefulness. Usefulness means that the knowledge structure is a tool to do a job. 
-    - Usefulness is the central metric of tools [[202201052120]]
-          - Usefulness is what is the quality of excellence in a tool. Usefulness is a contribution to eudaemonia.
-4. Beauty.
-5. Simpleness. 
-★★★★★
----
-UUID:      ›[[202106132004]] 
-cdate:     06-13-2021 08:04 PM
-tags:      #blog-post 
----
-# Serendipitous Ideation
-
-When I pay attention and notice ideas as they appear, the noticing and the attention heightens and enriches the experience. This can take a mighty effort, but the energy spent is priceless. 
-
-Effort doesn’t have to be 100% all of the time or even 80% or 60%. Even if the effort is lackluster, any awkward intermingling with ideas intensifies apparency. §[[202106140552]]‹ Grab even the pico-sized moments and let the compounding feedback cycle explode. ›[[202106140557]] Each time ideas are danced with, we get in a little more sync.
-- Maintaining an Idea's Flywheel [[202311011103]]
-     * A positive feedback cycle is created when attention is applied to an idea.
-Psychophysics Of Brightness [[201912270723]]
-Compounding Knowledge [[201903112026]]
-Your smile spreads happiness [[202012151745]]
-
-
-Ideation is serendipitous. Being tackled by ideas and wrestling with them is a privilege. I am the lucky one. “Luck is what happens when preparation meets opportunity.” ― **Roman philosopher Seneca**
-
-The volume of ideas, good and bad, valuable and worthless, appreciate and inappropriate, is increasing. The measure of a good idea is the answer to the question, “Is this consistent with the person I want to be?.” And “Is this idea intricately connected to my objectives?” And “Will it lead to an opportunity to express gratitude?” And “Will this idea encourage me to wake up to the wonderment of this bright moment?”
-
-- B-Techniques For Producing Ideas [[202206251631]] 
-- Wonderment-Eudaemonia [[202206100711]]
-   * The only good outcomes of life.
-- The Image Of A Cities Relationship To ZM [[202106121928]]
-- H-The Art Of Living A Good Life [[202105102006]]
-- How to Keep Getting Better at Stuff [[202405270952]]
-     * Continuous improvement hinges on embracing a growth mindset, seeking regular feedback, and practicing deliberate effort.
-                                                                                                                            
+- Sharing Slow Ideas | The New Yorker
+		- bear://x-callback-url/open-note?id=894E9720-7C2B-41CA-B716-A533D0367E66-35763-00000A7108967FB2

@@ -5,7 +5,6 @@ from datetime import date
 from datetime import datetime
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
-from zkrandom import zkrand
 
 
 # import pyperclip
@@ -89,47 +88,6 @@ def lines_that_start_with(string, fp):
 def lines_that_end_with(string, fp):
     return [line for line in fp if line.endswith(string)]
 
-# Random Super Slogan
-
-ss = random.choice(
-    open("/Users/will/Dropbox/zettelkasten/L-Super Slogans 202012281549.md").readlines()
-)
-ss = ss.replace("\xa0", " ")
-
-
-# Iteration for counting tags, links (tlinks), wc (twords), total zettel (tzettel)
-
-for filename in os.listdir(target_dir):
-    if filename.endswith(".md"):
-        file = open((os.path.join(target_dir, filename)), "r")
-        data = file.read()
-        books = data.count("#book")
-        tbooks += books
-        blog = data.count("#blog-post")
-        tblogs += blog
-        podcast = data.count("#podcast")
-        tpodcast += podcast
-        article = data.count("#article")
-        tarticles += article
-        
-        youtube = data.count("#youtube")
-        tyoutube += youtube
-        
-        proof = data.count("#proofing")
-        tproof += proof
-        video = data.count("#video")
-        tvideo += video
-        twodo = data.count("#2do")
-        ttwodo += twodo
-        links = data.count("]]")
-        tlinks += links
-        per_word = data.split()
-        twords += len(per_word)
-        tzettel += 1
-
-        continue
-    else:
-        continue
 
 # Files is a dictionary mapping of a date to the list of files with that date
 
@@ -157,12 +115,12 @@ for uuid in sorted(files, reverse=True):
 
         # 10 day gap
 
-        # for i in range(tengap):
-        #     targetdate = (date.today() - timedelta(+i)).strftime('%Y%m%d')
-        #     if targetdate == uuid:
-        #         tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
-        #             '%m/%d/%Y') + " :: [" + file_name.rsplit((uuid), 1)[0] + "](thearchive://match/" + file_name + ")")
-        #         tencount += 1
+        for i in range(tengap):
+            targetdate = (date.today() - timedelta(+i)).strftime('%Y%m%d')
+            if targetdate == uuid:
+                tencountfiles.append(datetime.strptime(uuid, '%Y%m%d').strftime(
+                    '%m/%d/%Y') + " :: [" + file_name.rsplit((uuid), 1)[0] + "](thearchive://match/" + file_name + ")")
+                tencount += 1
 
         for i in range(tengap):
             targetdate = (date.today() - timedelta(+i)).strftime("%Y%m%d")
@@ -201,92 +159,18 @@ for uuid in sorted(files, reverse=True):
         if uuid == one_week_ago.strftime("%Y%m%d"):
             one_week_ago_count += 1
 
-        # 3 week gap
 
-        if uuid == three_weeks_ago.strftime("%Y%m%d"):
-            three_weeks_ago_count += 1
-
-        # 6 month gap
-
-        if uuid == six_months_ago.strftime("%Y%m%d"):
-            six_months_ago_count += 1
-
-        # 1 year gap
-
-        if uuid == one_yr_ago.strftime("%Y%m%d"):
-            one_yr_ago_count += 1
-
-        # 2 year gap
-
-        if uuid == two_yrs_ago.strftime("%Y%m%d"):
-            two_yrs_ago_count += 1
-
-        # 3 year gap
-
-        if uuid == three_yrs_ago.strftime("%Y%m%d"):
-            three_yrs_ago_count += 1
-            
-        # 4 year gap
-
-        if uuid == four_yrs_ago.strftime("%Y%m%d"):
-            four_yrs_ago_count += 1
 
 
                 
 # Print and output
 
 output1 = f""" 
-## Memento Mori
-Days since birth: {since.days} - {percentSince}%
-Days until I'm 80: {until.days} - {percentLeft}%
-Days of COVID watch: {quarintine.days} - {percentOfTotal}%
-Total days in an eighty-year life. 29220
-
-## Super Slogan
-{ss}
-{'–'*4}
-Zettelkasten Statistics
-       ★★★★★
-\t{twords} Total word count
-\t{tlinks - tzettel} Total link count
-\t{tzettel} Total zettel count
-       ★★★★★
-
-\t{tproof} [Zettel Proofing](thearchive://match/"#proofing").
-\t{tbooks} [Books Processed](thearchive://match/"#book").
-\t{tblogs} [Blog Posts](thearchive://match/"#blog-post").
-\t{tpodcast} [Podcasts Processed](thearchive://match/"#podcast").
-\t{tarticles} [Articles Processed](thearchive://match/"#article").
-\t{tyoutube} [YouTube Videos Processed](thearchive://match/"#youtube").
-\t{tvideo} [Poetry of Zettelkasting Videos Made](thearchive://match/"#video").
+**Zettelkasten Review**
 
 {'–'*4}
 [{yesterday_count} notes created on {yesterday.strftime('%Y%m%d')}](thearchive://match/›[[{yesterday.strftime('%Y%m%d')}) yesterday.
 [{one_week_ago_count} notes created on {one_week_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_week_ago.strftime('%Y%m%d')}) one week ago.
-[{three_weeks_ago_count} notes created on {three_weeks_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_weeks_ago.strftime('%Y%m%d')}) three weeks ago.
-[{six_months_ago_count} notes created on {six_months_ago.strftime('%Y%m%d')}](thearchive://match/›[[{six_months_ago.strftime('%Y%m%d')}) six months ago.
-[{one_yr_ago_count} notes created on {one_yr_ago.strftime('%Y%m%d')}](thearchive://match/›[[{one_yr_ago.strftime('%Y%m%d')}) one year ago.
 
-Four Random Notes Older than One Year Old
 """
 print(f'{output1}')
-zkrand()
-
-output = f""" 
-**{tencount} new zettel in the last {tengap} days.**
-{hundredcount} new zettel in the last {hundredgap} days.
-{tzettel / (today - day0).days:.2f} zettel created on average since day zero.
-{'–'*4}
-"""
-
-for newnotes in tencountfiles:
-    output += newnotes + "\r"
-
-print(f'{output}') 
-
-# pyperclip.copy(output)
-
-
-# [{two_yrs_ago_count} notes created on {two_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{two_yrs_ago.strftime('%Y%m%d')}) two years ago.
-# [{three_yrs_ago_count} notes created on {three_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{three_yrs_ago.strftime('%Y%m%d')}) tzhree years ago.
-# [{four_yrs_ago_count} notes created on {four_yrs_ago.strftime('%Y%m%d')}](thearchive://match/›[[{four_yrs_ago.strftime('%Y%m%d')}) four years ago.
