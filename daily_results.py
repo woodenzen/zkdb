@@ -59,7 +59,7 @@ def trend(length, compare_length):
 
     # Calculate the length of the trend and the date range
     trend_length = today - timedelta(days=length)
-    date_range = [trend_length + timedelta(days=x) for x in range(length)]
+    date_range = [trend_length + timedelta(days=x) for x in range(length+1)]
 
     # Calculate the length of the comparison trend and the comparison date range
     compare_trend_length = today - timedelta(days=compare_length)

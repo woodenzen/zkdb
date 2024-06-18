@@ -8,6 +8,7 @@ from TheArchivePath import TheArchivePath
 import daily_results
 from zk_stats import zk_stats
 from get_word_count import get_word_count
+from modified import count_modified_md_files
 
 # Set the path to the directory to search for files
 zettelkasten = TheArchivePath()
@@ -24,6 +25,8 @@ short = 10
 long = 100
 
 # Functions
+
+
 ## Trending Function Call
 current = daily_results.trend(short, short)
 past = daily_results.trend(long, long)
@@ -49,11 +52,11 @@ print(f'{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}')
 print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')
 print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20181114).")
 # proofing_count = count_proofing_files(zettelkasten)
-print(f"I have {count_target_occurrences('#proofing')} [zettels](thearchive://match/%23proofing) in my proofing oven.")
+print(f"I have {count_target_occurrences('#proofing')} zettels in my proofing oven.")
 
 ## Print the list of files produced in the last 10 days and their subatomic lines.
 print('\n–––––')
-print(f'## {current[0]} new notes have been created in the last ten days. \n')
+print(f'## {current[0]} new notes have been created, and {count_modified_md_files(10)} incrementally improved over the past ten days. \n')
 for entry in current[4]:
     subatomic_line = daily_results.get_subatomic_line(zettelkasten+"/"+entry)
-    print(f'- [{entry[:-7]}](thearchive://match/›[[{entry[-15:-3]})\n\t- {subatomic_line[11:]}')
+    print(f'- {entry[:-7]}\n\t- {subatomic_line[11:]}')
