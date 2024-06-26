@@ -92,7 +92,7 @@ if __name__ == "__main__":
     
     print()
     print(f"**I've read {highest_number} books on a pace to read {round(highest_number/current_week*52)} books this year.**") 
-    print(f"**This is week {round(weeks_since_birth)} of 4174 until I'm 80 in 2036. I'm {round(weeks_since_birth / eighty_year_life * 100, 1)}% done.**")
+    print(f"**This is week {round(weeks_since_birth)} with {4174 - round(weeks_since_birth)} weeks until I'm 80 in 2036. I'm {round(weeks_since_birth / eighty_year_life * 100, 1)}% done.**")
     print(f"**My proofing oven contains {proofing_count} notes out of {len(os.listdir(zettelkasten))} total.**")
 
 
