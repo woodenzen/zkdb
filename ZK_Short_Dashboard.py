@@ -10,6 +10,7 @@ from zk_stats import zk_stats
 from get_word_count import get_word_count
 from modified import count_modified_md_files
 
+
 # Set the path to the directory to search for files
 zettelkasten = TheArchivePath()
 
@@ -52,12 +53,17 @@ print(f'{current[2]}-day trend: {current[0]}/{current[1]} {current[3]}')
 print(f'{past[2]}-day trend: {past[0]}/{past[1]} {past[3]}')
 print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20181114).")
 # proofing_count = count_proofing_files(zettelkasten)
-print(f"{count_target_occurrences('#proofing')} zettels in proofing oven.")
+print(f"{count_target_occurrences('#proofing')} zettels in my proofing oven.")
 print(f'{count_modified_md_files(10)} notes modified in 10 days.')
 ## Print the list of files produced in the last 10 days and their subatomic lines.
 print('\n–––––')
 # print(f'## {current[0]} new notes in 10 days.')
 # print(f' {count_modified_md_files(10)} incrementally improved over the past ten days.')
 for entry in current[4]:
-    subatomic_line = daily_results.get_subatomic_line(zettelkasten+"/"+entry)
-    print(f'- {entry[:-7]}\n\t- {subatomic_line[11:]}')
+    subatomic_line = daily_results.get_subatomic_line(zettelkasten + "/" + entry)
+    if not subatomic_line or len(subatomic_line) < 12:  # Check if subatomic_line is empty or shorter than 12 characters
+        continue
+    else:
+        print_line = '* ' + subatomic_line[11:]  # Slice subatomic_line from the 12th character onwards
+
+    print(f'- {entry[:-7]}\n\t {print_line}')

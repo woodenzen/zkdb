@@ -124,5 +124,11 @@ if __name__ == "__main__":
     print(f'## {current[0]} notes in the last ten days.')
     for entry in current[4]:
         subatomic_line = get_subatomic_line(zettelkasten+"/"+entry)
-        print(f'- [{entry[:-7]}](thearchive://match/›[[{entry[-15:-3]})\n\t- {subatomic_line[11:]}')
+        # Check if subatomic_line has enough content
+        if len(subatomic_line) < 12:
+            print_line = 'test\n'
+        else:
+            print_line = '- ' + subatomic_line[11:]
+        
+        print(f'- [{entry[:-7]}](thearchive://match/›[[{entry[-15:-3]})\n\t {print_line}')
 
