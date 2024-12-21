@@ -54,7 +54,7 @@ def main(short,long):
     print(f"{calculate_avg_notes_per_day(zettelkasten)} notes/day since day zero (20181114).")
     # proofing_count = count_proofing_files(zettelkasten)
     print(f"{count_target_occurrences('#proofing')} zettels in my proofing oven.")
-    print(f'{count_modified_md_files(short)} notes modified in {short} days.')
+    print(f'{count_modified_md_files(short)} notes were modified in the past {short} days.')
     ## Print the list of files produced in the last 10 days and their subatomic lines.
     print('\n–––––')
     # print(f'## {current[0]} new notes in 10 days.')
@@ -69,4 +69,5 @@ def main(short,long):
         print(f'- {entry[:-7]}\n\t {print_line}')
 
 if __name__ == '__main__':
-    main(10,100)        
+    # main(10,100)        
+    main(int(os.environ["KMVAR_numberDays"]),100)   

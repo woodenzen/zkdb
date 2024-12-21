@@ -57,11 +57,11 @@ def momento_mori():
     eighty_years_later = birth + timedelta(days=80*365.25)
 
     # Calculate the number of weeks between the birth date and 80 years later
-    eighty_year_life = (eighty_years_later - birth).days / 7
+    eighty_year_life = (eighty_years_later - birth).days
 
-    spent_life = (eighty_years_later - birth).days / 7
+    spent_life = (eighty_years_later - birth).days
 
-    return weeks_since_birth, eighty_year_life, eighty_years_later
+    return days, eighty_year_life, eighty_years_later
 
 def count_target_in_file(file_path, target):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -86,13 +86,13 @@ def count_target_occurrences(target):
 if __name__ == "__main__":
     zettelkasten = "/Users/will/Dropbox/zettelkasten/"
     highest_number, current_week, goal, abandoned = bookography(52)
-    weeks_since_birth, eighty_year_life, eighty_years_later = momento_mori()  # Call the function and store its return values
+    days, eighty_year_life, eighty_years_later = momento_mori()  # Call the function and store its return values
     proofing_count = count_target_occurrences('#proofing')
     zettel_count = count_target_occurrences('›[[')
     
     print()
     print(f"**I've read {highest_number} books on a pace to read {round(highest_number/current_week*52)} books this year.**") 
-    print(f"**This is week {round(weeks_since_birth)} with {4174 - round(weeks_since_birth)} weeks until I'm 80 in 2036. I'm {round(weeks_since_birth / eighty_year_life * 100, 1)}% done.**")
+    print(f"**This is day {(days)} with {29220 - (days)} days until I'm 80 in 2036. I'm {round(days / eighty_year_life * 100, 1)}% done.**")
     print(f"**My proofing oven contains {proofing_count} notes out of {len(os.listdir(zettelkasten))} total.**")
 
 
