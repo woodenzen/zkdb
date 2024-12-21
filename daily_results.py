@@ -20,9 +20,10 @@ def get_subatomic_line(file_name):
         # Loop through each line in the file
         for line in file:
             # Check if the line starts with "Subatomic: "
-            if line.startswith("Subatomic: "):
+            if line.startswith("Subatomic: ") or line.startswith("description: "):
                 # Return the line
-                return line
+                # Split the line at the first colon and return the part after the colon
+                return line.split(':', 1)[1].strip()
     # If no "Subatomic: " line is found, return an empty string
     return ""
 
@@ -128,7 +129,7 @@ if __name__ == "__main__":
         if len(subatomic_line) < 12:
             print_line = 'test\n'
         else:
-            print_line = '- ' + subatomic_line[11:]
+            print_line = '- ' + subatomic_line
         
         print(f'- [{entry[:-7]}](thearchive://match/›[[{entry[-15:-3]})\n\t {print_line}')
 

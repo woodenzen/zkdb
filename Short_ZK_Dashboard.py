@@ -59,14 +59,17 @@ def main(short,long):
     print('\n–––––')
     # print(f'## {current[0]} new notes in 10 days.')
     # print(f' {count_modified_md_files(10)} incrementally improved over the past ten days.')
+    
+    # Print the list of files produced in the last 10 days and their subatomic lines.
     for entry in current[4]:
         subatomic_line = daily_results.get_subatomic_line(zettelkasten + "/" + entry)
         if not subatomic_line or len(subatomic_line) < 12:  # Check if subatomic_line is empty or shorter than 12 characters
-            continue
+            print(f'- {entry[:-7]}\n')
+            print_line = ''  # Initialize print_line to an empty string
         else:
-            print_line = '* ' + subatomic_line[11:]  # Slice subatomic_line from the 12th character onwards
+            print_line = '* ' + subatomic_line  # Slice subatomic_line from the 12th character onwards
 
-        print(f'- {entry[:-7]}\n\t {print_line}')
+            print(f'- {entry[:-7]}\n\t {print_line}')
 
 if __name__ == '__main__':
     # main(10,100)        
