@@ -10,6 +10,14 @@ from zk_stats import zk_stats
 from get_word_count import get_word_count
 from modified import count_modified_md_files
 
+    # Functions
+def count_target_occurrences_in_file(file_name, target):
+    count = 0
+    with open(file_name, 'r') as file:
+        for line in file:
+            count += line.count(target)
+    return count
+
 def main(short,long):
     # Set the path to the directory to search for files
     zettelkasten = TheArchivePath()
@@ -25,8 +33,6 @@ def main(short,long):
     # short = 10
     # long = 100
 
-    # Functions
-
 
     ## Trending Function Call
     current = daily_results.trend(short, short)
@@ -38,7 +44,7 @@ def main(short,long):
 
     output = f"""
     {'–'*5}
-    ## Zettelkasten Statistics
+## Zettelkasten Statistics
            ★★★★★ 
     {twords} Total word count
     {tlinks-len(os.listdir(zettelkasten))} Total link count
@@ -56,10 +62,14 @@ def main(short,long):
     print(f"{count_target_occurrences('#proofing')} zettels in my proofing oven.")
     print(f'{count_modified_md_files(short)} notes were modified in the past {short} days.')
     ## Print the list of files produced in the last 10 days and their subatomic lines.
+    # print(f'{current[0]} new notes in {short} days.')
+    print(f'{count_modified_md_files(10)} incrementally improved over the past {short} days.')
+      # Count occurrences of '#blog-post' in the files within the 'short' period
+    blog_post_count = 0
+    for entry in current[4]:
+        blog_post_count += count_target_occurrences_in_file(zettelkasten + "/" + entry, '#blog-post')
+    print(f"{blog_post_count} blog posts in the last {short} days for a total of {count_target_occurrences('#blog-post')} zettel as blog posts.")
     print('\n–––––')
-    # print(f'## {current[0]} new notes in 10 days.')
-    # print(f' {count_modified_md_files(10)} incrementally improved over the past ten days.')
-    
     # Print the list of files produced in the last 10 days and their subatomic lines.
     for entry in current[4]:
         subatomic_line = daily_results.get_subatomic_line(zettelkasten + "/" + entry)
