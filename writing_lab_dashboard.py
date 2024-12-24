@@ -91,7 +91,7 @@ if __name__ == "__main__":
     zettel_count = count_target_occurrences('›[[')
     
     print()
-    print(f"**I've read {highest_number} books on a pace to read {round(highest_number/current_week*52)} books this year.**") 
+    print(f"**I've read {highest_number} books this year. I'm on a pace to read {round(highest_number/current_week*52)} books.**") 
     print(f"**This is day {(days)} with {29220 - (days)} days until I'm 80 in 2036. I'm {round(days / eighty_year_life * 100, 1)}% done.**")
     print(f"**My proofing oven contains {proofing_count} notes out of {len(os.listdir(zettelkasten))} total.**")
 
