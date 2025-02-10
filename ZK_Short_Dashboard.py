@@ -64,6 +64,6 @@ for entry in current[4]:
     if not subatomic_line or len(subatomic_line) < 12:  # Check if subatomic_line is empty or shorter than 12 characters
         continue
     else:
-        print_line = '* ' + subatomic_line[11:]  # Slice subatomic_line from the 12th character onwards
+        print_line = '* ' + subatomic_line  # Slice subatomic_line from the 12th character onwards
 
     print(f'- {entry[:-7]}\n\t {print_line}')

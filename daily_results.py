@@ -25,7 +25,7 @@ def get_subatomic_line(file_name):
                 result_line = line.split(':', 1)[1].strip()
                 # If blog is "post", concatenate " Blog Post" to the result_line
                 if blog == "post":
-                    result_line += " ★Blog Post★"
+                    result_line += "★Blog Post★"
                 return result_line
     # If no matching line is found, return an empty string
     return ""

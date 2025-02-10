@@ -179,8 +179,8 @@ if __name__ == "__main__":
     print()
     print(f"**I've read {highest_number} books this year. I'm on a pace to read {round(highest_number/current_week*52)} books.**") 
     print(f"**I've written {writing_highest_number} essays this year. I'm on a pace to write {round(writing_highest_number/current_week*52)} essays.**") 
-    print(f"**I've read {journal_highest_number} journal articales this year. I'm on a pace to read {round(journal_highest_number/current_week*52)} journal articles.**") 
+    print(f"**I've read {journal_highest_number} journal articles this year. I'm on a pace to read {round(journal_highest_number/current_week*52)} journal articles.**") 
     print(f"**This is day {(days)} with {29220 - (days)} days until I'm 80 in 2036. I'm {round(days / eighty_year_life * 100, 1)}% done.**")
-    print(f"**My proofing oven contains {proofing_count} notes out of {len(os.listdir(zettelkasten))} total.**")
+    print(f"**My proofing oven contains {proofing_count} notes out of {len(os.listdir(zettelkasten))} in total.**")
 
 

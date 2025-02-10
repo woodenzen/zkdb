@@ -73,7 +73,7 @@ def main(short,long):
     # Print the list of files produced in the last 10 days and their subatomic lines.
     for entry in current[4]:
         subatomic_line = daily_results.get_subatomic_line(zettelkasten + "/" + entry)
-        if not subatomic_line or len(subatomic_line) < 12:  # Check if subatomic_line is empty or shorter than 12 characters
+        if not subatomic_line or len(subatomic_line) < 10:  # Check if subatomic_line is empty or shorter than 12 characters
             print(f'- {entry[:-7]}  \n')
             print_line = ''  # Initialize print_line to an empty string
         else:
@@ -82,5 +82,5 @@ def main(short,long):
             print(f'- {entry[:-7]}\n\t {print_line}  \n')  
 
 if __name__ == '__main__':
-    # main(10,100)        
-    main(int(os.environ["KMVAR_numberDays"]),100)   
+    main(10,100)        
+    # main(int(os.environ["KMVAR_numberDays"]),100)   
