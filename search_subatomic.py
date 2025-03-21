@@ -6,7 +6,8 @@ zettelkasten = '/Users/will/Dropbox/zettelkasten'
 
 # Define the search terms
 search_term1 = "Subatomic: "
-search_term2 = os.environ["KMVAR_searchTerm"]
+search_term2 = "think"  # Uncomment the following lines to use environment variables
+# search_term1 = os.environ["KMVAR_searchTerm"]
 
 # Compile the regular expression pattern
 pattern = re.compile(rf'{re.escape(search_term1)}.*{re.escape(search_term2)}')
