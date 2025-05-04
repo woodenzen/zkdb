@@ -61,9 +61,8 @@ print('\n–––––')
 # print(f' {count_modified_md_files(10)} incrementally improved over the past ten days.')
 for entry in current[4]:
     subatomic_line = daily_results.get_subatomic_line(zettelkasten + "/" + entry)
-    if not subatomic_line or len(subatomic_line) < 12:  # Check if subatomic_line is empty or shorter than 12 characters
-        continue
+    if not subatomic_line or len(subatomic_line) < 12:
+        print(f'- {entry[:-7]}\n\t * Subatomic line missing')
     else:
-        print_line = '* ' + subatomic_line  # Slice subatomic_line from the 12th character onwards
-
-    print(f'- {entry[:-7]}\n\t {print_line}')
+        print_line = '* ' + subatomic_line
+        print(f'- {entry[:-7]}\n\t {print_line}')

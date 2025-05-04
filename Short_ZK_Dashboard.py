@@ -63,12 +63,12 @@ def main(short,long):
     ## Print the list of files produced in the last 10 days and their subatomic lines.  
     # print(f'{current[0]} new notes in {short} days.  ')  
     print(f'{count_modified_md_files(short)} incrementally improved over the past {short} days.  ')  
-      # Count occurrences of '#blog-post' in the files within the 'short' period  
-    blog_post_count = 0
-    for entry in current[4]:
-        blog_post_count += count_target_occurrences_in_file(zettelkasten + "/" + entry, '#blog-post')
-    print(f"{blog_post_count} blog posts in the last {short} days.  ")  
-    print(f"{count_target_occurrences('#blog-post')} zettels are blog posts.  ")    
+    # Count occurrences of '#blog-post' in the files within the 'short' period  
+    # blog_post_count = 0
+    # for entry in current[4]:
+        # blog_post_count += count_target_occurrences_in_file(zettelkasten + "/" + entry, '#blog-post')
+    # print(f"{blog_post_count} blog posts in the last {short} days.  ")  
+    # print(f"{count_target_occurrences('#blog-post')} zettels are blog posts.  ")    
     print('\n–––––')  
     # Print the list of files produced in the last 10 days and their subatomic lines.
     for entry in current[4]:
@@ -82,5 +82,5 @@ def main(short,long):
             print(f'- {entry[:-7]}\n\t {print_line}  \n')  
 
 if __name__ == '__main__':
-    main(10,100)        
-    # main(int(os.environ["KMVAR_numberDays"]),100)   
+    # main(20,100)        
+    main(int(os.environ["KMVAR_numberDays"]),100)   
