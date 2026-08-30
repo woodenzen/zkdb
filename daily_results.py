@@ -1,5 +1,6 @@
 import os
 import fnmatch
+import re
 from datetime import datetime as dt
 from datetime import timedelta
 from avg_per_day import calculate_avg_notes_per_day
@@ -32,11 +33,26 @@ def get_subatomic_line(file_name):
 
 # Define a function to extract the date from the file name
 def extract_date(file_name):
-    # Extract the last 12 characters before the "."
-    date_str = file_name.split('.')[0][-12:]
-    # Convert the date and time string to a datetime object
-    date = dt.strptime(date_str, "%Y%m%d%H%M")
-    return date
+    # Try to find a 12-digit timestamp (YYYYmmddHHMM) anywhere in the filename
+    m = re.search(r'(\d{12})', file_name)
+    if m:
+        date_str = m.group(1)
+        try:
+            return dt.strptime(date_str, "%Y%m%d%H%M")
+        except ValueError:
+            pass
+
+    # If no 12-digit timestamp, try an 8-digit date (YYYYmmdd)
+    m2 = re.search(r'(\d{8})', file_name)
+    if m2:
+        date_str = m2.group(1)
+        try:
+            return dt.strptime(date_str, "%Y%m%d")
+        except ValueError:
+            pass
+
+    # Fallback: return the minimum datetime so undated files sort last
+    return dt.min
 
 def count_target_occurrences_in_file(file_name, target):
     count = 0
